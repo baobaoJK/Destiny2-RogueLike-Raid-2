@@ -1,0 +1,49 @@
+@use "app.scss";
+
+#event {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    // 事件标题
+    .event-title {
+        color: white;
+        margin-bottom: 2rem;
+    }
+
+
+    // 事件列表
+    .event-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 2rem;
+
+        // 事件样式
+        .event {
+            margin: 0 3rem;
+            width: 15.625rem;
+            height: 29.375rem;
+
+            .event-img {
+                width: 15.625rem;
+                height: 26.25rem;
+                margin-bottom: 2rem;
+                background-image: url('../images/event/event.png');
+                background-size: cover;
+                border-radius: 1rem;
+            }
+
+            // 事件名称
+            .event-name {
+                text-align: center;
+                font-size: 1.5rem;
+                color: white;
+                letter-spacing: 0.5rem;
+            }
+        }
+    }
+}

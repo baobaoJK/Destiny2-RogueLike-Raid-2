@@ -1,0 +1,179 @@
+@use "app.scss";
+
+#deck {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    // 卡组标题
+    .deck-title {
+        color: white;
+        margin-bottom: 2rem;
+        font-weight: 100;
+        font-size: 2rem;
+    }
+
+    // 卡组列表
+    .deck-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 2rem;
+
+        // 卡组样式
+        .deck {
+            width: 16.25rem;
+            height: 30rem;
+            margin: 2rem;
+
+            @for $i from 1 through 5 {
+                .deck-#{$i} {
+                    width: 16.25rem;
+                    height: 27.5rem;
+                    margin-bottom: 1rem;
+                    background-image: url('../images/deck/deck-'+ #{$i} + ".jpg");
+                    background-size: cover;
+                    transition: all .5s;
+                    cursor: pointer;
+
+                    &:hover {
+                        transform: scale(1.05);
+                        opacity: 0.8;
+                    }
+                }
+            }
+
+            // 卡组名称
+            .deck-name {
+                text-align: center;
+                font-size: 1.5rem;
+                color: white;
+                letter-spacing: 0.5rem;
+            }
+        }
+    }
+}
+
+// 卡组模态框
+
+#deck-model {
+    .modal-lg {
+        min-width: 75rem;
+        max-width: 75rem;
+    }
+
+    .modal-content {
+        background-color: #12171C;
+    }
+
+    .modal-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 37.5rem;
+
+        .deck-list-box {
+            display: flex;
+            flex-wrap: wrap;
+
+            @for $i from 1 through 5 {
+                &.deck-#{$i} {
+                    .card {
+
+                        @if ($i==1) {
+                            background-image: url('../images/deck/deck-1.jpg');
+
+                        }
+
+                        @if ($i==2) {
+                            background-image: url('../images/deck/deck-2.jpg');
+
+                        }
+
+                        @if ($i==3) {
+                            background-image: url('../images/deck/deck-3.jpg');
+
+                        }
+
+                        @if ($i==4) {
+                            background-image: url('../images/deck/deck-4.jpg');
+
+                        }
+
+                        @if ($i==5) {
+                            background-image: url('../images/deck/deck-5.jpg');
+
+                        }
+                    }
+                }
+            }
+
+            .card-item {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                width: 8.125rem;
+                height: 13.75rem;
+                margin: 1rem 2rem;
+                transform: scale(1);
+                transform-style: preserve-3d;
+                transition: transform .5s;
+                cursor: pointer;
+
+                &.flip {
+                    transform: rotateY(180deg);
+                }
+
+                .card {
+                    width: 8.125rem;
+                    height: 13.75rem;
+                    background-size: cover;
+                    transition: opacity .3s;
+
+                    &:hover {
+                        opacity: 0.6;
+                    }
+                }
+
+                // 卡片样式
+                .card-front,
+                .card-back {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    backface-visibility: hidden;
+                }
+
+                .card-front {
+                    transform: rotateY(180deg);
+
+                    .card-info {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        width: 85%;
+                        height: 85%;
+                        font-size: 1.5rem;
+                        color: white;
+                        text-align: center;
+                        background-color: #fff2;
+                        border-radius: 0.25rem;
+                    }
+                }
+            }
+        }
+
+        button {
+            margin: 0 2rem;
+        }
+    }
+}

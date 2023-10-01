@@ -1,0 +1,74 @@
+@use "app.scss";
+
+html,
+body {
+    background-color: transparent !important;
+}
+
+@keyframes bg {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes start-button {
+    0% {
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#app {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+// 背景图片
+.background {
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    background-image: url('../images/Destiny2.png');
+
+    animation: bg 2s;
+}
+
+// 开始按钮
+.start-button {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 30%;
+    margin: auto;
+    width: 25rem;
+    height: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.75rem;
+    color: #535353;
+    text-align: center;
+    text-decoration: none;
+    transition: opacity .3s;
+
+    animation: start-button 3s;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}

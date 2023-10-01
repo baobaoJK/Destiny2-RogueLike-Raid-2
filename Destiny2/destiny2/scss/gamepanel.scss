@@ -1,0 +1,172 @@
+@use "app.scss";
+
+#gamepanel {
+    width: 100%;
+    height: 100%;
+
+    // 头部样式
+    .header {
+        position: relative;
+        width: 100%;
+        height: 6.25rem;
+
+        .image {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        // 名片样式
+        .emblem {
+            position: relative;
+            float: left;
+            width: 31.25rem;
+            height: 6.25rem;
+
+            .icon {
+                position: absolute;
+                top: 2rem;
+                left: 4rem;
+                width: 6rem;
+                height: 6rem;
+                background-size: cover;
+            }
+
+            .info {
+                position: absolute;
+                top: 2rem;
+                left: 11.25rem;
+                width: 18.75rem;
+                height: 4rem;
+
+                a {
+                    position: relative;
+                    display: block;
+                    width: 29.625rem;
+                    height: 6rem;
+                    text-decoration: none;
+                    margin-bottom: 2rem;
+
+                    &:hover {
+                        &::before {
+                            background-color: #fff3;
+                            box-shadow: inset 0 0 0 1px #fff;
+                        }
+
+                        &::after {
+                            box-shadow: 0 0 0 2px #fff;
+                            transform: scale(1, 1) translate3d(-2px, -2px, 0);
+                        }
+                    }
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: #fff0;
+                        box-shadow: inset 0 0 0 1px #fff0;
+                        transition: box-shadow .25s,
+                            background-color .25s;
+                        z-index: 2;
+                    }
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: calc(100% + 4px);
+                        height: calc(100% + 4px);
+                        transition: box-shadow .25s,
+                            transform .25s;
+                        transform: scale(1.017, 1.1) translate3d(-2px, -2px, 0);
+                        box-shadow: 0 0 0 2px #fff0;
+                    }
+                }
+
+                .name {
+                    color: white;
+                    font-size: 1.75rem;
+                    letter-spacing: 0.25rem;
+                }
+
+                .sub {
+                    margin-top: 0.25rem;
+
+                    p {
+                        float: left;
+                        letter-spacing: 0.125rem;
+                        color: white;
+                        margin: 0 4px;
+                    }
+
+                    .light {
+                        color: #E5D163;
+                    }
+
+                    .line {
+                        color: #fff9;
+                    }
+
+                    .money {
+                        display: flex;
+                        color: white;
+
+                        img {
+                            width: 24px;
+                            height: 24px;
+                            margin-right: 8px;
+                        }
+                    }
+                }
+            }
+        }
+
+        // 菜单
+        .menu {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            position: relative;
+            float: left;
+            width: calc(100% - 31.25rem);
+            height: 6.25rem;
+
+            ul {
+                display: flex;
+                padding-right: 4rem;
+
+                li {
+                    margin: 0 0.75rem;
+
+                    &.active {
+                        a {
+                            color: #fff;
+                            border-bottom: 4px solid white;
+                        }
+                    }
+
+                    a {
+                        padding: 0.5rem 0.25rem 2.375rem 0.25rem;
+                        font-size: 1.25rem;
+                        font-weight: 100;
+                        color: #fff9;
+                        transition: color 0.5s;
+
+                        &:hover {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // 主样式
+    .main {
+        height: calc(100% - 6.875rem);
+    }
+}

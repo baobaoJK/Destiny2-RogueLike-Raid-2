@@ -1,0 +1,148 @@
+@use "app.scss";
+
+// 主页
+#home {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+
+    width: 100%;
+    height: 100%;
+    padding: 12%;
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+
+    box-sizing: border-box;
+
+    // 标题样式
+    .title {
+        width: 29.625rem;
+        height: 2rem;
+        margin-bottom: 2rem;
+        color: white;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    // 名片样式
+    .emblems {
+        width: 29.625rem;
+        height: 31.25rem;
+
+        a {
+            position: relative;
+            display: block;
+            width: 29.625rem;
+            height: 6rem;
+            text-decoration: none;
+            margin-bottom: 2rem;
+
+            &:hover {
+                &::before {
+                    background-color: #fff3;
+                    box-shadow: inset 0 0 0 1px #fff;
+                }
+
+                &::after {
+                    box-shadow: 0 0 0 2px #fff;
+                    transform: scale(1, 1) translate3d(-2px, -2px, 0);
+                }
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #fff0;
+                box-shadow: inset 0 0 0 1px #fff0;
+                transition: box-shadow .25s,
+                    background-color .25s;
+                z-index: 2;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: calc(100% + 4px);
+                height: calc(100% + 4px);
+                transition: box-shadow .25s,
+                    transform .25s;
+                transform: scale(1.017, 1.1) translate3d(-2px, -2px, 0);
+                box-shadow: 0 0 0 2px #fff0;
+            }
+        }
+
+        // 名片样式
+        .emblem {
+            width: 100%;
+            height: 100%;
+            color: white;
+            background-size: cover;
+
+            .description {
+                width: calc(100% - 6rem);
+                height: calc(100% - 0.5rem);
+                margin-left: 6rem;
+                padding-top: 0.5rem;
+
+                p {
+                    margin: 0;
+                }
+
+                .name {
+                    font-size: 1.5rem;
+                }
+
+                .sub {
+                    font-size: 1rem;
+                    opacity: .5;
+                }
+            }
+
+            .light {
+                position: absolute;
+                top: 0.5rem;
+                right: 0.5rem;
+                width: 5rem;
+                height: 2rem;
+                font-size: 1.875rem;
+                font-weight: 500;
+                color: #E5D163;
+            }
+        }
+
+        .titan {
+            background-image: url('../images/emblem/titan.jpg');
+        }
+
+        .hunter {
+            background-image: url('../images/emblem/hunter.jpg');
+        }
+
+        .warlock {
+            background-image: url('../images/emblem/warlock.jpg');
+        }
+
+        .corrupted {
+            background-image: url('../images/emblem/captain.jpg');
+        }
+    }
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 3rem;
+    background-color: #F0F0F0;
+}
