@@ -1,0 +1,125 @@
+@use 'app.scss';
+@use 'event.scss';
+
+#event {
+    .event-item {
+        .event-card {
+            background-image: url('../images/event/globalevent.png') !important;
+
+            .text {
+                font-size: 1rem !important;
+            }
+        }
+    }
+}
+
+// 卡组模态框
+#deck-model {
+    .modal-lg {
+        min-width: 75rem;
+        max-width: 75rem;
+    }
+
+    .modal-content {
+        background-color: #12171C;
+    }
+
+    .modal-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 37.5rem;
+
+        .deck-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .deck-title {
+                color: white;
+                font-size: 2rem;
+                font-weight: 100;
+                margin-bottom: 1rem;
+            }
+
+            .players {
+                color: white;
+                font-size: 1.5rem;
+                font-weight: 100;
+            }
+        }
+
+        .deck-list-box {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+
+            .card-item {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                width: 8.125rem;
+                height: 13.75rem;
+                margin: 1rem 2rem;
+                transform: scale(1);
+                transform-style: preserve-3d;
+                transition: transform 1s;
+                cursor: pointer;
+
+                &.flip {
+                    transform: rotateY(180deg);
+                }
+
+                .card {
+                    width: 8.125rem;
+                    height: 13.75rem;
+                    background-size: cover;
+                    transition: opacity .3s;
+                    background-image: url('../images/deck/deck-1.jpg');
+                    box-shadow: 0px 0px 1.25rem #546072;
+
+                    &:hover {
+                        opacity: 0.6;
+                    }
+                }
+
+                // 卡片样式
+                .card-front,
+                .card-back {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    backface-visibility: hidden;
+                }
+
+                .card-front {
+                    transform: rotateY(180deg);
+
+                    .card-info {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        width: 85%;
+                        height: 90%;
+                        font-size: 1.5rem;
+                        color: white;
+                        text-align: center;
+                        background-color: #0005;
+                        border-radius: 0.25rem;
+                    }
+                }
+            }
+        }
+
+        button {
+            margin: 0 2rem;
+        }
+    }
+}

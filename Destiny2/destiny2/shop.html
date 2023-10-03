@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="destiny2/images/favicon.ico">
+    <title>命运2 RogueLike 2.0</title>
+    <link rel="stylesheet" href="/destiny2/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/shop.css">
+</head>
+
+<body>
+    <div id="shop">
+
+        <div id="tooltip" class="" style="transform:translate(0px, 0px)">
+            <div class="wrapper">
+                <div class="header">
+                    <div class="name">合成感受器</div>
+                    <div class="type">
+                        <div class="kind">臂铠</div>
+                        <div class="rarity">异域</div>
+                    </div>
+                </div>
+                <div class="main">
+                    <div class="description">
+                        <div class="text">
+                            <p class="type">这是一件泰坦的异域装备。</p>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="monetary">
+                        <div class="name">
+                            <img class="light" src="images/light.png" alt="light.png">
+                            <p>光尘货币</p>
+                        </div>
+                        <div class="info">
+                            <p class="text"><span class="money">0</span> / <span class="sell">0</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="shop-list">
+            <div class="shop-top">
+                <h1 class="shop-title">随机商店</h1>
+                <div class="shop-options">
+                    <button class="button refresh-button">刷新商店</button>
+                    <p id="refresh-count">免费刷新次数：<span>0</span></p>
+                    <p id="pay-count">付费刷新费用：<span>0</span></p>
+                </div>
+                <hr class="shop-line">
+            </div>
+
+            <div class="fixed-list">
+                <h2 class="shop-title">固定售卖</h2>
+                <hr class="shop-line">
+                <div class="item-list">
+                    <div class="item water-1" style="background-image:url('images/card.png')"></div>
+                    <div class="item water-2" style="background-image:url('images/card.png')"></div>
+                    <div class="item water-3" style="background-image:url('images/card.png')"></div>
+                    <div class="item draw-count" style="background-image:url('images/card.png')"></div>
+                </div>
+            </div>
+
+            <div class="random-list">
+                <h2 class="shop-title">随机售卖</h2>
+                <hr class="shop-line">
+                <div class="item-list">
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 圣水模态框 -->
+    <div class="modal fade" id="card-model" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="card-modelLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h1 class="title">选择要删除的卡牌</h1>
+                    <div class="card-list-box">
+
+                        <div class="card-item" id="card-1">
+                            <div class="card">
+                                <div class="card-info">
+                                    <p class="card-id">GM1</p>
+                                    <p class="card-name">无限火力</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="card-confirm-box">
+                        <button type="button" class="button card-cancel card-close" data-dismiss="modal"
+                            aria-label="Close">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 商店关闭模态框 -->
+    <!-- <div class="shop-closed"></div> -->
+</body>
+
+<script src="/destiny2/js/jquery.min.js"></script>
+<script src="/destiny2/js/popper.min.js"></script>
+<script src="/destiny2/bootstrap/js/bootstrap.min.js"></script>
+<script src="/destiny2/js/lottery.js"></script>
+<script src="/destiny2/js/api.js"></script>
+<script src="/destiny2/js/shop.js"></script>
+
+</html>

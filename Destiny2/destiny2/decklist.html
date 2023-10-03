@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="destiny2/images/favicon.ico">
+    <title>命运2 RogueLike 2.0</title>
+    <link rel="stylesheet" href="/destiny2/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/decklist.css">
+</head>
+
+<body>
+    <div id="decklist">
+        <div class="decks">
+            <div class="deck-top">
+                <h1 class="deck-title">持有卡牌</h1>
+                <div class="deck-options">
+                    <button class="button get-button" data-toggle="modal" data-target="#card-model">卡牌选取</button>
+                    <button class="button take-button" data-toggle="modal" data-target="#take-model">顺手牵羊功能</button>
+                </div>
+                <hr class="deck-line">
+            </div>
+
+            <div class="card-list" id="mg">
+                <div class="card-list-header">
+                    <h2 class="deck-title">微弱增益 - 持有 <span class="count">0</span> 张</h2>
+                    <hr class="deck-line">
+                </div>
+            </div>
+
+            <div class="card-list" id="sg">
+                <div class="card-list-header">
+                    <h2 class="deck-title">强大增益 - 持有 <span class="count">0</span> 张</h2>
+                    <hr class="deck-line">
+                </div>
+            </div>
+
+            <div class="card-list" id="o">
+                <div class="card-list-header">
+                    <h2 class="deck-title">欧皇增益 - 持有 <span class="count">0</span> 张</h2>
+                    <hr class="deck-line">
+                </div>
+            </div>
+
+            <div class="card-list" id="md">
+                <div class="card-list-header">
+                    <h2 class="deck-title">微弱不适 - 持有 <span class="count">0</span> 张</h2>
+                    <hr class="deck-line">
+                </div>
+            </div>
+
+            <div class="card-list" id="sd">
+                <div class="card-list-header">
+                    <h2 class="deck-title">重度不适 - 持有 <span class="count">0</span> 张</h2>
+                    <hr class="deck-line">
+                </div>
+            </div>
+
+            <div class="card-list" id="u">
+                <div class="card-list-header">
+                    <h2 class="deck-title">反人类 - 持有 <span class="count">0</span> 张</h2>
+                    <hr class="deck-line">
+                </div>
+            </div>
+
+            <div class="card-list" id="t">
+                <div class="card-list-header">
+                    <h2 class="deck-title">特殊卡牌 - 持有 <span class="count">0</span> 张</h2>
+                    <hr class="deck-line">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 卡牌选取模态框 -->
+    <div class="modal fade" id="card-model" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="card-modelLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="card-list-box">
+
+                        <div class="add-card-item" id="card-1">
+                            <div class="card">
+                                <div class="card-info">
+                                    <p class="card-id">GM1</p>
+                                    <p class="card-name">无限火力</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="card-confirm-box">
+                        <button type="button" class="button card-cancel card-close" data-dismiss="modal"
+                            aria-label="Close">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 顺手牵羊 -->
+    <div class="modal fade" id="take-model" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="take-modelLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h1 class="take-title">打乱顺序</h1>
+                    <div class="take-list-box">
+
+                        <div class="take-item" id="take-1">
+                            <div class="card">
+                                <div class="take-info">
+                                    <p class="take-id">GM1</p>
+                                    <p class="take-name">无限火力</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="take-confirm-box">
+                        <button type="button" class="button take-cancel take-close" data-dismiss="modal"
+                            aria-label="Close">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="js/jquery.min.js"></script>
+<script src="/destiny2/js/popper.min.js"></script>
+<script src="/destiny2/bootstrap/js/bootstrap.min.js"></script>
+<script src="js/api.js"></script>
+<script src="js/decklist.js"></script>
+
+</html>

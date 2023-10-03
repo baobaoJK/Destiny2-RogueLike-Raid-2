@@ -1,0 +1,348 @@
+* {
+  font-weight: 100;
+  outline: none !important;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #12171C;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.button {
+  color: white;
+  font-size: 1.25rem;
+  padding: 0.375rem 4rem;
+  background-color: #405286;
+  border: 1px solid #616885;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+  cursor: pointer;
+}
+.button:hover {
+  opacity: 0.5;
+}
+
+.alert-custom {
+  position: fixed;
+  top: 2rem;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  width: 31.25rem;
+  z-index: 99999;
+}
+.alert-custom a {
+  position: absolute;
+  top: 1rem;
+  right: 0.5rem;
+  line-height: 0 !important;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1600px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 1199px) {
+  html {
+    font-size: 10px;
+  }
+}
+#options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+#options .map-pane {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50rem;
+  height: 37.5rem;
+}
+#options .map-pane .map-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 18.75rem;
+  height: 18.75rem;
+  margin-bottom: 1rem;
+}
+#options .map-pane .map-info .map-img {
+  width: 18.75rem;
+  height: auto;
+  background-color: white;
+}
+#options .map-pane .map-info .map-text {
+  width: 18.75rem;
+  margin: 1rem 0;
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  letter-spacing: 0.25rem;
+}
+#options .map-pane .map-level-box,
+#options .map-pane .map-chest-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 43.75rem;
+  height: 8.75rem;
+  margin-bottom: 2rem;
+}
+#options .map-pane .map-level-box p,
+#options .map-pane .map-chest-box p {
+  color: white;
+}
+#options .map-pane .map-level-box .map-step-bar,
+#options .map-pane .map-level-box .chest-step-bar,
+#options .map-pane .map-chest-box .map-step-bar,
+#options .map-pane .map-chest-box .chest-step-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 1rem;
+}
+#options .map-pane .map-level-box .map-step-bar::before,
+#options .map-pane .map-level-box .chest-step-bar::before,
+#options .map-pane .map-chest-box .map-step-bar::before,
+#options .map-pane .map-chest-box .chest-step-bar::before {
+  content: "1";
+  position: absolute;
+  top: calc(50% - 0.125rem);
+  width: 100%;
+  height: 0.25rem;
+  background-color: #E0E0E0;
+  z-index: 1;
+}
+#options .map-pane .map-level-box .map-step-bar .map-bar,
+#options .map-pane .map-level-box .map-step-bar .chest-bar,
+#options .map-pane .map-level-box .chest-step-bar .map-bar,
+#options .map-pane .map-level-box .chest-step-bar .chest-bar,
+#options .map-pane .map-chest-box .map-step-bar .map-bar,
+#options .map-pane .map-chest-box .map-step-bar .chest-bar,
+#options .map-pane .map-chest-box .chest-step-bar .map-bar,
+#options .map-pane .map-chest-box .chest-step-bar .chest-bar {
+  position: absolute;
+  top: calc(50% - 0.125rem);
+  width: 0%;
+  height: 0.25rem;
+  background-color: #247cff;
+  z-index: 1;
+  -webkit-transition: width 0.7s;
+  transition: width 0.7s;
+}
+#options .map-pane .map-level-box .map-step-bar .step,
+#options .map-pane .map-level-box .chest-step-bar .step,
+#options .map-pane .map-chest-box .map-step-bar .step,
+#options .map-pane .map-chest-box .chest-step-bar .step {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: white;
+  border: 3px solid #E0E0E0;
+  border-radius: 50%;
+  -webkit-transition: border 0.7s;
+  transition: border 0.7s;
+  z-index: 2;
+}
+#options .map-pane .map-level-box .map-step-bar .step.active,
+#options .map-pane .map-level-box .chest-step-bar .step.active,
+#options .map-pane .map-chest-box .map-step-bar .step.active,
+#options .map-pane .map-chest-box .chest-step-bar .step.active {
+  border: 3px solid #247cff;
+}
+#options .options-pane :nth-child(n) {
+  margin: 0 0.5rem;
+}
+
+#map-model .modal-lg {
+  min-width: 75rem;
+  max-width: 75rem;
+}
+#map-model .modal-content {
+  background-color: #12171C;
+}
+#map-model .modal-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 37.5rem;
+}
+#map-model .modal-body .map-list-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 30rem;
+}
+#map-model .modal-body .map-list-box .map-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  width: 14rem;
+  height: 8.4375rem;
+  margin: 1rem 2rem;
+  color: white;
+  font-size: 1rem;
+  letter-spacing: 0.125rem;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+  cursor: pointer;
+}
+#map-model .modal-body .map-list-box .map-item:hover {
+  opacity: 0.5;
+}
+#map-model .modal-body .map-list-box .map-item img {
+  width: 100%;
+  height: 100%;
+}
+
+#money-model .modal-body,
+#card-model .modal-body {
+  background-color: #12171C;
+}
+#money-model .modal-body .money-input-box,
+#money-model .modal-body .card-input-box,
+#card-model .modal-body .money-input-box,
+#card-model .modal-body .card-input-box {
+  margin-bottom: 2rem;
+}
+#money-model .modal-body .money-input-box label,
+#money-model .modal-body .money-input-box input,
+#money-model .modal-body .card-input-box label,
+#money-model .modal-body .card-input-box input,
+#card-model .modal-body .money-input-box label,
+#card-model .modal-body .money-input-box input,
+#card-model .modal-body .card-input-box label,
+#card-model .modal-body .card-input-box input {
+  width: 100%;
+}
+#money-model .modal-body .money-input-box label,
+#money-model .modal-body .card-input-box label,
+#card-model .modal-body .money-input-box label,
+#card-model .modal-body .card-input-box label {
+  color: white;
+  font-size: 1rem;
+}
+#money-model button,
+#card-model button {
+  width: 100%;
+}/*# sourceMappingURL=options.css.map */

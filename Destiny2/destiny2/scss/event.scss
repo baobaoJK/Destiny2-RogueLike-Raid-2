@@ -1,0 +1,120 @@
+@use "app.scss";
+
+#event {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    // 事件标题
+    .event-title {
+        color: white;
+        font-size: 1.75rem;
+        font-weight: 100;
+        letter-spacing: 0.5rem;
+        margin-bottom: 2rem;
+    }
+
+
+    // 事件列表
+    .event-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 2rem;
+
+        .event-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 3rem;
+            width: 15.625rem;
+            height: 37.5rem;
+
+            .event-item {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                width: 15.625rem;
+                height: 26.25rem;
+                margin: 2rem 0rem;
+                transform: scale(1);
+                transform-style: preserve-3d;
+                transition: transform 1s;
+
+                &.flip {
+                    transform: rotateY(180deg);
+                }
+
+                .event-card {
+                    width: 15.625rem;
+                    height: 26.25rem;
+                    border-radius: 1rem;
+                    background-size: cover;
+                    transition: opacity .3s;
+                    background-image: url('../images/event/event.png');
+                }
+
+                // 卡片样式
+                .event-front,
+                .event-back {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    backface-visibility: hidden;
+                }
+
+                .event-front {
+                    transform: rotateY(180deg);
+
+                    .event-info {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: space-around;
+                        width: 90%;
+                        height: 90%;
+                        font-size: 1.25rem;
+                        color: white;
+                        text-align: center;
+                        background-color: #0005;
+                        border-radius: 0.25rem;
+
+                        p {
+                            margin-bottom: 1rem;
+                        }
+                    }
+                }
+            }
+
+            // 事件信息
+            .event-time {
+                width: 70%;
+                text-align: center;
+                font-size: 1.5rem;
+                color: white;
+                letter-spacing: 0.5rem;
+                margin-bottom: 1rem;
+            }
+
+            // 悬赏名称
+            .event-name {
+                width: 100%;
+                text-align: center;
+                font-size: 1.5rem;
+                color: white;
+                letter-spacing: 0.5rem;
+            }
+        }
+    }
+
+    .audio {
+        display: none;
+    }
+}

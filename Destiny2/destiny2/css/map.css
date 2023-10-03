@@ -1,0 +1,150 @@
+* {
+  font-weight: 100;
+  outline: none !important;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #12171C;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.button {
+  color: white;
+  font-size: 1.25rem;
+  padding: 0.375rem 4rem;
+  background-color: #405286;
+  border: 1px solid #616885;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+  cursor: pointer;
+}
+.button:hover {
+  opacity: 0.5;
+}
+
+.alert-custom {
+  position: fixed;
+  top: 2rem;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  width: 31.25rem;
+  z-index: 99999;
+}
+.alert-custom a {
+  position: absolute;
+  top: 1rem;
+  right: 0.5rem;
+  line-height: 0 !important;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1600px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 1199px) {
+  html {
+    font-size: 10px;
+  }
+}
+#map {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  letter-spacing: 0.25rem;
+}
+#map .map-title {
+  width: 100%;
+  margin: 2rem 0;
+  text-align: center;
+  color: white;
+}
+#map .map-roll-list {
+  width: 55rem;
+  height: 30.9375rem;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+#map .map-roll-list .map-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#map .map-roll-list .map-list img {
+  width: 55rem;
+  height: 30.9375rem;
+  margin-right: 2rem;
+  background-size: cover;
+}
+#map .map-text {
+  height: 4rem;
+  margin-bottom: 2rem;
+  color: white;
+  opacity: 0;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+#map .map-button {
+  background-color: rgb(73, 125, 230);
+  outline: none !important;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.5rem 2rem;
+  font-size: 1.25rem;
+  color: white;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+#map .map-button:hover {
+  opacity: 0.6;
+}
+#map .map-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}/*# sourceMappingURL=map.css.map */
