@@ -34,8 +34,7 @@ $(function () {
                 '</div>' +
                 '<div class="event-card event-back"></div>' +
                 '</div>' +
-                '<p class="event-time"></p>' +
-                '<p class="event-name">- 个人事件 -</p>' +
+                '<p class="event-name">- 全局事件 -</p>' +
                 '</div>');
         }
 
@@ -77,28 +76,28 @@ function runEvent(eventName) {
     let players = shuffle([1, 2, 3, 4, 5, 6]);
 
     // 紧急支援
-    if (eventName == "QS1") {
-        let dungeon = lottery(gameConfig.dungeon);
+    if (eventName == "MAYDAY") {
+        let dungeon = lottery(gameConfig.dungeons);
         showAlert("玩家 " + players[0] + " | " + players[1] + " | " + players[2] + " 需前往 - " + dungeon.name + " -");
     }
 
     // 五谷丰登
-    if (eventName == "QS9") {
+    if (eventName == "Bumper-Harvest") {
         $("#deck-model").modal("show");
 
         let deck = [];
 
         // 微弱增益
         while (deck.length != 6) {
-            card = lottery(gameConfig.deck.mg);
+            card = lottery(gameConfig.deck.MicroGain);
             if (checkDeck(deck, card)) {
                 deck.push(card);
             };
         }
 
         for (let i = 0; i < deck.length; i++) {
-            $("#card-" + (i + 1) + " .card-id").text(deck[i].id);
-            $("#card-" + (i + 1) + " .card-name").text(deck[i].name);
+            $("#card-" + (i + 1) + " .card-id").text("-" + deck[i].name + "-");
+            $("#card-" + (i + 1) + " .card-name").text("-" + deck[i].cardName + "-");
             $("#card-" + (i + 1)).attr("data-id", (i + 1));
         }
 
