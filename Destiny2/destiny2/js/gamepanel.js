@@ -31,13 +31,17 @@ $(function () {
 
     // 名片设置
 
-    if (gameConfig.role != "captain") {
+    if (gameConfig.roleName == "和泉纱雾") {
+        $(".image").attr("style", "background-image: url(/destiny2/images/emblem/es-w.jpg);");
+        $(".icon").attr("style", "background-image: url(/destiny2/images/emblem/es_icon.png);");
+    }
+    else if (gameConfig.position != "captain") {
         $(".image").attr("style", "background-image: url(/destiny2/images/emblem/" + gameConfig.role + "-w.jpg);");
         $(".icon").attr("style", "background-image: url(/destiny2/images/emblem/" + gameConfig.role + "_icon.png);");
     }
     else {
-        $(".image").attr("style", "background-image: url(/destiny2/images/emblem/es-w.jpg);");
-        $(".icon").attr("style", "background-image: url(/destiny2/images/emblem/es_icon.png);");
+        $(".image").attr("style", "background-image: url(/destiny2/images/emblem/" + gameConfig.position + "-w.jpg);");
+        $(".icon").attr("style", "background-image: url(/destiny2/images/emblem/" + gameConfig.position + "_icon.png);");
     }
 });
 
@@ -88,7 +92,7 @@ function startGame() {
             globalEventNumbers = shuffle(globalEventNumbers);
             console.log("----全局事件-----");
             console.log(globalEventNumbers);
-            
+
             if (globalEventNumbers[0] == 1) {
                 globalEventAudio.play();
                 let globalEvent = lotteryByCount(gameConfig.globalevent);
