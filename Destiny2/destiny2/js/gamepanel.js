@@ -31,9 +31,9 @@ $(function () {
 
     // 名片设置
 
-    if (gameConfig.position != "player") {
-        $(".image").attr("style", "background-image: url(/destiny2/images/emblem/" + gameConfig.position + "-w.jpg);");
-        $(".icon").attr("style", "background-image: url(/destiny2/images/emblem/" + gameConfig.position + "_icon.png);");
+    if (gameConfig.role != "captain") {
+        $(".image").attr("style", "background-image: url(/destiny2/images/emblem/" + gameConfig.role + "-w.jpg);");
+        $(".icon").attr("style", "background-image: url(/destiny2/images/emblem/" + gameConfig.role + "_icon.png);");
     }
     else {
         $(".image").attr("style", "background-image: url(/destiny2/images/emblem/es-w.jpg);");
