@@ -7,14 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="images/favicon.ico">
     <title>命运2 RogueLike 2.0</title>
-    <link rel="stylesheet" href="/destiny2/css/home.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/home.css">
 </head>
 
 <body>
     <div id="home">
         <div class="title">选择游玩角色</div>
         <div class="emblems">
-            <a class="role" href="gamepanel.html" id="titan">
+            <a class="role" href="gamepanel.html" id="titan" data-toggle="modal" data-target="#role-model">
                 <div class="emblem titan">
                     <div class="description">
                         <p class="name">泰坦</p>
@@ -24,7 +25,7 @@
                 </div>
             </a>
 
-            <a class="role" href="gamepanel.html" id="hunter">
+            <a class="role" href="gamepanel.html" id="hunter" data-toggle="modal" data-target="#role-model">
                 <div class="emblem hunter">
                     <div class="description">
                         <p class="name">猎人</p>
@@ -34,7 +35,7 @@
                 </div>
             </a>
 
-            <a class="role" href="gamepanel.html" id="warlock">
+            <a class="role" href="gamepanel.html" id="warlock" data-toggle="modal" data-target="#role-model">
                 <div class="emblem warlock">
                     <div class="description">
                         <p class="name">术士</p>
@@ -44,7 +45,7 @@
                 </div>
             </a>
 
-            <a class="role" href="gamepanel.html" id="captain">
+            <a class="role" href="gamepanel.html" id="captain" data-toggle="modal" data-target="#captain-model">
                 <div class="emblem corrupted">
                     <div class="description">
                         <p class="name">火力战队队长</p>
@@ -55,12 +56,12 @@
             </a>
 
             <div class="list">
-                <ul>
-                    <li><a href="destiny2.html">游戏说明</a></li>
-                    <li><a href="gameplay.html">游戏玩法</a></li>
-                    <li><a href="update.html">更新日志</a></li>
-                    <li><a href="copyright.html">版权声明</a></li>
-                </ul>
+                <div class="link">
+                    <a href="destiny2.html" target="_blank">游戏说明</a>
+                    <a href="gameplay.html" target="_blank">游戏玩法</a>
+                    <a href="update.html" target="_blank">更新日志</a>
+                    <a href="copyright.html" target="_blank">版权声明</a>
+                </div>
                 <button class="button" id="delete-button">一键清除游戏数据</button>
             </div>
         </div>
@@ -70,11 +71,87 @@
     <div class="footer">
         <p>当前网页版本为 RogueLike Raid Version 2.0 | 请完整的阅读 《游戏说明》 与 《游戏玩法》 后再开始游戏，以免影响游戏体验</p>
     </div>
+
+    <!-- 角色信息模态框 -->
+    <div class="modal fade" id="role-model" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="role-modelLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h1 class="role-title">设置游戏角色信息</h1>
+
+                    <div class="role-id-box">
+                        <p class="role-id-title">选择游戏编号</p>
+                        <div class="role-radio">
+                            <label for="role-id-2"><input type="radio" class="role-id" name="role-id" id="role-id-2"
+                                    value="2">2号</label>
+                            <label for="role-id-3"><input type="radio" class="role-id" name="role-id" id="role-id-3"
+                                    value="3">3号</label>
+                            <label for="role-id-4"><input type="radio" class="role-id" name="role-id" id="role-id-4"
+                                    value="4">4号</label>
+                            <label for="role-id-5"><input type="radio" class="role-id" name="role-id" id="role-id-5"
+                                    value="5">5号</label>
+                            <label for="role-id-6"><input type="radio" class="role-id" name="role-id" id="role-id-6"
+                                    value="6">6号</label>
+                        </div>
+                    </div>
+
+                    <div class="role-name-box">
+                        <p class="role-name-title">输入你的游戏名称 / 游戏ID</p>
+                        <input type="text" name="role-name" id="role-name">
+                    </div>
+
+                    <div class="role-confirm-box">
+                        <button type="button" class="button role-confirm">确认</button>
+                        <button type="button" class="button role-cancel role-close" data-dismiss="modal"
+                            aria-label="Close">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 队长角色信息模态框 -->
+    <div class="modal fade" id="captain-model" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="captain-modelLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h1 class="captain-title">设置游戏角色信息</h1>
+
+                    <div class="captain-name-box">
+                        <p class="captain-name-title">输入你的游戏名称 / 游戏ID</p>
+                        <input type="text" name="captain-name" id="captain-name">
+                    </div>
+
+                    <div class="captain-position-box">
+                        <p class="captain-position-title">选择游玩职业</p>
+                        <div class="captain-radio">
+                            <label for="captain-titan"><input type="radio" class="captain-position"
+                                    name="captain-position" id="captain-titan" value="titan">泰坦</label>
+                            <label for="captain-hunter"><input type="radio" class="captain-position"
+                                    name="captain-position" id="captain-hunter" value="hunter">猎人</label>
+                            <label for="captain-warlock"><input type="radio" class="captain-position"
+                                    name="captain-position" id="captain-warlock" value="warlock">术士</label>
+                        </div>
+                    </div>
+
+                    <div class="captain-confirm-box">
+                        <button type="button" class="button captain-confirm captain-close">确认</button>
+                        <button type="button" class="button captain-cancel captain-close" data-dismiss="modal"
+                            aria-label="Close">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
-<script src="/destiny2/js/jquery.min.js"></script>
-<script src="/destiny2/js/api.js"></script>
-<script src="/destiny2/js/lottery.js"></script>
-<script src="/destiny2/js/home.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="js/api.js"></script>
+<script src="js/lottery.js"></script>
+<script src="js/home.js"></script>
 
 </html>

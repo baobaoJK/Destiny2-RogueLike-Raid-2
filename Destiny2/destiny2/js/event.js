@@ -1,68 +1,97 @@
 $(function () {
+    // 读取游戏存档
     gameConfig = read();
 
-    const event = gameConfig.playerEvent;
-    const eventTime = gameConfig.playerEventTime;
+    // 音频
+    let audio = $(".audio")[0];
+    audio.volume = 0.1;
+
+    const event = gameConfig.playereventlist;
 
     console.log(event);
 
-    let eventTimeInterval = setInterval(() => {
-        if (eventTime) {
-            showAlert("事件已超时需接受惩罚");
-            gameConfig.playerEvent = null;
-            gameConfig.playerEventShow = false;
-            save(gameConfig);
-            eventTimeInterval = null;
-        }
-    }, 500);
-
-    if (event != null | event != undefined | eventTime) {
-
-        if (eventTime) {
-            $(".event-time").text("事件已超时需接受惩罚");
-            return;
-        }
+    if (event.length != 0) {
 
         $(".event-title").text("当前有新事件");
-        $(".title").text(event.name);
-        $(".text").text(event.description);
+        $(".event-list .event-box").remove();
 
-        $(".event-item .event-card").click(function (e) {
-            e.preventDefault();
+        for (let i = 0; i < event.length; i++) {
 
-            // Aatrox
-            if (gameConfig.playerEvent.id == "PS2") {
-                $("audio")[0].play();
-            }
+            let stage = event[i].stage;
+            let confirmButton = stage == "none" ? "block" : "none";
+            let finishButton = stage == "active" ? "block" : "none";
 
-            gameConfig.playerEventShow = true;
-            save(gameConfig);
+            $(".event-list").append('<div class="event-box">' +
+                '<div class= "event-item" id="' + event[i].name + '">' +
+                '<div class="event-card event-front">' +
+                '<div class="event-info">' +
+                '<div>' +
+                '<p class="title">- ' + event[i].eventName + ' -</p>' +
+                '<p class="sub-title">- ' + event[i].name + ' -</p>' +
+                '</div>' +
+                '<p class="text">' + event[i].description + '</p>' +
+                '<div class="buttons">' +
+                '<button class="button confirm ' + event[i].name + '" style="display: ' + confirmButton + ';" data-event="false" data-name="' + event[i].name + '">接受</button>' +
+                '<button class="button finish ' + event[i].name + '" style="display: ' + finishButton + ';" data-event="false" data-name="' + event[i].name + '">完成</button>' +
+                '</div>' +
+                '</div>' +
+                '</div>' +
+                '<div class="event-card event-back"></div>' +
+                '</div>' +
+                '<p class="event-time"></p>' +
+                '<p class="event-name">- 个人事件 -</p>' +
+                '</div>');
 
-            $(".event-item").addClass("flip");
-        });
+            $(".event-item").click(function (e) {
+                e.preventDefault();
+
+                // Aatrox
+                if ($(this).attr("id") == "Aatrox") {
+                    audio.play();
+                }
+
+                $(this).addClass("flip");
+            });
 
 
-        $(".confirm").click(function (e) {
-            e.preventDefault();
-            runEvent();
-            $(".event-title").text("当前没有新事件");
+            $(".confirm").click(function (e) {
+                e.preventDefault();
 
-            gameConfig.playerEvent = null;
-            gameConfig.playerEventTime = false;
-            save(gameConfig);
-        });
+                $(this).remove();
+                $("." + $(this).attr("data-name")).attr("style", "display:block");
+
+                runEvent($(this).attr("data-name"));
+
+            });
+
+            $(".finish").click(function (e) {
+                e.preventDefault();
+
+                let dataName = $(this).attr("data-name");
+
+                // let title = $("#" + dataName + " .title").text();
+
+                showAlert("已完成事件");
+                deleteEvent(dataName);
+                $("#" + $(this).attr("data-name")).parent().remove();
+            });
+        }
     }
 });
 
 // 个人事件处理机制 ↓
-function runEvent() {
-    let eventId = gameConfig.playerEvent.id;
+function runEvent(eventName) {
 
-    // PS2
-    if (eventId == "PS2") {
+    let event = gameConfig.playereventlist;
 
-        for (let i = 0; i < gameConfig.decklist.sd.length; i++) {
-            if (gameConfig.decklist.sd[i].id == "Aatrox") {
+    // for (let i = 0; i < event.length; i++) {
+    //     if (event[i].stage == "active") return;
+    // }
+
+    // 亚托克斯
+    if (eventName == "Aatrox") {
+        for (let i = 0; i < gameConfig.decklist.StrongDiscomfort.length; i++) {
+            if (gameConfig.decklist.StrongDiscomfort[i].id == "Aatrox") {
                 showAlert("卡牌 - 亚托克斯 - 已存在");
                 return;
             }
@@ -70,19 +99,24 @@ function runEvent() {
 
         let aatroxCard = {
             "id": "Aatrox",
-            "type": "sd",
-            "name": "亚托克斯",
+            "type": "StrongDiscomfort",
+            "name": "Aatrox",
+            "cardName": "亚托克斯",
             "description": "获得一把挽歌且绑定威能位无法更换，可被【贱卖】【重铸】和2阶圣水解除，前二者失去挽歌，后者保留",
+            "illustrate": "无",
+            "priority": 0,
             "weight": 0,
             "count": 0
         };
-        gameConfig.decklist.sd.push(aatroxCard);
+        gameConfig.decklist.StrongDiscomfort.push(aatroxCard);
+
+        save(gameConfig);
 
         showAlert("已添加卡牌 - 亚托克斯 - 至重度不适中");
     }
 
-    // PS5
-    if (eventId == "PS5") {
+    // 顺手牵羊
+    if (eventName == "Take-Others") {
         let randomPlayer = Math.round(Math.random() * 5 + 1);
 
         while (randomPlayer == gameConfig.roleId) {
@@ -92,15 +126,61 @@ function runEvent() {
         showAlert("抽取 " + randomPlayer + " 号玩家的一张卡");
     }
 
-    // PS9
-    if (eventId == "PS9") {
+    // 无中生有
+    if (eventName == "Create-Nothing") {
         gameConfig.cardDrawsCount += 2;
         save(gameConfig);
     }
 
-    // PS10
-    if (eventId == "PS10") {
+    // 窃取
+    if (eventName == "Steal") {
         gameConfig.refreshCount += 1;
         save(gameConfig);
     }
+
+    // 改变事件状态
+    for (let i = 0; i < event.length; i++) {
+        if (eventName == event[i].name) {
+            // showAlert("已接受事件 -" + gameConfig.playereventlist[i].eventName + "-");
+            gameConfig.playereventlist[i].stage = "active";
+            save(gameConfig);
+            // break;
+        }
+    }
+}
+
+// 事件回收机制
+function deleteEvent(eventName) {
+
+    console.log("事件回收机制");
+
+    let event = gameConfig.playerevent;
+
+    for (let i = 0; i < event.length; i++) {
+        if (event[i].name == eventName) {
+            gameConfig.playerevent[i].count += 1;
+            save(gameConfig);
+            break;
+        }
+    }
+
+    let playerevent = gameConfig.playereventlist;
+
+    for (let i = 0; i < playerevent.length; i++) {
+        if (playerevent[i].name == eventName) {
+            playerevent[i] = null;
+            break;
+        }
+    }
+
+    let newEventlist = [];
+
+    for (let i = 0; i < playerevent.length; i++) {
+        if (playerevent[i] != null) {
+            newEventlist.push(playerevent[i]);
+        }
+    }
+
+    gameConfig.playereventlist = newEventlist;
+    save(gameConfig);
 }

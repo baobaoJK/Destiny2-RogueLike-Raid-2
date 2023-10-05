@@ -1,4 +1,8 @@
 $(function () {
+    // 读取游戏存档
+    gameConfig = read();
+
+    // 初始化
     init();
 
     // 提示框
@@ -10,116 +14,6 @@ $(function () {
         let y = e.pageY + 8;
 
         tooltip.attr("style", "transform:translate(" + x + "px, " + y + "px)");
-    });
-
-    // 圣水1 点击事件
-    $(".water-1").click(function (e) {
-        e.preventDefault();
-        const decklist = gameConfig.decklist.md;
-        console.log(decklist);
-        if (gameConfig.money < gameConfig.shop.fixedItems[0].sell) {
-            alert("货币不足无法购买");
-            return;
-        }
-
-        if (decklist == null | decklist.length == 0) {
-            alert("你当前没有可以消除的卡牌");
-            return;
-        }
-
-        $("#card-model").modal("show");
-
-        setCardItem("md");
-
-        if (gameConfig.profiteer) {
-            gameConfig.money -= (gameConfig.shop.fixedItems[0].sell + 1);
-        }
-        else {
-            gameConfig.money -= gameConfig.shop.fixedItems[0].sell;
-        }
-        save(gameConfig);
-        parentElement = parentJQuery(".money span");
-        parentElement.text(gameConfig.money);
-        $("#tooltip .money").text(gameConfig.money);
-    });
-
-    // 圣水2 点击事件
-    $(".water-2").click(function (e) {
-        e.preventDefault();
-        const decklist = gameConfig.decklist.sd;
-        console.log(decklist);
-        if (gameConfig.money < gameConfig.shop.fixedItems[1].sell) {
-            alert("货币不足无法购买");
-            return;
-        }
-
-        if (decklist == null | decklist.length == 0) {
-            alert("你当前没有可以消除的卡牌");
-            return;
-        }
-
-        $("#card-model").modal("show");
-
-        setCardItem("sd");
-
-        if (gameConfig.profiteer) {
-            gameConfig.money -= (gameConfig.shop.fixedItems[1].sell + 1);
-        }
-        else {
-            gameConfig.money -= gameConfig.shop.fixedItems[1].sell;
-        }
-        save(gameConfig);
-        parentElement = parentJQuery(".money span");
-        parentElement.text(gameConfig.money);
-        $("#tooltip .money").text(gameConfig.money);
-    });
-
-    // 圣水3 点击事件
-    $(".water-3").click(function (e) {
-        e.preventDefault();
-        const decklist = gameConfig.decklist.u;
-        if (gameConfig.money < gameConfig.shop.fixedItems[2].sell) {
-            alert("货币不足无法购买");
-            return;
-        }
-
-        if (decklist == null | decklist.length == 0) {
-            alert("你当前没有可以消除的卡牌");
-            return;
-        }
-
-        $("#card-model").modal("show");
-
-        setCardItem("u");
-
-        if (gameConfig.profiteer) {
-            gameConfig.money -= (gameConfig.shop.fixedItems[2].sell + 1);
-        }
-        else {
-            gameConfig.money -= gameConfig.shop.fixedItems[2].sell;
-        }
-
-        save(gameConfig);
-        parentElement = parentJQuery(".money span");
-        parentElement.text(gameConfig.money);
-        $("#tooltip .money").text(gameConfig.money);
-    });
-
-    // 抽卡机会
-    $(".draw-count").click(function (e) {
-        e.preventDefault();
-
-        if (gameConfig.money < gameConfig.shop.fixedItems[3].sell) {
-            alert("货币不足");
-            return;
-        }
-
-        gameConfig.money -= gameConfig.shop.fixedItems[3].sell;
-        gameConfig.cardDrawsCount += 1;
-        save(gameConfig);
-        parentElement = parentJQuery(".money span");
-        parentElement.text(gameConfig.money);
-        $("#tooltip .money").text(gameConfig.money);
     });
 
     // 物品栏
@@ -140,6 +34,72 @@ $(function () {
             tooltip.removeClass("show");
         });
     }
+
+    // 圣水点击事件
+    $(".water").click(function (e) {
+        e.preventDefault();
+
+        // 卡组类型
+        const deckType = $(this).attr("data-deck");
+        const decklist = gameConfig.decklist[deckType];
+
+        // 物品属性
+        let itemSell = 0;
+
+        switch (deckType) {
+            case "MicroDiscomfort":
+                itemSell = 0;
+                break;
+            case "StrongDiscomfort":
+                itemSell = 1;
+                break;
+            case "Unacceptable":
+                itemSell = 2;
+                break;
+            default:
+                break;
+        }
+
+        // 售价
+        let sell = gameConfig.shop.fixedItems[itemSell].sell;
+
+        if (profiteer) sell += 1;
+
+        if (gameConfig.money < sell) {
+            showAlert("货币不足无法购买");
+            return;
+        }
+
+        // 判断
+        if (decklist == null | decklist.length == 0) {
+            showAlert("你当前没有可以消除的卡牌");
+            return;
+        }
+
+        setCardItem(deckType, sell);
+
+        $("#card-model").modal("show");
+    });
+
+    // 抽卡机会
+    $(".draw-count").click(function (e) {
+        e.preventDefault();
+
+        let sell = gameConfig.shop.fixedItems[3].sell;
+
+        if (gameConfig.money < sell) {
+            showAlert("货币不足");
+            return;
+        }
+
+        gameConfig.money -= gameConfig.shop.fixedItems[3].sell;
+        gameConfig.drawCount += 1;
+        save(gameConfig);
+
+        showAlert("您已增加一次抽卡机会");
+
+        setGamePanel();
+    });
 
     // 随机售卖栏
     $(".random-list .item").click(function (e) {
@@ -167,19 +127,19 @@ $(function () {
             case "pay":
                 let money = gameConfig.money;
                 if (money - gameConfig.refreshMoney < 0) {
-                    alert("货币不足");
+                    showAlert("货币不足");
                     return;
                 };
 
                 gameConfig.money -= gameConfig.refreshMoney;
                 gameConfig.refreshMoney += 1;
-                parentElement = parentJQuery(".money span");
-                parentElement.text(gameConfig.money);
 
                 $("#pay-count span").text(gameConfig.refreshMoney);
 
                 refreshShopItem();
                 save(gameConfig);
+
+                setGamePanel();
                 break;
             default:
                 break;
@@ -206,31 +166,88 @@ let hunterArmor;
 // 术士装备列表
 let warlockArmor;
 
+// 商店价格提高
+let profiteer;
+
 // 设置默认信息
 function init() {
-    gameConfig = read();
 
     // 商店检测
-    for (let i = 0; i < gameConfig.decklist.u.length; i++) {
-        let card = gameConfig.decklist.u[i];
+    for (let i = 0; i < gameConfig.decklist["Unacceptable"].length; i++) {
+        let card = gameConfig.decklist["Unacceptable"][i];
 
-        if (card.id == "U2") {
+        if (card.name == "Stillwater-Prison") {
             showAlert("您的商店系统已被关闭！");
-            $("body").append('<div class="shop-closed"></div>');
-            return;
+            $("body").append('<div class="shop-closed"><button class="button open-shop">开启商店</button></div>');
+
+            $(".open-shop").click(function (e) {
+                e.preventDefault();
+
+                let sell = 12;
+
+                if (profiteer) sell += 1;
+
+                if (gameConfig.money < sell) {
+                    showAlert("你需要 " + sell + " 货币才能解锁商店");
+                }
+                else {
+                    let deck = gameConfig.deck["Unacceptable"];
+
+                    let name = "Stillwater-Prison";
+
+                    for (let i = 0; i < deck.length; i++) {
+                        if (deck[i].name == name) {
+                            deck[i].count += 1;
+                            break;
+                        }
+                    }
+
+                    let decklist = gameConfig.decklist["Unacceptable"];
+
+                    for (let i = 0; i < decklist.length; i++) {
+                        if (decklist[i].name == name) {
+                            decklist[i] = null;
+                            break;
+                        }
+                    }
+
+                    let newDecklist = [];
+
+                    for (let i = 0; i < decklist.length; i++) {
+                        if (decklist[i] != null) {
+                            newDecklist.push(decklist);
+                        }
+                    }
+
+                    gameConfig.money -= sell;
+                    gameConfig.decklist["Unacceptable"] = newDecklist;
+
+                    save(gameConfig);
+
+                    showAlert("你已重新开启商店系统");
+                    $(".shop-closed").remove();
+                    setGamePanel();
+                }
+            });
         }
     }
 
     // 价格检测
-    for (let i = 0; i < gameConfig.decklist.sd.length; i++) {
-        let card = gameConfig.decklist.sd[i];
-        if (card.id == "SD2") {
+    for (let i = 0; i < gameConfig.decklist["StrongDiscomfort"].length; i++) {
+        let card = gameConfig.decklist["StrongDiscomfort"][i];
+        if (card.name == "Reicher-Playboy") {
+            profiteer = true;
             showAlert("购买任意物品价格提高 1 货币！");
-            gameConfig.profiteer = true;
+            break;
         }
         else {
-            gameConfig.profiteer = false;
+            profiteer = false;
         }
+    }
+
+    // 恶魔契约检测
+    if (gameConfig.devilspact != 0) {
+        showAlert("恶魔契约已启用");
     }
 
     $("#pay-count span").text(gameConfig.refreshMoney);
@@ -243,7 +260,6 @@ function init() {
     hunterArmor = gameConfig.hunterArmor;
     warlockArmor = gameConfig.warlockArmor;
 
-    setFristShop();
     setShopItem();
     randomShopItem();
 }
@@ -315,12 +331,13 @@ function setToolTips(type, number) {
     money.text(gameConfig.money);
     // sell.text(info.sell);
 
-    if (gameConfig.profiteer) {
+    if (profiteer) {
         sell.text(info.sell + 1);
     }
     else {
         sell.text(info.sell);
     }
+
     count.text(info.count);
 }
 
@@ -346,6 +363,8 @@ function randomShopItem() {
         $(randomListItem[i]).attr("data-name", gameConfig.shop.randomItems[i].name);
         $(randomListItem[i]).attr("data-number", i);
         $(randomListItem[i]).attr("data-type", "random");
+
+        if (gameConfig.shop.randomItems[i].name == "空物品") continue;
 
         switch (i) {
             case 0:
@@ -404,43 +423,34 @@ function buyShopItem(type, number) {
     let money = gameConfig.money;
     let sell = shopList.sell;
 
-    if (gameConfig.profiteer) {
-        sell += 1;
-    }
+    if (profiteer) sell += 1;
 
     // 货币不足
     if (money < sell) {
-        alert("货币不足无法购买");
+        showAlert("货币不足无法购买");
         return;
     }
 
     // 购买成功
     gameConfig.money = money - sell;
+
     shopList.count--;
-    save(gameConfig);
-    alert("购买 " + shopList.name + " 成功");
-    parentElement = parentJQuery(".money span");
-    parentElement.text(gameConfig.money);
-}
 
-// 第一次加载商店
-function setFristShop() {
-    let refreshMoney = gameConfig.refreshMoney;
-
-    if (refreshMoney > 0) {
-        return;
+    // 恶魔契约
+    if (gameConfig.devilspact != 0) {
+        gameConfig.devilspact -= 1;
+        gameConfig.drawCount += 1;
     }
 
-    gameConfig.refreshMoney = 2;
-
-    refreshShopItem();
-    randomShopItem();
-
     save(gameConfig);
+
+    showAlert("购买 " + shopList.name + " 成功");
+
+    setGamePanel();
 }
 
 // 设置卡牌信息
-function setCardItem(type) {
+function setCardItem(type, sell) {
     let deckList = gameConfig.decklist[type];
 
     $(".card-item").remove();
@@ -449,7 +459,7 @@ function setCardItem(type) {
             '<div class="card">' +
             '<div class="card-info">' +
             '<p class="card-id">' + deckList[i].id + '</p>' +
-            '<p class="card-name">' + deckList[i].name + '</p>' +
+            '<p class="card-name">' + deckList[i].cardName + '</p>' +
             '</div>' +
             '</div>' +
             '</div>');
@@ -461,6 +471,7 @@ function setCardItem(type) {
         e.preventDefault();
 
         const cardId = $(this).attr("data-id");
+        let card;
 
         if (cardId == "Aatrox") {
             deleteAatroxCard();
@@ -470,6 +481,7 @@ function setCardItem(type) {
 
         for (let i = 0; i < deckList.length; i++) {
             if (deckList[i].id == cardId) {
+                card = deckList[i];
                 deckList[i] = null;
 
                 let tempDeck = gameConfig.deck[type];
@@ -491,7 +503,14 @@ function setCardItem(type) {
             }
         }
 
-        console.log(deckList.length);
+        showAlert("你已删除 - " + card.cardName + " - 卡牌");
+
+        gameConfig.money -= sell;
+
+        save(gameConfig);
+
+        setGamePanel();
+
         $("#card-model").modal("hide");
     });
 }

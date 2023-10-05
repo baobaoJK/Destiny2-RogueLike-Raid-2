@@ -26,7 +26,6 @@ $(function () {
     // 遭遇战插旗点
     $("#map-door").click(function (e) {
         e.preventDefault();
-
         if (gameConfig.map == "") return;
 
         // 赏金任务
@@ -43,7 +42,7 @@ $(function () {
 
         // 设置赏金任务 与 添加抽卡次数
         gameConfig.bountylist = bountyList;
-        gameConfig.cardDrawsCount += 2;
+        gameConfig.drawCount += 2;
 
         // 刷新商店次数
         if (gameConfig.refreshCount != 1) gameConfig.refreshCount = 1;
@@ -59,12 +58,17 @@ $(function () {
         if (mapStepNum < mapSteps.length) {
             mapStepNum++;
             update(mapSteps, mapStepNum, mapBar, mapStepWidth);
-            if (mapStepNum == 2) return;
+            if (mapStepNum == 2) {
+                gameConfig.levelPoint = mapStepNum;
+
+                save(gameConfig);
+                return;
+            };
             nextLevel();
         }
     });
 
-    // 下一步按钮事件
+    // 获取隐藏箱事件
     chestNext.click(function (e) {
         e.preventDefault();
         if (gameConfig.map == "") return;
@@ -102,7 +106,7 @@ $(function () {
         e.preventDefault();
         const cardInput = $("#card");
 
-        gameConfig.cardDrawsCount = Number(cardInput.val());
+        gameConfig.drawCount = Number(cardInput.val());
         save(gameConfig);
 
         showAlert("已更抽卡次数为 " + cardInput.val());
@@ -186,6 +190,7 @@ function setMapInfo() {
             $(".map-step-bar").append('<div class="step map-step active">' + i + '</div>');
         }
         else {
+            // $(".map-step-bar").append('<div class="step map-step">CP</div>');
             $(".map-step-bar").append('<div class="step map-step">' + i + '</div>');
         }
     }

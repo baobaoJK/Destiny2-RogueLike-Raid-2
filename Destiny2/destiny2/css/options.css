@@ -16,11 +16,10 @@ h1,
 h2,
 h3,
 h4,
-h5 {
-  margin: 0;
-}
-
-p {
+h5,
+p,
+label {
+  color: white;
   margin: 0;
 }
 
@@ -134,8 +133,7 @@ ul li {
 }
 #options .map-pane .map-info .map-img {
   width: 18.75rem;
-  height: auto;
-  background-color: white;
+  height: 10.546875rem;
 }
 #options .map-pane .map-info .map-text {
   width: 18.75rem;
@@ -157,7 +155,7 @@ ul li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 43.75rem;
+  width: 50rem;
   height: 8.75rem;
   margin-bottom: 2rem;
 }

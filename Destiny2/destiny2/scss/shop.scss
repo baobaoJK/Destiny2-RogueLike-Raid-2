@@ -286,6 +286,9 @@
 
 // 商店关闭模态框
 .shop-closed {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: fixed;
     top: 0;
     left: 0;

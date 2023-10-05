@@ -45,23 +45,23 @@
                     }
 
                     @if ($i==1) {
-                        box-shadow: 0px 0px 1.25rem #546072;
+                        box-shadow: 0px 0px 1rem 0.25rem #546072;
                     }
 
                     @if($i==2) {
-                        box-shadow: 0px 0px 1.25rem #7FE4C5;
+                        box-shadow: 0px 0px 1rem 0.25rem #7FE4C5;
                     }
 
                     @if($i==3) {
-                        box-shadow: 0px 0px 1.25rem #D2C796;
+                        box-shadow: 0px 0px 1rem 0.25rem #D2C796;
                     }
 
                     @if($i==4) {
-                        box-shadow: 0px 0px 1.25rem #973B3A;
+                        box-shadow: 0px 0px 1rem 0.25rem #973B3A;
                     }
 
                     @if($i==5) {
-                        box-shadow: 0px 0px 1.25rem #6e43cb;
+                        box-shadow: 0px 0px 1rem 0.25rem #6e43cb;
                     }
                 }
             }
@@ -181,7 +181,7 @@
                         justify-content: center;
                         width: 85%;
                         height: 90%;
-                        font-size: 1.5rem;
+                        font-size: 1.25rem;
                         color: white;
                         text-align: center;
                         background-color: #0005;

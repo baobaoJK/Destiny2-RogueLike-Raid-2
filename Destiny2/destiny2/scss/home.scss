@@ -112,7 +112,7 @@
                 width: 5rem;
                 height: 2rem;
                 font-size: 1.875rem;
-                font-weight: 500;
+                font-weight: 400;
                 color: #E5D163;
             }
         }
@@ -138,13 +138,19 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 100%;
 
-        ul li {
-            margin-bottom: 0.5rem;
+        .link {
+            width: 100%;
+            margin-bottom: 2rem;
 
             a {
+                display: block;
+                float: left;
+                width: 25%;
                 color: white;
                 font-size: 1rem;
+                text-align: center;
                 transition: opacity .3s;
 
                 &:hover {
@@ -152,6 +158,7 @@
                 }
             }
         }
+
 
     }
 }
@@ -165,4 +172,138 @@
     width: 100%;
     height: 3rem;
     background-color: #F0F0F0;
+
+    p {
+        color: black;
+    }
+}
+
+// 角色信息框
+#role-model {
+    .modal-lg {
+        min-width: 40rem;
+        max-width: 40rem;
+    }
+
+    .modal-content {
+        background-color: #12171C;
+    }
+
+    .modal-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 20rem;
+        border-radius: 1rem;
+
+        .role-title {
+            font-weight: 100;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .role-id-box {
+            margin-bottom: 2rem;
+
+            .role-id-title {
+                font-size: 1rem;
+                text-align: center;
+                margin-bottom: 0.5rem;
+            }
+
+            .role-radio {
+
+                input {
+                    margin-right: 0.5rem;
+                }
+
+                label {
+                    margin-right: 1rem;
+                }
+            }
+        }
+
+        .role-name-box {
+            margin-bottom: 2rem;
+
+            p {
+                text-align: center;
+                margin-bottom: 0.5rem;
+            }
+
+            input {
+                width: 18.75rem;
+            }
+        }
+    }
+
+    button {
+        margin: 0 2rem;
+    }
+}
+
+// 队长角色信息框
+#captain-model {
+    .modal-lg {
+        min-width: 40rem;
+        max-width: 40rem;
+    }
+
+    .modal-content {
+        background-color: #12171C;
+    }
+
+    .modal-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 20rem;
+        border-radius: 1rem;
+
+        .captain-title {
+            font-weight: 100;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .captain-position-box {
+            margin-bottom: 2rem;
+
+            .captain-position-title {
+                font-size: 1rem;
+                text-align: center;
+                margin-bottom: 0.5rem;
+            }
+
+            .captain-radio {
+
+                input {
+                    margin-right: 0.5rem;
+                }
+
+                label {
+                    margin-right: 1rem;
+                }
+            }
+        }
+
+        .captain-name-box {
+            margin-bottom: 2rem;
+
+            p {
+                text-align: center;
+                margin-bottom: 0.5rem;
+            }
+
+            input {
+                width: 18.75rem;
+            }
+        }
+    }
+
+    button {
+        margin: 0 2rem;
+    }
 }

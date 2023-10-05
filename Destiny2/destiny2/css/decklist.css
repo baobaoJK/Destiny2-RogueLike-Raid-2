@@ -16,11 +16,10 @@ h1,
 h2,
 h3,
 h4,
-h5 {
-  margin: 0;
-}
-
-p {
+h5,
+p,
+label {
+  color: white;
   margin: 0;
 }
 
@@ -228,8 +227,10 @@ ul li {
 }
 #decklist .decks .card-list .card-item .card-name {
   text-align: center;
-  color: white;
   font-size: 1.5rem;
+}
+#decklist .decks .card-list .card-item .card-text {
+  font-size: 1rem;
 }
 
 #card-model .modal-lg {

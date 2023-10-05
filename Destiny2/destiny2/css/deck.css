@@ -16,11 +16,10 @@ h1,
 h2,
 h3,
 h4,
-h5 {
-  margin: 0;
-}
-
-p {
+h5,
+p,
+label {
+  color: white;
   margin: 0;
 }
 
@@ -130,8 +129,8 @@ ul li {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   cursor: pointer;
-  -webkit-box-shadow: 0px 0px 1.25rem #546072;
-          box-shadow: 0px 0px 1.25rem #546072;
+  -webkit-box-shadow: 0px 0px 1rem 0.25rem #546072;
+          box-shadow: 0px 0px 1rem 0.25rem #546072;
 }
 #deck .deck-list .deck .deck-1:hover {
   -webkit-transform: scale(1.05);
@@ -147,8 +146,8 @@ ul li {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   cursor: pointer;
-  -webkit-box-shadow: 0px 0px 1.25rem #7FE4C5;
-          box-shadow: 0px 0px 1.25rem #7FE4C5;
+  -webkit-box-shadow: 0px 0px 1rem 0.25rem #7FE4C5;
+          box-shadow: 0px 0px 1rem 0.25rem #7FE4C5;
 }
 #deck .deck-list .deck .deck-2:hover {
   -webkit-transform: scale(1.05);
@@ -164,8 +163,8 @@ ul li {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   cursor: pointer;
-  -webkit-box-shadow: 0px 0px 1.25rem #D2C796;
-          box-shadow: 0px 0px 1.25rem #D2C796;
+  -webkit-box-shadow: 0px 0px 1rem 0.25rem #D2C796;
+          box-shadow: 0px 0px 1rem 0.25rem #D2C796;
 }
 #deck .deck-list .deck .deck-3:hover {
   -webkit-transform: scale(1.05);
@@ -181,8 +180,8 @@ ul li {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   cursor: pointer;
-  -webkit-box-shadow: 0px 0px 1.25rem #973B3A;
-          box-shadow: 0px 0px 1.25rem #973B3A;
+  -webkit-box-shadow: 0px 0px 1rem 0.25rem #973B3A;
+          box-shadow: 0px 0px 1rem 0.25rem #973B3A;
 }
 #deck .deck-list .deck .deck-4:hover {
   -webkit-transform: scale(1.05);
@@ -198,8 +197,8 @@ ul li {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   cursor: pointer;
-  -webkit-box-shadow: 0px 0px 1.25rem #6e43cb;
-          box-shadow: 0px 0px 1.25rem #6e43cb;
+  -webkit-box-shadow: 0px 0px 1rem 0.25rem #6e43cb;
+          box-shadow: 0px 0px 1rem 0.25rem #6e43cb;
 }
 #deck .deck-list .deck .deck-5:hover {
   -webkit-transform: scale(1.05);
@@ -343,7 +342,7 @@ ul li {
           justify-content: center;
   width: 85%;
   height: 90%;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   color: white;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.3333333333);

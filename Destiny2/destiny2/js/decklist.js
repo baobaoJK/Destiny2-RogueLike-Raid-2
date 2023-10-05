@@ -2,19 +2,20 @@ $(function () {
     // 读取存档
     gameConfig = read();
 
-    loadDeck("mg");
-    loadDeck("sg");
-    loadDeck("o");
-    loadDeck("md");
-    loadDeck("sd");
-    loadDeck("u");
-    loadDeck("t");
-
+    console.log(gameConfig.decklist);
+    
+    // 加载手牌
+    loadDeck("MicroGain");
+    loadDeck("StrongGain");
+    loadDeck("Opportunity");
+    loadDeck("MicroDiscomfort");
+    loadDeck("StrongDiscomfort");
+    loadDeck("Unacceptable");
+    loadDeck("Technology");
 
     // 卡牌删除
     $(".delete-button").click(function (e) {
         e.preventDefault();
-
 
         const cardId = $(this).attr("data-id");
         const type = $(this).attr("data-type");
@@ -59,13 +60,13 @@ $(function () {
     // 卡牌添加
     $(".get-button").click(function (e) {
         $(".add-card-item").remove();
-        addLoadDeck("mg");
-        addLoadDeck("sg");
-        addLoadDeck("o");
-        addLoadDeck("md");
-        addLoadDeck("sd");
-        addLoadDeck("u");
-        addLoadDeck("t");
+        addLoadDeck("MicroGain");
+        addLoadDeck("StrongGain");
+        addLoadDeck("Opportunity");
+        addLoadDeck("MicroDiscomfort");
+        addLoadDeck("StrongDiscomfort");
+        addLoadDeck("Unacceptable");
+        addLoadDeck("Technology");
 
         $(".add-button").click(function (e) {
             e.preventDefault();
@@ -90,10 +91,12 @@ $(function () {
 
             $("#" + cardId).remove();
             $("#" + type + " .count").text(gameConfig.decklist[type].length);
+            
+            loadDeck(type);
         });
     });
 
-    // 顺手牵羊
+    // 打乱卡牌
     $(".take-button").click(function (e) {
         e.preventDefault();
 
@@ -101,7 +104,7 @@ $(function () {
 
         let cardNum = 0;
 
-        let deckType = ["mg", "sg", "o", "sd", "md", "u", "t"];
+        let deckType = ["MicroGain", "StrongGain", "Opportunity", "StrongDiscomfort", "MicroDiscomfort", "Unacceptable", "Technology"];
 
         let allDeck = [];
 
@@ -123,7 +126,7 @@ $(function () {
                 '<div class="card">' +
                 '<div class="take-info">' +
                 '<p class="card-id">' + allDeck[i].id + '</p>' +
-                '<p class="card-name">' + allDeck[i].name + '</p>' +
+                '<p class="card-name">' + allDeck[i].cardName + '</p>' +
                 '<p class="card-name">- ' + ++cardNum + ' -</p>' +
                 '</div>' +
                 '</div>' +
@@ -132,98 +135,42 @@ $(function () {
 
     });
 });
-// 洗牌
-function shuffle(array) {
-    let res = [], random;
-    while (array.length > 0) {
-        random = Math.floor(Math.random() * array.length);
-        res.push(array[random]);
-        array.splice(random, 1);
-    }
-    return res;
-}
 
 // 卡牌信息
 function loadDeck(type) {
-    let deckList;
-
-    switch (type) {
-        case "mg":
-            deckList = gameConfig.decklist.mg;
-            break;
-        case "sg":
-            deckList = gameConfig.decklist.sg;
-            break;
-        case "o":
-            deckList = gameConfig.decklist.o;
-            break;
-        case "md":
-            deckList = gameConfig.decklist.md;
-            break;
-        case "sd":
-            deckList = gameConfig.decklist.sd;
-            break;
-        case "u":
-            deckList = gameConfig.decklist.u;
-            break;
-        case "t":
-            deckList = gameConfig.decklist.t;
-            break;
-        default:
-            break;
-    }
+    let deckList = gameConfig.decklist[type];
 
     $("#" + type + " .count").text(deckList.length);
+
+    $("#" + type + " .card-item").remove();
+
     for (let i = 0; i < deckList.length; i++) {
         $("#" + type).append('<div class="card-item" id="' + deckList[i].id + '">' +
             '<div class= "card" >' +
             '<div class="card-info">' +
+            '<div>' + 
+            '<p class="card-name">- ' + deckList[i].cardName + ' -</p>' +
+            '<p class="card-sub">- ' + deckList[i].name + ' -</p>' +
+            '</div>' +
             '<p class="card-text">' + deckList[i].description + '</p>' +
             '<button class="button delete-button" data-id="' + deckList[i].id + '" data-type="' + deckList[i].type + '">删除</button>' +
             '</div>' +
             '</div>' +
-            '<p class="card-name">- ' + deckList[i].name + ' -</p>' +
             '</div>');
     }
 }
 
 // 添加卡牌信息
 function addLoadDeck(type) {
-    let deckList;
-
-    switch (type) {
-        case "mg":
-            deckList = gameConfig.deck.mg;
-            break;
-        case "sg":
-            deckList = gameConfig.deck.sg;
-            break;
-        case "o":
-            deckList = gameConfig.deck.o;
-            break;
-        case "md":
-            deckList = gameConfig.deck.md;
-            break;
-        case "sd":
-            deckList = gameConfig.deck.sd;
-            break;
-        case "u":
-            deckList = gameConfig.deck.u;
-            break;
-        case "t":
-            deckList = gameConfig.deck.t;
-            break;
-        default:
-            break;
-    }
+    let deckList = gameConfig.deck[type];
 
     for (let i = 0; i < deckList.length; i++) {
         if (deckList[i].count > 0) {
             $(".card-list-box").append('<div class="add-card-item" id="' + deckList[i].id + '">' +
                 '<div class= "card" >' +
                 '<div class="card-info">' +
-                '<p class="card-id">' + deckList[i].id + '</p>' +
-                '<p class="card-name">' + deckList[i].name + '</p>' +
+                '<p class="card-id">' + deckList[i].name + '</p>' +
+                '<p class="card-name">' + deckList[i].cardName + '</p>' +
                 '<button class="button add-button" data-id="' + deckList[i].id + '" data-type="' + deckList[i].type + '">添加</button>' +
                 '</div>' +
                 '</div>' +

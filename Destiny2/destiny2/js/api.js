@@ -16,6 +16,7 @@ let gamepaneMoney = parentJQuery(".money span");
 function setGameConfig() {
     $.getJSON("js/GameConfig.json", function (data) {
         gameConfig = data;
+        save(gameConfig);
     });
 }
 
@@ -34,7 +35,13 @@ function deleteSave() {
     localStorage.removeItem('gameConfig');
 }
 
-// 警告框
+// 设置面板信息
+function setGamePanel() {
+    gamepaneMoney.text(gameConfig.money);
+    $("#tooltip .money").text(gameConfig.money);
+}
+
+// 自定义警告框
 function showAlert(text) {
     $(".alert-custom").remove();
     $("body").append('<div class="alert alert-dark alert-custom" role="alert">' +
@@ -70,4 +77,15 @@ function deleteAatroxCard() {
     showAlert("已删除 - 亚托克斯 - 卡牌");
     $("#Aatrox").remove();
     $("#sd .count").text(gameConfig.decklist.sd.length);
+}
+
+// 随机生成
+function shuffle(array) {
+    let res = [], random;
+    while (array.length > 0) {
+        random = Math.floor(Math.random() * array.length);
+        res.push(array[random]);
+        array.splice(random, 1);
+    }
+    return res;
 }

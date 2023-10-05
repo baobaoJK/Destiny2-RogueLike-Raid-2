@@ -1,67 +1,89 @@
 $(function () {
+    // 读取游戏存档
     gameConfig = read();
 
-    const globalEvent = gameConfig.globalEvent;
-    const globalEventTime = gameConfig.globalEventTime;
+    const globalEvent = gameConfig.globaleventlist;
 
     console.log(globalEvent);
 
-    let globalEventTimeInterval = setInterval(() => {
-        if (globalEventTime) {
-            showAlert("事件已超时需接受惩罚");
-            gameConfig.globalEvent = null;
-            gameConfig.globalEventShow = false;
-            save(gameConfig);
-            globalEventTimeInterval = null;
-        }
-    }, 500);
-
-    if (globalEvent != null | globalEvent != undefined | globalEventTime) {
-
-        if (globalEventTime) {
-            $(".event-time").text("事件已超时需接受惩罚");
-            return;
-        }
+    if (globalEvent.length != 0) {
 
         $(".event-title").text("当前有新事件");
-        $(".title").text(globalEvent.name);
-        $(".text").text(globalEvent.description);
+        $(".event-list .event-box").remove();
 
-        $(".event-item .event-card").click(function (e) {
+        for (let i = 0; i < globalEvent.length; i++) {
+
+            let stage = globalEvent[i].stage;
+            let confirmButton = stage == "none" ? "block" : "none";
+            let finishButton = stage == "active" ? "block" : "none";
+
+            $(".event-list").append('<div class="event-box">' +
+                '<div class= "event-item" id="' + globalEvent[i].name + '">' +
+                '<div class="event-card event-front">' +
+                '<div class="event-info">' +
+                '<div>' +
+                '<p class="title">- ' + globalEvent[i].eventName + ' -</p>' +
+                '<p class="sub-title">- ' + globalEvent[i].name + ' -</p>' +
+                '</div>' +
+                '<p class="text">' + globalEvent[i].description + '</p>' +
+                '<div class="buttons">' +
+                '<button class="button confirm ' + globalEvent[i].name + '" style="display: ' + confirmButton + ';" data-event="false" data-name="' + globalEvent[i].name + '">接受</button>' +
+                '<button class="button finish ' + globalEvent[i].name + '" style="display: ' + finishButton + ';" data-event="false" data-name="' + globalEvent[i].name + '">完成</button>' +
+                '</div>' +
+                '</div>' +
+                '</div>' +
+                '<div class="event-card event-back"></div>' +
+                '</div>' +
+                '<p class="event-time"></p>' +
+                '<p class="event-name">- 个人事件 -</p>' +
+                '</div>');
+        }
+
+        $(".event-item").click(function (e) {
             e.preventDefault();
 
-            gameConfig.globalEventShow = true;
-            save(gameConfig);
-
-            $(".event-item").addClass("flip");
+            $(this).addClass("flip");
         });
 
 
         $(".confirm").click(function (e) {
             e.preventDefault();
-            runEvent();
-            $(".event-title").text("当前没有新事件");
 
-            gameConfig.globalEvent = null;
-            gameConfig.globalEventTime = false;
-            save(gameConfig);
+            $(this).remove();
+            $("." + $(this).attr("data-name")).attr("style", "display:block");
+
+            runEvent($(this).attr("data-name"));
+        });
+
+        $(".finish").click(function (e) {
+            e.preventDefault();
+
+            let dataName = $(this).attr("data-name");
+
+            // let title = $("#" + dataName + " .title").text();
+
+            showAlert("已完成事件");
+            deleteEvent(dataName);
+            $("#" + $(this).attr("data-name")).parent().remove();
         });
     }
 });
 
 // 全局事件处理机制 ↓
-function runEvent() {
-    let globalEventId = gameConfig.globalEvent.id;
+function runEvent(eventName) {
+
+    let globalEvent = gameConfig.globaleventlist;
+
     let players = shuffle([1, 2, 3, 4, 5, 6]);
 
     // 紧急支援
-    if (globalEventId == "QS1") {
+    if (eventName == "QS1") {
         let dungeon = lottery(gameConfig.dungeon);
         showAlert("玩家 " + players[0] + " | " + players[1] + " | " + players[2] + " 需前往 - " + dungeon.name + " -");
     }
 
     // 五谷丰登
-    if (globalEventId == "QS9") {
+    if (eventName == "QS9") {
         $("#deck-model").modal("show");
 
         let deck = [];
@@ -74,7 +96,7 @@ function runEvent() {
             };
         }
 
-        for (let i = 0; i < deck.length; i ++) {
+        for (let i = 0; i < deck.length; i++) {
             $("#card-" + (i + 1) + " .card-id").text(deck[i].id);
             $("#card-" + (i + 1) + " .card-name").text(deck[i].name);
             $("#card-" + (i + 1)).attr("data-id", (i + 1));
@@ -86,9 +108,53 @@ function runEvent() {
         setTimeout(() => {
             $(".card-item").addClass("flip");
         }, 500);
-
-
     }
+
+    // 改变事件状态
+    for (let i = 0; i < globalEvent.length; i++) {
+        if (eventName == globalEvent[i].name) {
+            // showAlert("已接受事件 -" + gameConfig.playereventlist[i].eventName + "-");
+            gameConfig.globaleventlist[i].stage = "active";
+            save(gameConfig);
+            // break;
+        }
+    }
+}
+
+// 事件回收机制
+function deleteEvent(eventName) {
+
+    console.log("事件回收机制");
+
+    let event = gameConfig.globalevent;
+
+    for (let i = 0; i < event.length; i++) {
+        if (event[i].name == eventName) {
+            gameConfig.globalevent[i].count += 1;
+            save(gameConfig);
+            break;
+        }
+    }
+
+    let globalevent = gameConfig.globaleventlist;
+
+    for (let i = 0; i < globalevent.length; i++) {
+        if (globalevent[i].name == eventName) {
+            globalevent[i] = null;
+            break;
+        }
+    }
+
+    let newEventlist = [];
+
+    for (let i = 0; i < globalevent.length; i++) {
+        if (globalevent[i] != null) {
+            newEventlist.push(globalevent[i]);
+        }
+    }
+
+    gameConfig.globaleventlist = newEventlist;
+    save(gameConfig);
 }
 
 // 卡牌去重
@@ -100,14 +166,4 @@ function checkDeck(deck, card) {
     }
 
     return true;
-}
-
-function shuffle(array) {
-    let res = [], random;
-    while (array.length > 0) {
-        random = Math.floor(Math.random() * array.length);
-        res.push(array[random]);
-        array.splice(random, 1);
-    }
-    return res;
 }

@@ -16,11 +16,10 @@ h1,
 h2,
 h3,
 h4,
-h5 {
-  margin: 0;
-}
-
-p {
+h5,
+p,
+label {
+  color: white;
   margin: 0;
 }
 
@@ -192,7 +191,7 @@ ul li {
   width: 5rem;
   height: 2rem;
   font-size: 1.875rem;
-  font-weight: 500;
+  font-weight: 400;
   color: #E5D163;
 }
 #home .emblems .titan {
@@ -218,17 +217,23 @@ ul li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
 }
-#home .list ul li {
-  margin-bottom: 0.5rem;
+#home .list .link {
+  width: 100%;
+  margin-bottom: 2rem;
 }
-#home .list ul li a {
+#home .list .link a {
+  display: block;
+  float: left;
+  width: 25%;
   color: white;
   font-size: 1rem;
+  text-align: center;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
-#home .list ul li a:hover {
+#home .list .link a:hover {
   opacity: 0.5;
 }
 
@@ -247,4 +252,121 @@ ul li {
   width: 100%;
   height: 3rem;
   background-color: #F0F0F0;
+}
+.footer p {
+  color: black;
+}
+
+#role-model .modal-lg {
+  min-width: 40rem;
+  max-width: 40rem;
+}
+#role-model .modal-content {
+  background-color: #12171C;
+}
+#role-model .modal-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 20rem;
+  border-radius: 1rem;
+}
+#role-model .modal-body .role-title {
+  font-weight: 100;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+#role-model .modal-body .role-id-box {
+  margin-bottom: 2rem;
+}
+#role-model .modal-body .role-id-box .role-id-title {
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+#role-model .modal-body .role-id-box .role-radio input {
+  margin-right: 0.5rem;
+}
+#role-model .modal-body .role-id-box .role-radio label {
+  margin-right: 1rem;
+}
+#role-model .modal-body .role-name-box {
+  margin-bottom: 2rem;
+}
+#role-model .modal-body .role-name-box p {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+#role-model .modal-body .role-name-box input {
+  width: 18.75rem;
+}
+#role-model button {
+  margin: 0 2rem;
+}
+
+#captain-model .modal-lg {
+  min-width: 40rem;
+  max-width: 40rem;
+}
+#captain-model .modal-content {
+  background-color: #12171C;
+}
+#captain-model .modal-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 20rem;
+  border-radius: 1rem;
+}
+#captain-model .modal-body .captain-title {
+  font-weight: 100;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+#captain-model .modal-body .captain-position-box {
+  margin-bottom: 2rem;
+}
+#captain-model .modal-body .captain-position-box .captain-position-title {
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+#captain-model .modal-body .captain-position-box .captain-radio input {
+  margin-right: 0.5rem;
+}
+#captain-model .modal-body .captain-position-box .captain-radio label {
+  margin-right: 1rem;
+}
+#captain-model .modal-body .captain-name-box {
+  margin-bottom: 2rem;
+}
+#captain-model .modal-body .captain-name-box p {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+#captain-model .modal-body .captain-name-box input {
+  width: 18.75rem;
+}
+#captain-model button {
+  margin: 0 2rem;
 }/*# sourceMappingURL=home.css.map */

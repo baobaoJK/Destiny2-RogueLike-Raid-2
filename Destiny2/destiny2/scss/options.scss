@@ -34,8 +34,7 @@ $transitonTime: 0.7s;
             // 地图图片
             .map-img {
                 width: 18.75rem;
-                height: auto;
-                background-color: white;
+                height: 10.546875rem;
             }
 
             // 地图文本
@@ -55,7 +54,7 @@ $transitonTime: 0.7s;
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 43.75rem;
+            width: 50rem;
             height: 8.75rem;
             margin-bottom: 2rem;
 
@@ -190,7 +189,7 @@ $transitonTime: 0.7s;
         .money-input-box,
         .card-input-box {
             margin-bottom: 2rem;
-            
+
             label,
             input {
                 width: 100%;

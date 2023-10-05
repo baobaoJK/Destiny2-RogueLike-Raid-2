@@ -1,43 +1,70 @@
 $(function () {
-    setGameConfig();
-
     // 角色选择
-    const roleEmblem = $(".emblems .role");
+    $(".emblems .role").click(function (e) {
 
-    for (let i = 0; i < roleEmblem.length; i++) {
-        $(roleEmblem[i]).click(function (e) {
+        setGameConfig();
 
-            let position = $(this).attr("id");
-            let role = $(this).attr("id");
+        let role = $(this).attr("id");
 
-            let number = '';
-            do {
-                number = prompt("请输入游戏编号");
-            } while (number == '' || number == ' ' || number == null);
+        if (role != "captain") {
 
-            let roleName = '';
-            do {
-                roleName = prompt("请输入游戏名称");
-            } while (roleName == '' || roleName == ' ' || roleName == null);
+            let roleId = 0;
 
-            if (position == 'captain') {
-                do {
-                    role = prompt("请输入游玩角色英文(泰坦：titan，猎人：hunter，术士：warlock)")
-                } while (role == '' || role == ' ' || role == null);
-            }
+            $(".role-id").click(function (e) {
+                roleId = $(this).val();
+            });
 
-            setRole(position, role, roleName, number);
-        });
-    }
+            $(".role-confirm").click(function (e) {
+                e.preventDefault();
+
+                let roleName = $("#role-name").val();
+
+                if (roleId == 0) {
+                    showAlert("请选择游戏编号");
+                }
+                else if (roleName == "" || roleName == null || roleName == undefined) {
+                    showAlert("请输入游戏名称 / 游戏ID");
+                }
+                else {
+                    setRole("player", role, roleId, roleName);
+                }
+            });
+        }
+        else {
+            let roleId = 1;
+            let role = null;
+
+            $(".captain-position").click(function (e) {
+                role = $(this).val();
+            });
+
+            $(".captain-confirm").click(function (e) {
+                e.preventDefault();
+
+                let roleName = $("#captain-name").val();
+
+                if (roleName == "" || roleName == null || roleName == undefined) {
+                    showAlert("请输入游戏名称 / 游戏ID");
+                }
+                else if (role != "titan" && role != "hunter" && role != "warlock") {
+                    showAlert("请选择游玩角色");
+                }
+                else {
+                    setRole("captain", role, roleId, roleName);
+                }
+            });
+        }
+    });
 });
 
 // 设置角色
-function setRole(position, role, roleName, number) {
+function setRole(position, role, roleId, roleName) {
     gameConfig.position = position;
     gameConfig.role = role;
+    gameConfig.roleId = roleId;
     gameConfig.roleName = roleName;
-    gameConfig.number = number;
     save(gameConfig);
+    window.location.href = $(".role").attr("href");
 }
 
 // 清除游戏数据
@@ -45,5 +72,5 @@ $("#delete-button").click(function (e) {
     e.preventDefault();
 
     deleteSave(read());
-    alert("删除成功！");
+    showAlert("删除成功！");
 });

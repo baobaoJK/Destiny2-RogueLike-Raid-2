@@ -1,6 +1,9 @@
 $(function () {
 
+    // 读取存档
     gameConfig = read();
+    
+    // 获取地图列表
     let maps = gameConfig.maps;
     console.log(maps);
 
@@ -9,11 +12,11 @@ $(function () {
     let mapName = "";
     let mapRoll = false;
 
-    setMapRollList(maps);
-
     // 抽取 地图 按钮
     // -----------------------------------------------------------------------------------------------
     $(".map-button").click(function (e) {
+        setMapRollList(maps);
+
         rollMapList(mapRoll, outTime);
         mapRoll = true;
         $(this).attr("disabled", true);

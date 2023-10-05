@@ -16,11 +16,10 @@ h1,
 h2,
 h3,
 h4,
-h5 {
-  margin: 0;
-}
-
-p {
+h5,
+p,
+label {
+  color: white;
   margin: 0;
 }
 
@@ -204,14 +203,15 @@ ul li {
       justify-content: space-around;
   width: 90%;
   height: 90%;
-  font-size: 1.25rem;
+  font-size: 1rem;
   color: white;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.3333333333);
   border-radius: 0.25rem;
 }
-#event .event-list .event-box .event-item .event-front .event-info p {
-  margin-bottom: 1rem;
+#event .event-list .event-box .event-item .event-front .event-info .title,
+#event .event-list .event-box .event-item .event-front .event-info .sub-title {
+  font-size: 1.25rem;
 }
 #event .event-list .event-box .event-time {
   width: 70%;
