@@ -14,7 +14,7 @@ $(function () {
     // 导航栏
     if (gameConfig.position == "captain") {
         $('.menu ul').prepend('<li class="menu-link"><a href="map.html" target="windows">地图</a></li>');
-        $('.menu ul').append('<li class="menu-link"><a href="globalEvent.html" target="windows">全局事件</a></li>');
+        $('.menu ul').append('<li class="menu-link"><a href="globalevent.html" target="windows">全局事件</a></li>');
     }
 
     // 添加操控面板
