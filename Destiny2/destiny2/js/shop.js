@@ -7,7 +7,6 @@ $(function () {
 
     // 提示框
     let tooltip = $('#tooltip');
-
     $("#shop").mousemove(function (e) {
         // values: e.clientX, e.clientY, e.pageX, e.pageY
         let x = e.pageX + 8;
@@ -41,7 +40,7 @@ $(function () {
 
         // 卡组类型
         const deckType = $(this).attr("data-deck");
-        const decklist = gameConfig.decklist[deckType];
+        const deckList = gameConfig.deckList[deckType];
 
         // 物品属性
         let itemSell = 0;
@@ -71,7 +70,7 @@ $(function () {
         }
 
         // 判断
-        if (decklist == null | decklist.length == 0) {
+        if (deckList == null | deckList.length == 0) {
             showAlert("你当前没有可以消除的卡牌");
             return;
         }
@@ -148,24 +147,6 @@ $(function () {
     });
 });
 
-// 武器列表1
-let weapons1;
-
-// 武器列表2
-let weapons2;
-
-// 武器列表3
-let weapons3;
-
-// 泰坦装备列表
-let titanArmor;
-
-// 猎人装备列表
-let hunterArmor;
-
-// 术士装备列表
-let warlockArmor;
-
 // 商店价格提高
 let profiteer;
 
@@ -173,8 +154,8 @@ let profiteer;
 function init() {
 
     // 商店检测
-    for (let i = 0; i < gameConfig.decklist["Unacceptable"].length; i++) {
-        let card = gameConfig.decklist["Unacceptable"][i];
+    for (let i = 0; i < gameConfig.deckList["Unacceptable"].length; i++) {
+        let card = gameConfig.deckList["Unacceptable"][i];
 
         if (card.name == "Stillwater-Prison") {
             showAlert("您的商店系统已被关闭！");
@@ -202,25 +183,25 @@ function init() {
                         }
                     }
 
-                    let decklist = gameConfig.decklist["Unacceptable"];
+                    let deckList = gameConfig.deckList["Unacceptable"];
 
-                    for (let i = 0; i < decklist.length; i++) {
-                        if (decklist[i].name == name) {
-                            decklist[i] = null;
+                    for (let i = 0; i < deckList.length; i++) {
+                        if (deckList[i].name == name) {
+                            deckList[i] = null;
                             break;
                         }
                     }
 
                     let newDecklist = [];
 
-                    for (let i = 0; i < decklist.length; i++) {
-                        if (decklist[i] != null) {
-                            newDecklist.push(decklist);
+                    for (let i = 0; i < deckList.length; i++) {
+                        if (deckList[i] != null) {
+                            newDecklist.push(deckList);
                         }
                     }
 
                     gameConfig.money -= sell;
-                    gameConfig.decklist["Unacceptable"] = newDecklist;
+                    gameConfig.deckList["Unacceptable"] = newDecklist;
 
                     save(gameConfig);
 
@@ -233,8 +214,8 @@ function init() {
     }
 
     // 价格检测
-    for (let i = 0; i < gameConfig.decklist["StrongDiscomfort"].length; i++) {
-        let card = gameConfig.decklist["StrongDiscomfort"][i];
+    for (let i = 0; i < gameConfig.deckList["StrongDiscomfort"].length; i++) {
+        let card = gameConfig.deckList["StrongDiscomfort"][i];
         if (card.name == "Reicher-Playboy") {
             profiteer = true;
             showAlert("购买任意物品价格提高 1 货币！");
@@ -253,40 +234,33 @@ function init() {
     $("#pay-count span").text(gameConfig.refreshMoney);
     $("#refresh-count span").text(gameConfig.refreshCount);
 
-    weapons1 = gameConfig.weapons1;
-    weapons2 = gameConfig.weapons3;
-    weapons2 = gameConfig.weapons3;
-    titanArmor = gameConfig.titanArmor;
-    hunterArmor = gameConfig.hunterArmor;
-    warlockArmor = gameConfig.warlockArmor;
-
-    setShopItem();
-    randomShopItem();
+    setShopFixedItem();
+    setShopRandomShopItem();
 }
 
 // 获取商店类型
-function getShopType(type, number) {
-    let info = "";
+function getShopList(type, number) {
+    let list = "";
 
     switch (type) {
         case "fixed":
-            info = gameConfig.shop.fixedItems[number];
+            list = gameConfig.shop.fixedItems[number];
             break;
         case "random":
-            info = gameConfig.shop.randomItems[number];
+            list = gameConfig.shop.randomItems[number];
             break;
         default:
             break;
     }
 
-    return info;
+    return list;
 }
 
 // 设置提示信息
-function setToolTips(type, number) {
+function setToolTips(type, number) {    
 
     // 获取信息
-    let info = getShopType(type, number);
+    let info = getShopList(type, number);
 
     // 修改 ToolTips 颜色
     const wrapper = $("#tooltip .wrapper");
@@ -342,7 +316,7 @@ function setToolTips(type, number) {
 }
 
 // 设置商店信息
-function setShopItem() {
+function setShopFixedItem() {
 
     // 固定物品栏
     const fixedListItem = $(".fixed-list .item");
@@ -355,11 +329,12 @@ function setShopItem() {
 }
 
 // 随机商店物品
-function randomShopItem() {
+function setShopRandomShopItem() {
     // 固定物品栏
     const randomListItem = $(".random-list .item");
 
     for (let i = 0; i < randomListItem.length; i++) {
+        console.log(gameConfig.shop.randomItems);
         $(randomListItem[i]).attr("data-name", gameConfig.shop.randomItems[i].name);
         $(randomListItem[i]).attr("data-number", i);
         $(randomListItem[i]).attr("data-type", "random");
@@ -368,19 +343,19 @@ function randomShopItem() {
 
         switch (i) {
             case 0:
-                $(randomListItem[i]).attr("style", "background-image:url('images/shop/1/" + gameConfig.shop.randomItems[i].name + ".jpg')");
+                $(randomListItem[i]).attr("style", "background-image:url('images/shop/weapons1/" + gameConfig.shop.randomItems[i].name + ".jpg')");
                 break;
             case 1:
-                $(randomListItem[i]).attr("style", "background-image:url('images/shop/2/" + gameConfig.shop.randomItems[i].name + ".jpg')");
+                $(randomListItem[i]).attr("style", "background-image:url('images/shop/weapons2/" + gameConfig.shop.randomItems[i].name + ".jpg')");
                 break;
             case 2:
-                $(randomListItem[i]).attr("style", "background-image:url('images/shop/3/" + gameConfig.shop.randomItems[i].name + ".jpg')");
+                $(randomListItem[i]).attr("style", "background-image:url('images/shop/weapons3/" + gameConfig.shop.randomItems[i].name + ".jpg')");
                 break;
             case 3:
-                $(randomListItem[i]).attr("style", "background-image:url('images/weapons/" + gameConfig.shop.randomItems[i].name + ".jpg')");
+                $(randomListItem[i]).attr("style", "background-image:url('images/shop/exotic/" + gameConfig.shop.randomItems[i].name + ".jpg')");
                 break;
             case 4:
-                $(randomListItem[i]).attr("style", "background-image:url('images/" + gameConfig.role + "/" + gameConfig.shop.randomItems[i].name + ".jpg')");
+                $(randomListItem[i]).attr("style", "background-image:url('images/shop/" + gameConfig.role + "/" + gameConfig.shop.randomItems[i].name + ".jpg')");
                 break;
             default:
                 break;
@@ -391,33 +366,33 @@ function randomShopItem() {
 // 刷新商店
 function refreshShopItem() {
     let randomItems = gameConfig.shop.randomItems;
-    randomItems[0] = lotteryByCount(gameConfig.weapons1);
-    randomItems[1] = lotteryByCount(gameConfig.weapons2);
-    randomItems[2] = lotteryByCount(gameConfig.weapons3);
-    randomItems[3] = lotteryByCount(gameConfig.exotic);
+    randomItems[0] = lotteryByCount(gameConfig.shop.weapons.weapons1);
+    randomItems[1] = lotteryByCount(gameConfig.shop.weapons.weapons2);
+    randomItems[2] = lotteryByCount(gameConfig.shop.weapons.weapons3);
+    randomItems[3] = lotteryByCount(gameConfig.shop.weapons.exotic);
 
     // 检测角色类型
     switch (gameConfig.role) {
         case "titan":
-            randomItems[4] = lotteryByCount(gameConfig.titanArmor);
+            randomItems[4] = lotteryByCount(gameConfig.shop.armor.titanArmor);
             break;
         case "hunter":
-            randomItems[4] = lotteryByCount(gameConfig.hunterArmor);
+            randomItems[4] = lotteryByCount(gameConfig.shop.armor.hunterArmor);
             break;
         case "warlock":
-            randomItems[4] = lotteryByCount(gameConfig.warlockArmor);
+            randomItems[4] = lotteryByCount(gameConfig.shop.armor.warlockArmor);
             break;
         default:
             break;
     }
 
-    randomShopItem();
+    setShopRandomShopItem();
 }
 
 // 购买物品
 function buyShopItem(type, number) {
     // 获取商店类型
-    const shopList = getShopType(type, number);
+    const shopList = getShopList(type, number);
 
     // 货币
     let money = gameConfig.money;
@@ -451,14 +426,14 @@ function buyShopItem(type, number) {
 
 // 设置卡牌信息
 function setCardItem(type, sell) {
-    let deckList = gameConfig.decklist[type];
+    let deckList = gameConfig.deckList[type];
 
     $(".card-item").remove();
     for (let i = 0; i < deckList.length; i++) {
         $(".card-list-box").append('<div class="card-item" data-id="' + deckList[i].id + '">' +
             '<div class="card">' +
             '<div class="card-info">' +
-            '<p class="card-id">' + deckList[i].id + '</p>' +
+            '<p class="card-id">' + deckList[i].name + '</p>' +
             '<p class="card-name">' + deckList[i].cardName + '</p>' +
             '</div>' +
             '</div>' +
@@ -466,51 +441,53 @@ function setCardItem(type, sell) {
     }
 
     // 删除卡牌
-    // 需要优化
     $(".card-item").click(function (e) {
         e.preventDefault();
 
         const cardId = $(this).attr("data-id");
         let card;
 
+        // 删除亚托克斯卡牌
         if (cardId == "Aatrox") {
             deleteAatroxCard();
             $("#card-model").modal("hide");
             return;
         }
 
+        // 删除卡牌
         for (let i = 0; i < deckList.length; i++) {
             if (deckList[i].id == cardId) {
                 card = deckList[i];
                 deckList[i] = null;
+                break;
+            }
+        }
 
-                let tempDeck = gameConfig.deck[type];
+        // 添加卡牌数量
+        let tempDeck = gameConfig.deck[type];
 
-                for (let j = 0; j < tempDeck.length; j++) {
-                    if (tempDeck[j].id == cardId) {
-                        gameConfig.deck[type][j].count += 1;
+        for (let i = 0; i < tempDeck.length; i++) {
+            if (tempDeck[i].id == cardId) {
+                gameConfig.deck[type][i].count += 1;
+                break;
+            }
+        }
 
-                        let newDeckList = [];
-                        for (let k = 0; k < deckList.length; k++) {
-                            if (deckList[k] != null) {
-                                newDeckList.push(deckList[k]);
-                            }
-                        }
-                        gameConfig.decklist[type] = newDeckList;
-                        save(gameConfig);
-                    }
-                }
+        // 更换数据
+        let newDeckList = [];
+        for (let k = 0; k < deckList.length; k++) {
+            if (deckList[k] != null) {
+                newDeckList.push(deckList[k]);
             }
         }
 
         showAlert("你已删除 - " + card.cardName + " - 卡牌");
 
+        gameConfig.deckList[type] = newDeckList;
         gameConfig.money -= sell;
-
         save(gameConfig);
 
         setGamePanel();
-
         $("#card-model").modal("hide");
     });
 }

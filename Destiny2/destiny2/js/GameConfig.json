@@ -1,17 +1,13 @@
 {
 	"mapId": 0,
 	"map": "",
-	"level": 0,
-	"levelPoint": 0,
-	"checkPoint": 0,
-	"chest": 0,
-	"chestPoint": 0,
 	"maps": [
 		{
 			"id": 1,
 			"name": "最后一愿",
 			"weight": 0.125,
 			"count": 1,
+			"checkPoint": 5,
 			"level": 5,
 			"chest": 2
 		},
@@ -20,6 +16,7 @@
 			"name": "救赎花园",
 			"weight": 0.125,
 			"count": 1,
+			"checkPoint": 4,
 			"level": 4,
 			"chest": 2
 		},
@@ -28,6 +25,7 @@
 			"name": "深岩墓室",
 			"weight": 0.125,
 			"count": 1,
+			"checkPoint": 4,
 			"level": 4,
 			"chest": 2
 		},
@@ -36,6 +34,7 @@
 			"name": "玻璃拱顶",
 			"weight": 0.125,
 			"count": 1,
+			"checkPoint": 5,
 			"level": 5,
 			"chest": 4
 		},
@@ -44,6 +43,7 @@
 			"name": "门徒誓约",
 			"weight": 0.125,
 			"count": 1,
+			"checkPoint": 4,
 			"level": 4,
 			"chest": 2
 		},
@@ -52,6 +52,7 @@
 			"name": "国王的陨落",
 			"weight": 0.125,
 			"count": 1,
+			"checkPoint": 5,
 			"level": 5,
 			"chest": 4
 		},
@@ -60,6 +61,7 @@
 			"name": "梦魇根源",
 			"weight": 0.125,
 			"count": 1,
+			"checkPoint": 4,
 			"level": 4,
 			"chest": 2
 		},
@@ -68,10 +70,16 @@
 			"name": "克洛塔的末日",
 			"weight": 0.125,
 			"count": 1,
+			"checkPoint": 4,
 			"level": 4,
 			"chest": 2
 		}
 	],
+	"level": 0,
+	"levelPoint": 0,
+	"checkPoint": 0,
+	"chest": 0,
+	"chestPoint": 0,
 	"dungeonId": 0,
 	"dungeon": "",
 	"dungeons": [
@@ -191,2534 +199,2538 @@
 				"sell": 0,
 				"count": 0
 			}
-		]
+		],
+		"weapons": {
+			"weapons1": [
+				{
+					"name": "自动步枪",
+					"kind": "自动步枪",
+					"rarity": "传说",
+					"description": "调取任意一把传说品质的自动步枪",
+					"sell": 1,
+					"count": 1,
+					"weight": 0.1429
+				},
+				{
+					"name": "斥候步枪",
+					"kind": "斥候步枪",
+					"rarity": "传说",
+					"description": "调取任意一把传说品质的斥候步枪",
+					"sell": 1,
+					"count": 1,
+					"weight": 0.1429
+				},
+				{
+					"name": "脉冲步枪",
+					"kind": "脉冲步枪",
+					"rarity": "传说",
+					"description": "调取任意一把传说品质的脉冲步枪",
+					"sell": 1,
+					"count": 1,
+					"weight": 0.1429
+				},
+				{
+					"name": "手炮",
+					"kind": "手炮",
+					"rarity": "传说",
+					"description": "调取任意一把传说品质的手炮",
+					"sell": 1,
+					"count": 1,
+					"weight": 0.1429
+				},
+				{
+					"name": "微型冲锋枪",
+					"kind": "微型冲锋枪",
+					"rarity": "传说",
+					"description": "调取任意一把传说品质的微型冲锋枪",
+					"sell": 1,
+					"count": 1,
+					"weight": 0.1429
+				},
+				{
+					"name": "手枪",
+					"kind": "手枪",
+					"rarity": "传说",
+					"description": "调取任意一把传说品质的手枪",
+					"sell": 1,
+					"count": 1,
+					"weight": 0.1429
+				},
+				{
+					"name": "弓箭",
+					"kind": "弓箭",
+					"rarity": "传说",
+					"description": "调取任意一把传说品质的弓箭",
+					"sell": 1,
+					"count": 1,
+					"weight": 0.1429
+				}
+			],
+			"weapons2": [
+				{
+					"name": "霰弹枪",
+					"kind": "霰弹枪",
+					"rarity": "传说",
+					"description": "调取任意一把传说品质特殊弹药类型的霰弹枪",
+					"sell": 3,
+					"count": 1,
+					"weight": 0.1667
+				},
+				{
+					"name": "榴弹发射器",
+					"kind": "榴弹发射器",
+					"rarity": "传说",
+					"description": "调取任意一把传说品质特殊弹药类型的榴弹发射器",
+					"sell": 3,
+					"count": 1,
+					"weight": 0.1667
+				},
+				{
+					"name": "融合步枪",
+					"kind": "融合步枪",
+					"rarity": "传说",
+					"description": "调取任意一把传说品质特殊弹药类型的融合步枪",
+					"sell": 3,
+					"count": 1,
+					"weight": 0.1667
+				},
+				{
+					"name": "狙击步枪",
+					"kind": "狙击步枪",
+					"rarity": "传说",
+					"description": "调取任意一把传说品质特殊弹药类型的狙击步枪",
+					"sell": 3,
+					"count": 1,
+					"weight": 0.1667
+				},
+				{
+					"name": "追踪步枪",
+					"kind": "追踪步枪",
+					"rarity": "传说",
+					"description": "调取任意一把传说品质特殊弹药类型的追踪步枪",
+					"sell": 3,
+					"count": 1,
+					"weight": 0.1667
+				},
+				{
+					"name": "堰月",
+					"kind": "堰月",
+					"rarity": "传说",
+					"description": "调取任意一把传说品质特殊弹药类型的堰月",
+					"sell": 3,
+					"count": 1,
+					"weight": 0.1667
+				}
+			],
+			"weapons3": [
+				{
+					"name": "刀剑",
+					"kind": "刀剑",
+					"rarity": "传说",
+					"description": "调取任意一把传说品质重型弹药类型的刀剑",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.2
+				},
+				{
+					"name": "榴弹发射器",
+					"kind": "榴弹发射器",
+					"rarity": "传说",
+					"description": "调取任意一把传说品质重型弹药类型的榴弹发射器",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.2
+				},
+				{
+					"name": "火箭发射器",
+					"kind": "火箭发射器",
+					"rarity": "传说",
+					"description": "调取任意一把传说品质重型弹药类型的火箭发射器",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.2
+				},
+				{
+					"name": "线性融合步枪",
+					"kind": "线性融合步枪",
+					"rarity": "传说",
+					"description": "调取任意一把传说品质重型弹药类型的线性融合步枪",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.2
+				},
+				{
+					"name": "机枪",
+					"kind": "机枪",
+					"rarity": "传说",
+					"description": "调取任意一把传说品质重型弹药类型的机枪",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.2
+				}
+			],
+			"exotic": [
+				{
+					"id": 1,
+					"name": "米达多功能",
+					"kind": "斥候步枪",
+					"rarity": "异域",
+					"description": "米达多功能",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 2,
+					"name": "鼠王",
+					"kind": "手枪",
+					"rarity": "异域",
+					"description": "鼠王",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 3,
+					"name": "警惕羽翼",
+					"kind": "脉冲步枪",
+					"rarity": "异域",
+					"description": "警惕羽翼",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 4,
+					"name": "狂飙",
+					"kind": "手枪",
+					"rarity": "异域",
+					"description": "狂飙",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 5,
+					"name": "糖果生意",
+					"kind": "自动步枪",
+					"rarity": "异域",
+					"description": "糖果生意",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 6,
+					"name": "玉兔",
+					"kind": "斥候步枪",
+					"rarity": "异域",
+					"description": "玉兔",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 7,
+					"name": "血色浪漫",
+					"kind": "手炮",
+					"rarity": "异域",
+					"description": "血色浪漫",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 8,
+					"name": "SUROS政权",
+					"kind": "自动步枪",
+					"rarity": "异域",
+					"description": "SUROS政权",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 9,
+					"name": "越橘",
+					"kind": "微型冲锋枪",
+					"rarity": "异域",
+					"description": "越橘",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 10,
+					"name": "监护人",
+					"kind": "霰弹枪",
+					"rarity": "异域",
+					"description": "监护人",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 11,
+					"name": "黑桃A",
+					"kind": "手炮",
+					"rarity": "异域",
+					"description": "黑桃A",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 12,
+					"name": "渎职",
+					"kind": "手炮",
+					"rarity": "异域",
+					"description": "渎职",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 13,
+					"name": "碎愿者",
+					"kind": "弓箭",
+					"rarity": "异域",
+					"description": "碎愿者",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 14,
+					"name": "冥府三头犬+1",
+					"kind": "自动步枪",
+					"rarity": "异域",
+					"description": "冥府三头犬+1",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 15,
+					"name": "遗言",
+					"kind": "手炮",
+					"rarity": "异域",
+					"description": "遗言",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 16,
+					"name": "伊邪那岐的重担",
+					"kind": "狙击步枪",
+					"rarity": "异域",
+					"description": "伊邪那岐的重担",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 17,
+					"name": "全面爆发",
+					"kind": "脉冲步枪",
+					"rarity": "异域",
+					"description": "全面爆发",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 18,
+					"name": "荆棘",
+					"kind": "手炮",
+					"rarity": "异域",
+					"description": "荆棘",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 19,
+					"name": "劲弩",
+					"kind": "线性融合步枪",
+					"rarity": "异域",
+					"description": "劲弩",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 20,
+					"name": "邪恶符咒",
+					"kind": "脉冲步枪",
+					"rarity": "异域",
+					"description": "邪恶符咒",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 21,
+					"name": "流明",
+					"kind": "手炮",
+					"rarity": "异域",
+					"description": "流明",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 22,
+					"name": "蒙特卡洛",
+					"kind": "自动步枪",
+					"rarity": "异域",
+					"description": "蒙特卡洛",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 23,
+					"name": "堡垒",
+					"kind": "融合步枪",
+					"rarity": "异域",
+					"description": "堡垒",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 24,
+					"name": "旅行者的选择",
+					"kind": "手枪",
+					"rarity": "异域",
+					"description": "旅行者的选择",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 25,
+					"name": "枯萎囤积",
+					"kind": "榴弹发射器",
+					"rarity": "异域",
+					"description": "枯萎囤积",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 26,
+					"name": "无时辩解",
+					"kind": "脉冲步枪",
+					"rarity": "异域",
+					"description": "无时辩解",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 27,
+					"name": "隼月",
+					"kind": "手炮",
+					"rarity": "异域",
+					"description": "隼月",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 28,
+					"name": "亡者传说",
+					"kind": "斥候步枪",
+					"rarity": "异域",
+					"description": "亡者传说",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 29,
+					"name": "冷冻状态77K",
+					"kind": "手枪",
+					"rarity": "异域",
+					"description": "冷冻状态77K",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 30,
+					"name": "先驱者",
+					"kind": "手枪",
+					"rarity": "异域",
+					"description": "先驱者",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 31,
+					"name": "阿格尔的权杖",
+					"kind": "追踪步枪",
+					"rarity": "异域",
+					"description": "阿格尔的权杖",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 32,
+					"name": "枯骨鳞片",
+					"kind": "微型冲锋枪",
+					"rarity": "异域",
+					"description": "枯骨鳞片",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 33,
+					"name": "瞬变风暴",
+					"kind": "自动步枪",
+					"rarity": "异域",
+					"description": "瞬变风暴",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 34,
+					"name": "恶意触碰",
+					"kind": "斥候步枪",
+					"rarity": "异域",
+					"description": "恶意触碰",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 35,
+					"name": "零号修订",
+					"kind": "脉冲步枪",
+					"rarity": "异域",
+					"description": "零号修订",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 36,
+					"name": "雨淞弧线",
+					"kind": "弓箭",
+					"rarity": "异域",
+					"description": "雨淞弧线",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 37,
+					"name": "条件终局",
+					"kind": "霰弹枪",
+					"rarity": "异域",
+					"description": "条件终局",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 38,
+					"name": "最终警告",
+					"kind": "手枪",
+					"rarity": "异域",
+					"description": "最终警告",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 39,
+					"name": "领航员",
+					"kind": "追踪步枪",
+					"rarity": "异域",
+					"description": "领航员",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 40,
+					"name": "邪恶工具",
+					"kind": "斥候步枪",
+					"rarity": "异域",
+					"description": "邪恶工具",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 41,
+					"name": "坏疽",
+					"kind": "自动步枪",
+					"rarity": "异域",
+					"description": "坏疽",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 42,
+					"name": "严苛光芒",
+					"kind": "自动步枪",
+					"rarity": "异域",
+					"description": "严苛光芒",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 43,
+					"name": "赴险者",
+					"kind": "微型冲锋枪",
+					"rarity": "异域",
+					"description": "赴险者",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 44,
+					"name": "北极光",
+					"kind": "狙击步枪",
+					"rarity": "异域",
+					"description": "北极光",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 45,
+					"name": "焚天者誓约",
+					"kind": "斥候步枪",
+					"rarity": "异域",
+					"description": "焚天者誓约",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 46,
+					"name": "引力子长枪",
+					"kind": "脉冲步枪",
+					"rarity": "异域",
+					"description": "引力子长枪",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 47,
+					"name": "烈日弹丸",
+					"kind": "手炮",
+					"rarity": "异域",
+					"description": "烈日弹丸",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 48,
+					"name": "战狮",
+					"kind": "榴弹发射器",
+					"rarity": "异域",
+					"description": "战狮",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 49,
+					"name": "冷酷无情",
+					"kind": "融合步枪",
+					"rarity": "异域",
+					"description": "冷酷无情",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 50,
+					"name": "寒冰核心",
+					"kind": "追踪步枪",
+					"rarity": "异域",
+					"description": "寒冰核心",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 51,
+					"name": "土卫十三",
+					"kind": "融合步枪",
+					"rarity": "异域",
+					"description": "土卫十三",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 52,
+					"name": "普罗米修斯透镜",
+					"kind": "追踪步枪",
+					"rarity": "异域",
+					"description": "普罗米修斯透镜",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 53,
+					"name": "极星长枪",
+					"kind": "斥候步枪",
+					"rarity": "异域",
+					"description": "极星长枪",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 54,
+					"name": "狼王",
+					"kind": "霰弹枪",
+					"rarity": "异域",
+					"description": "狼王",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 55,
+					"name": "裂波者",
+					"kind": "追踪步枪",
+					"rarity": "异域",
+					"description": "裂波者",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 56,
+					"name": "三体坐观者",
+					"kind": "弓箭",
+					"rarity": "异域",
+					"description": "三体坐观者",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 57,
+					"name": "冰霜巨人",
+					"kind": "融合步枪",
+					"rarity": "异域",
+					"description": "冰霜巨人",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 58,
+					"name": "帝王蝶",
+					"kind": "弓箭",
+					"rarity": "异域",
+					"description": "帝王蝶",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 59,
+					"name": "泰拉巴",
+					"kind": "微型冲锋枪",
+					"rarity": "异域",
+					"description": "泰拉巴",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 60,
+					"name": "神圣裁决",
+					"kind": "追踪步枪",
+					"rarity": "异域",
+					"description": "神圣裁决",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 61,
+					"name": "爱莲娜之誓",
+					"kind": "手炮",
+					"rarity": "异域",
+					"description": "爱莲娜之誓",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 62,
+					"name": "魔鬼之厄",
+					"kind": "手枪",
+					"rarity": "异域",
+					"description": "魔鬼之厄",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 63,
+					"name": "同调",
+					"kind": "斥候步枪",
+					"rarity": "异域",
+					"description": "同调",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 64,
+					"name": "第四骑士",
+					"kind": "霰弹枪",
+					"rarity": "异域",
+					"description": "第四骑士",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 65,
+					"name": "汤米的火柴盒",
+					"kind": "自动步枪",
+					"rarity": "异域",
+					"description": "汤米的火柴盒",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 66,
+					"name": "毁灭雕像",
+					"kind": "追踪步枪",
+					"rarity": "异域",
+					"description": "毁灭雕像",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 67,
+					"name": "云霄破击",
+					"kind": "狙击步枪",
+					"rarity": "异域",
+					"description": "云霄破击",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 68,
+					"name": "二象性",
+					"kind": "霰弹枪",
+					"rarity": "异域",
+					"description": "二象性",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 69,
+					"name": "帝喾预言",
+					"kind": "弓箭",
+					"rarity": "异域",
+					"description": "帝喾预言",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 70,
+					"name": "Vex揭秘者",
+					"kind": "融合步枪",
+					"rarity": "异域",
+					"description": "Vex揭秘者",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 71,
+					"name": "洛伦兹驱动器",
+					"kind": "线性融合步枪",
+					"rarity": "异域",
+					"description": "洛伦兹驱动器",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 72,
+					"name": "集体义务",
+					"kind": "脉冲步枪",
+					"rarity": "异域",
+					"description": "集体义务",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 73,
+					"name": "死亡信使",
+					"kind": "榴弹发射器",
+					"rarity": "异域",
+					"description": "死亡信使",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 74,
+					"name": "朱雀意图之刃",
+					"kind": "堰月",
+					"rarity": "异域",
+					"description": "朱雀意图之刃",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 75,
+					"name": "玄武行动之刃",
+					"kind": "堰月",
+					"rarity": "异域",
+					"description": "玄武行动之刃",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 76,
+					"name": "青龙协同之刃",
+					"kind": "堰月",
+					"rarity": "异域",
+					"description": "青龙协同之刃",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 77,
+					"name": "入侵者",
+					"kind": "手枪",
+					"rarity": "异域",
+					"description": "入侵者",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 78,
+					"name": "精致坟墓",
+					"kind": "融合步枪",
+					"rarity": "异域",
+					"description": "精致坟墓",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 79,
+					"name": "需求层级",
+					"kind": "弓箭",
+					"rarity": "异域",
+					"description": "需求层级",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 80,
+					"name": "蝎狮",
+					"kind": "微型冲锋枪",
+					"rarity": "异域",
+					"description": "蝎狮",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 81,
+					"name": "维王者之剑",
+					"kind": "堰月",
+					"rarity": "异域",
+					"description": "维王者之剑",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 82,
+					"name": "离心混合器",
+					"kind": "自动步枪",
+					"rarity": "异域",
+					"description": "离心混合器",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 83,
+					"name": "不祥之兆",
+					"kind": "榴弹发射器",
+					"rarity": "异域",
+					"description": "不祥之兆",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 84,
+					"name": "雷神",
+					"kind": "机枪",
+					"rarity": "异域",
+					"description": "雷神",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 85,
+					"name": "D.A.R.C.I",
+					"kind": "狙击步枪",
+					"rarity": "异域",
+					"description": "D.A.R.C.I",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 86,
+					"name": "阿克瑞斯传说",
+					"kind": "霰弹枪",
+					"rarity": "异域",
+					"description": "阿克瑞斯传说",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 87,
+					"name": "牵引器火炮",
+					"kind": "霰弹枪",
+					"rarity": "异域",
+					"description": "牵引器火炮",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 88,
+					"name": "沃德克里夫线圈",
+					"kind": "火箭发射器",
+					"rarity": "异域",
+					"description": "沃德克里夫线圈",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 89,
+					"name": "勘探者",
+					"kind": "榴弹发射器",
+					"rarity": "异域",
+					"description": "勘探者",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 90,
+					"name": "群居者",
+					"kind": "榴弹发射器",
+					"rarity": "异域",
+					"description": "群居者",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 91,
+					"name": "蠕虫低语",
+					"kind": "狙击步枪",
+					"rarity": "异域",
+					"description": "蠕虫低语",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 92,
+					"name": "睡者之吼",
+					"kind": "线性融合步枪",
+					"rarity": "异域",
+					"description": "睡者之吼",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 93,
+					"name": "零号世界线",
+					"kind": "刀剑",
+					"rarity": "异域",
+					"description": "零号世界线",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 94,
+					"name": "弑后者",
+					"kind": "线性融合步枪",
+					"rarity": "异域",
+					"description": "弑后者",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 95,
+					"name": "黑色利爪",
+					"kind": "刀剑",
+					"rarity": "异域",
+					"description": "黑色利爪",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 96,
+					"name": "双尾狐",
+					"kind": "火箭发射器",
+					"rarity": "异域",
+					"description": "双尾狐",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 97,
+					"name": "千语",
+					"kind": "融合步枪",
+					"rarity": "异域",
+					"description": "千语",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 98,
+					"name": "混乱无序",
+					"kind": "榴弹发射器",
+					"rarity": "异域",
+					"description": "混乱无序",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 99,
+					"name": "真相",
+					"kind": "火箭发射器",
+					"rarity": "异域",
+					"description": "真相",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 100,
+					"name": "死亡使者",
+					"kind": "火箭发射器",
+					"rarity": "异域",
+					"description": "死亡使者",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 101,
+					"name": "异星噬菌",
+					"kind": "机枪",
+					"rarity": "异域",
+					"description": "异星噬菌",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 102,
+					"name": "利维坦之息",
+					"kind": "弓箭",
+					"rarity": "异域",
+					"description": "利维坦之息",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 103,
+					"name": "法定继承人",
+					"kind": "机枪",
+					"rarity": "异域",
+					"description": "法定继承人",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 104,
+					"name": "挽歌",
+					"kind": "刀剑",
+					"rarity": "异域",
+					"description": "挽歌",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 105,
+					"name": "明日之眼",
+					"kind": "火箭发射器",
+					"rarity": "异域",
+					"description": "明日之眼",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 106,
+					"name": "救赎之握",
+					"kind": "榴弹发射器",
+					"rarity": "异域",
+					"description": "救赎之握",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 107,
+					"name": "加拉尔号角",
+					"kind": "火箭发射器",
+					"rarity": "异域",
+					"description": "加拉尔号角",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 108,
+					"name": "大序曲",
+					"kind": "机枪",
+					"rarity": "异域",
+					"description": "大序曲",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 109,
+					"name": "寄生虫",
+					"kind": "榴弹发射器",
+					"rarity": "异域",
+					"description": "寄生虫",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 110,
+					"name": "心影",
+					"kind": "刀剑",
+					"rarity": "异域",
+					"description": "心影",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 111,
+					"name": "寒冬之啮",
+					"kind": "堰月",
+					"rarity": "异域",
+					"description": "寒冬之啮",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				},
+				{
+					"id": 112,
+					"name": "命定混沌",
+					"kind": "机枪",
+					"rarity": "异域",
+					"description": "命定混沌",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.008929
+				}
+			]
+		},
+		"armor": {
+			"titanArmor": [
+				{
+					"id": 1,
+					"name": "沙丘行者",
+					"kind": "腿部护甲",
+					"rarity": "异域",
+					"description": "沙丘行者",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 2,
+					"name": "和平守护者",
+					"kind": "腿部护甲",
+					"rarity": "异域",
+					"description": "和平守护者",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 3,
+					"name": "猖獗雄狮",
+					"kind": "腿部护甲",
+					"rarity": "异域",
+					"description": "猖獗雄狮",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 4,
+					"name": "圣火护心甲",
+					"kind": "胸部护甲",
+					"rarity": "异域",
+					"description": "圣火护心甲",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 5,
+					"name": "亚克兴角战役钻机",
+					"kind": "胸部护甲",
+					"rarity": "异域",
+					"description": "亚克兴角战役钻机",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 6,
+					"name": "阿尔法·鲁皮之脊",
+					"kind": "胸部护甲",
+					"rarity": "异域",
+					"description": "阿尔法·鲁皮之脊",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 7,
+					"name": "合成感受器",
+					"kind": "臂铠",
+					"rarity": "异域",
+					"description": "合成感受器",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 8,
+					"name": "毁灭之牙肩甲",
+					"kind": "臂铠",
+					"rarity": "异域",
+					"description": "毁灭之牙肩甲",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 9,
+					"name": "ACD-0反馈栅",
+					"kind": "臂铠",
+					"rarity": "异域",
+					"description": "ACD-0反馈栅",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 10,
+					"name": "沉默者面具",
+					"kind": "头盔",
+					"rarity": "异域",
+					"description": "沉默者面具",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 11,
+					"name": "难以逾越的颅骨堡垒",
+					"kind": "头盔",
+					"rarity": "异域",
+					"description": "难以逾越的颅骨堡垒",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 12,
+					"name": "Mk.44让开",
+					"kind": "腿部护甲",
+					"rarity": "异域",
+					"description": "Mk.44让开",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 13,
+					"name": "永劫安泰",
+					"kind": "臂铠",
+					"rarity": "异域",
+					"description": "永劫安泰",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 14,
+					"name": "圣人14的头盔",
+					"kind": "头盔",
+					"rarity": "异域",
+					"description": "圣人14的头盔",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 15,
+					"name": "凯布利角盔",
+					"kind": "头盔",
+					"rarity": "异域",
+					"description": "凯布利角盔",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 16,
+					"name": "医疗设备",
+					"kind": "胸部护甲",
+					"rarity": "异域",
+					"description": "医疗设备",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 17,
+					"name": "虫神爱抚",
+					"kind": "臂铠",
+					"rarity": "异域",
+					"description": "虫神爱抚",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 18,
+					"name": "苍白苏醒",
+					"kind": "臂铠",
+					"rarity": "异域",
+					"description": "苍白苏醒",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 19,
+					"name": "永恒战士",
+					"kind": "头盔",
+					"rarity": "异域",
+					"description": "永恒战士",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 20,
+					"name": "安泰俄斯护盾",
+					"kind": "腿部护甲",
+					"rarity": "异域",
+					"description": "安泰俄斯护盾",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 21,
+					"name": "至纯光能护心甲",
+					"kind": "胸部护甲",
+					"rarity": "异域",
+					"description": "至纯光能护心甲",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 22,
+					"name": "大熊狂怒",
+					"kind": "臂铠",
+					"rarity": "异域",
+					"description": "大熊狂怒",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 23,
+					"name": "独眼面具",
+					"kind": "头盔",
+					"rarity": "异域",
+					"description": "独眼面具",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 24,
+					"name": "据点",
+					"kind": "臂铠",
+					"rarity": "异域",
+					"description": "据点",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 25,
+					"name": "游隼胫甲",
+					"kind": "腿部护甲",
+					"rarity": "异域",
+					"description": "游隼胫甲",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 26,
+					"name": "凤巢",
+					"kind": "腿部护甲",
+					"rarity": "异域",
+					"description": "凤巢",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 27,
+					"name": "断绝末路",
+					"kind": "胸部护甲",
+					"rarity": "异域",
+					"description": "断绝末路",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 28,
+					"name": "西坦壁垒",
+					"kind": "臂铠",
+					"rarity": "异域",
+					"description": "西坦壁垒",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 29,
+					"name": "冰瀑衣钵",
+					"kind": "臂铠",
+					"rarity": "异域",
+					"description": "冰瀑衣钵",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 30,
+					"name": "珍贵伤痕",
+					"kind": "头盔",
+					"rarity": "异域",
+					"description": "珍贵伤痕",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 31,
+					"name": "陨星胸甲",
+					"kind": "胸部护甲",
+					"rarity": "异域",
+					"description": "陨星胸甲",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 32,
+					"name": "燃烧舞步之道",
+					"kind": "腿部护甲",
+					"rarity": "异域",
+					"description": "燃烧舞步之道",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 33,
+					"name": "没有B计划",
+					"kind": "臂铠",
+					"rarity": "异域",
+					"description": "没有B计划",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 34,
+					"name": "白霜-Z",
+					"kind": "胸部护甲",
+					"rarity": "异域",
+					"description": "白霜-Z",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 35,
+					"name": "罗蕾莱辉煌头盔",
+					"kind": "头盔",
+					"rarity": "异域",
+					"description": "罗蕾莱辉煌头盔",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 36,
+					"name": "第二次机会",
+					"kind": "臂铠",
+					"rarity": "异域",
+					"description": "第二次机会",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 37,
+					"name": "点接触炮架",
+					"kind": "臂铠",
+					"rarity": "异域",
+					"description": "点接触炮架",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 38,
+					"name": "中止之跃",
+					"kind": "腿部护甲",
+					"rarity": "异域",
+					"description": "中止之跃",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 39,
+					"name": "卡德马斯山脊长矛帽",
+					"kind": "头盔",
+					"rarity": "异域",
+					"description": "卡德马斯山脊长矛帽",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 40,
+					"name": "乔木典狱官",
+					"kind": "胸部护甲",
+					"rarity": "异域",
+					"description": "乔木典狱官",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 41,
+					"name": "火风暴臂铠",
+					"kind": "臂铠",
+					"rarity": "异域",
+					"description": "火风暴臂铠",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				}
+			],
+			"hunterArmor": [
+				{
+					"id": 1,
+					"name": "踢踏5",
+					"kind": "腿部护甲",
+					"rarity": "异域",
+					"description": "踢踏5",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 2,
+					"name": "奥菲斯钻机",
+					"kind": "腿部护甲",
+					"rarity": "异域",
+					"description": "奥菲斯钻机",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 3,
+					"name": "幸运裤",
+					"kind": "腿部护甲",
+					"rarity": "异域",
+					"description": "幸运裤",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 4,
+					"name": "巨龙之影",
+					"kind": "胸部护甲",
+					"rarity": "异域",
+					"description": "巨龙之影",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 5,
+					"name": "幸运要盆子",
+					"kind": "胸部护甲",
+					"rarity": "异域",
+					"description": "幸运覆盆子",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 6,
+					"name": "雷电通流",
+					"kind": "胸部护甲",
+					"rarity": "异域",
+					"description": "雷电通流",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 7,
+					"name": "机工诡诈臂袖",
+					"kind": "臂铠",
+					"rarity": "异域",
+					"description": "机工诡诈臂袖",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 8,
+					"name": "幼年阿罕卡拉之脊",
+					"kind": "臂铠",
+					"rarity": "异域",
+					"description": "幼年阿罕卡拉之脊",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 9,
+					"name": "觅敌者",
+					"kind": "头盔",
+					"rarity": "异域",
+					"description": "觅敌者",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 10,
+					"name": "星界夜鹰",
+					"kind": "头盔",
+					"rarity": "异域",
+					"description": "星界夜鹰",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 11,
+					"name": "傻瓜雷达",
+					"kind": "头盔",
+					"rarity": "异域",
+					"description": "傻瓜雷达",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 12,
+					"name": "双子座小丑",
+					"kind": "腿部护甲",
+					"rarity": "异域",
+					"description": "双子座小丑",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 13,
+					"name": "忍野的誓言",
+					"kind": "臂铠",
+					"rarity": "异域",
+					"description": "忍野的誓言",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 14,
+					"name": "永劫雨燕",
+					"kind": "臂铠",
+					"rarity": "异域",
+					"description": "永劫雨燕",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 15,
+					"name": "失重引力子",
+					"kind": "头盔",
+					"rarity": "异域",
+					"description": "失重引力子",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 16,
+					"name": "冰霜-EE5",
+					"kind": "腿部护甲",
+					"rarity": "异域",
+					"description": "冰霜-EE5",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 17,
+					"name": "盘蛇苞片",
+					"kind": "胸部护甲",
+					"rarity": "异域",
+					"description": "盘蛇苞片",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 18,
+					"name": "封印阿罕卡拉护手",
+					"kind": "臂铠",
+					"rarity": "异域",
+					"description": "封印阿罕卡拉护手",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 19,
+					"name": "虫骸头冠",
+					"kind": "头盔",
+					"rarity": "异域",
+					"description": "虫骸头冠",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 20,
+					"name": "鬼神胸甲",
+					"kind": "胸部护甲",
+					"rarity": "异域",
+					"description": "鬼神胸甲",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 21,
+					"name": "第六郊狼",
+					"kind": "胸部护甲",
+					"rarity": "异域",
+					"description": "第六郊狼",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 22,
+					"name": "守誓者",
+					"kind": "臂铠",
+					"rarity": "异域",
+					"description": "守誓者",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 23,
+					"name": "加拉诺碎片",
+					"kind": "臂铠",
+					"rarity": "异域",
+					"description": "加拉诺碎片",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 24,
+					"name": "骗徒的握手",
+					"kind": "臂铠",
+					"rarity": "异域",
+					"description": "骗徒的握手",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 25,
+					"name": "凯布利之刺",
+					"kind": "臂铠",
+					"rarity": "异域",
+					"description": "凯布利之刺",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 26,
+					"name": "刺客风帽",
+					"kind": "头盔",
+					"rarity": "异域",
+					"description": "刺客风帽",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 27,
+					"name": "投弹手",
+					"kind": "腿部护甲",
+					"rarity": "异域",
+					"description": "投弹手",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 28,
+					"name": "雷兽的挽具",
+					"kind": "胸部护甲",
+					"rarity": "异域",
+					"description": "雷兽的挽具",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 29,
+					"name": "阿斯瑞思之拥",
+					"kind": "臂铠",
+					"rarity": "异域",
+					"description": "阿斯瑞思之拥",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 30,
+					"name": "巴克里斯面具",
+					"kind": "头盔",
+					"rarity": "异域",
+					"description": "巴克里斯面具",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 31,
+					"name": "全知之眼",
+					"kind": "胸部护甲",
+					"rarity": "异域",
+					"description": "全知之眼",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 32,
+					"name": "噬星者之鳞",
+					"kind": "腿部护甲",
+					"rarity": "异域",
+					"description": "噬星者之鳞",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 33,
+					"name": "光辉跳舞机",
+					"kind": "腿部护甲",
+					"rarity": "异域",
+					"description": "光辉跳舞机",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 34,
+					"name": "复兴之握",
+					"kind": "臂铠",
+					"rarity": "异域",
+					"description": "复兴之握",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 35,
+					"name": "凋零游侠",
+					"kind": "头盔",
+					"rarity": "异域",
+					"description": "凋零游侠",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 36,
+					"name": "卡利班之手",
+					"kind": "臂铠",
+					"rarity": "异域",
+					"description": "卡利班之手",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 37,
+					"name": "矛隼胸甲",
+					"kind": "胸部护甲",
+					"rarity": "异域",
+					"description": "矛隼胸甲",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 38,
+					"name": "快速装弹松身裤",
+					"kind": "腿部护甲",
+					"rarity": "异域",
+					"description": "快速装弹松身裤",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 39,
+					"name": "曲腹蛛的伪装",
+					"kind": "头盔",
+					"rarity": "异域",
+					"description": "曲腹蛛的伪装",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 40,
+					"name": "特里同之罪",
+					"kind": "臂铠",
+					"rarity": "异域",
+					"description": "特里同之罪",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 41,
+					"name": "守蛾人裹手",
+					"kind": "臂铠",
+					"rarity": "异域",
+					"description": "守蛾人裹手",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				}
+			],
+			"warlockArmor": [
+				{
+					"id": 1,
+					"name": "月之阵营靴",
+					"kind": "腿部护甲",
+					"rarity": "异域",
+					"description": "月之阵营靴",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 2,
+					"name": "横断之步",
+					"kind": "腿部护甲",
+					"rarity": "异域",
+					"description": "横断之步",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 3,
+					"name": "神圣黎明之翼",
+					"kind": "胸部护甲",
+					"rarity": "异域",
+					"description": "神圣黎明之翼",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 4,
+					"name": "星火协议",
+					"kind": "胸部护甲",
+					"rarity": "异域",
+					"description": "星火协议",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 5,
+					"name": "狡诈严冬",
+					"kind": "臂铠",
+					"rarity": "异域",
+					"description": "狡诈严冬",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 6,
+					"name": "卡恩西坦臂章",
+					"kind": "臂铠",
+					"rarity": "异域",
+					"description": "卡恩西坦臂章",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 7,
+					"name": "炎阳护腕",
+					"kind": "臂铠",
+					"rarity": "异域",
+					"description": "炎阳护腕",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 8,
+					"name": "奈扎雷克原罪",
+					"kind": "头盔",
+					"rarity": "异域",
+					"description": "奈扎雷克原罪",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 9,
+					"name": "异界之眸",
+					"kind": "头盔",
+					"rarity": "异域",
+					"description": "异界之眸",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 10,
+					"name": "风暴头冠",
+					"kind": "头盔",
+					"rarity": "异域",
+					"description": "风暴头冠",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 11,
+					"name": "阿罕卡拉之颅",
+					"kind": "头盔",
+					"rarity": "异域",
+					"description": "阿罕卡拉之颅",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 12,
+					"name": "辐径晚星",
+					"kind": "胸部护甲",
+					"rarity": "异域",
+					"description": "辐径晚星",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 13,
+					"name": "毒蛇面貌",
+					"kind": "臂铠",
+					"rarity": "异域",
+					"description": "毒蛇面貌",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 14,
+					"name": "永劫灵魂",
+					"kind": "臂铠",
+					"rarity": "异域",
+					"description": "永劫灵魂",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 15,
+					"name": "雄鹿",
+					"kind": "头盔",
+					"rarity": "异域",
+					"description": "雄鹿",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 16,
+					"name": "血红炼金术",
+					"kind": "胸部护甲",
+					"rarity": "异域",
+					"description": "血红炼金术",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 17,
+					"name": "阿罕卡拉之爪",
+					"kind": "臂铠",
+					"rarity": "异域",
+					"description": "阿罕卡拉之爪",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 18,
+					"name": "神化面纱",
+					"kind": "头盔",
+					"rarity": "异域",
+					"description": "神化面纱",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 19,
+					"name": "真理之容",
+					"kind": "头盔",
+					"rarity": "异域",
+					"description": "真理之容",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 20,
+					"name": "地磁安定靴",
+					"kind": "腿部护甲",
+					"rarity": "异域",
+					"description": "地磁安定靴",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 21,
+					"name": "凤凰法则",
+					"kind": "胸部护甲",
+					"rarity": "异域",
+					"description": "凤凰法则",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 22,
+					"name": "炫火",
+					"kind": "胸部护甲",
+					"rarity": "异域",
+					"description": "炫火",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 23,
+					"name": "反转之握",
+					"kind": "臂铠",
+					"rarity": "异域",
+					"description": "反转之握",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 24,
+					"name": "逃逸艺术家",
+					"kind": "臂铠",
+					"rarity": "异域",
+					"description": "逃逸艺术家",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 25,
+					"name": "星云之歌",
+					"kind": "头盔",
+					"rarity": "异域",
+					"description": "星云之歌",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 26,
+					"name": "风暴舞者之拥",
+					"kind": "胸部护甲",
+					"rarity": "异域",
+					"description": "风暴舞者之拥",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 27,
+					"name": "冥火之刺",
+					"kind": "腿部护甲",
+					"rarity": "异域",
+					"description": "冥火之刺",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 28,
+					"name": "邪冬的头盔",
+					"kind": "头盔",
+					"rarity": "异域",
+					"description": "邪冬的头盔",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 29,
+					"name": "亡灵之握",
+					"kind": "臂铠",
+					"rarity": "异域",
+					"description": "亡灵之握",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 30,
+					"name": "黎明副歌",
+					"kind": "头盔",
+					"rarity": "异域",
+					"description": "黎明副歌",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 31,
+					"name": "战斗和谐护肩",
+					"kind": "胸部护甲",
+					"rarity": "异域",
+					"description": "战斗和谐护肩",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 32,
+					"name": "汇编器战靴",
+					"kind": "腿部护甲",
+					"rarity": "异域",
+					"description": "汇编器战靴",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 33,
+					"name": "虚无镣铐",
+					"kind": "臂铠",
+					"rarity": "异域",
+					"description": "虚无镣铐",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 34,
+					"name": "割线纤维",
+					"kind": "腿部护甲",
+					"rarity": "异域",
+					"description": "割线纤维",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 35,
+					"name": "锇素手套",
+					"kind": "臂铠",
+					"rarity": "异域",
+					"description": "锇素手套",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 36,
+					"name": "火焰润雨",
+					"kind": "腿部护甲",
+					"rarity": "异域",
+					"description": "火焰润雨",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 37,
+					"name": "堕落者日星",
+					"kind": "头盔",
+					"rarity": "异域",
+					"description": "堕落者日星",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 38,
+					"name": "浮游孢子",
+					"kind": "腿部护甲",
+					"rarity": "异域",
+					"description": "浮游孢子",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 39,
+					"name": "巴利道斯织怒工",
+					"kind": "臂铠",
+					"rarity": "异域",
+					"description": "巴利道斯织怒工",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 40,
+					"name": "纪念碑面具",
+					"kind": "头盔",
+					"rarity": "异域",
+					"description": "纪念碑面具",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				},
+				{
+					"id": 41,
+					"name": "蔷薇束缚",
+					"kind": "臂铠",
+					"rarity": "异域",
+					"description": "蔷薇束缚",
+					"sell": 6,
+					"count": 1,
+					"weight": 0.02439
+				}
+			]
+		}
 	},
-	"weapons1": [
-		{
-			"name": "自动步枪",
-			"kind": "自动步枪",
-			"rarity": "传说",
-			"description": "调取任意一把传说品质的自动步枪",
-			"sell": 1,
-			"count": 1,
-			"weight": 0.1429
-		},
-		{
-			"name": "斥候步枪",
-			"kind": "斥候步枪",
-			"rarity": "传说",
-			"description": "调取任意一把传说品质的斥候步枪",
-			"sell": 1,
-			"count": 1,
-			"weight": 0.1429
-		},
-		{
-			"name": "脉冲步枪",
-			"kind": "脉冲步枪",
-			"rarity": "传说",
-			"description": "调取任意一把传说品质的脉冲步枪",
-			"sell": 1,
-			"count": 1,
-			"weight": 0.1429
-		},
-		{
-			"name": "手炮",
-			"kind": "手炮",
-			"rarity": "传说",
-			"description": "调取任意一把传说品质的手炮",
-			"sell": 1,
-			"count": 1,
-			"weight": 0.1429
-		},
-		{
-			"name": "微型冲锋枪",
-			"kind": "微型冲锋枪",
-			"rarity": "传说",
-			"description": "调取任意一把传说品质的微型冲锋枪",
-			"sell": 1,
-			"count": 1,
-			"weight": 0.1429
-		},
-		{
-			"name": "手枪",
-			"kind": "手枪",
-			"rarity": "传说",
-			"description": "调取任意一把传说品质的手枪",
-			"sell": 1,
-			"count": 1,
-			"weight": 0.1429
-		},
-		{
-			"name": "弓箭",
-			"kind": "弓箭",
-			"rarity": "传说",
-			"description": "调取任意一把传说品质的弓箭",
-			"sell": 1,
-			"count": 1,
-			"weight": 0.1429
-		}
-	],
-	"weapons2": [
-		{
-			"name": "霰弹枪",
-			"kind": "霰弹枪",
-			"rarity": "传说",
-			"description": "调取任意一把传说品质特殊弹药类型的霰弹枪",
-			"sell": 3,
-			"count": 1,
-			"weight": 0.1667
-		},
-		{
-			"name": "榴弹发射器",
-			"kind": "榴弹发射器",
-			"rarity": "传说",
-			"description": "调取任意一把传说品质特殊弹药类型的榴弹发射器",
-			"sell": 3,
-			"count": 1,
-			"weight": 0.1667
-		},
-		{
-			"name": "融合步枪",
-			"kind": "融合步枪",
-			"rarity": "传说",
-			"description": "调取任意一把传说品质特殊弹药类型的融合步枪",
-			"sell": 3,
-			"count": 1,
-			"weight": 0.1667
-		},
-		{
-			"name": "狙击步枪",
-			"kind": "狙击步枪",
-			"rarity": "传说",
-			"description": "调取任意一把传说品质特殊弹药类型的狙击步枪",
-			"sell": 3,
-			"count": 1,
-			"weight": 0.1667
-		},
-		{
-			"name": "追踪步枪",
-			"kind": "追踪步枪",
-			"rarity": "传说",
-			"description": "调取任意一把传说品质特殊弹药类型的追踪步枪",
-			"sell": 3,
-			"count": 1,
-			"weight": 0.1667
-		},
-		{
-			"name": "堰月",
-			"kind": "堰月",
-			"rarity": "传说",
-			"description": "调取任意一把传说品质特殊弹药类型的堰月",
-			"sell": 3,
-			"count": 1,
-			"weight": 0.1667
-		}
-	],
-	"weapons3": [
-		{
-			"name": "刀剑",
-			"kind": "刀剑",
-			"rarity": "传说",
-			"description": "调取任意一把传说品质重型弹药类型的刀剑",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.2
-		},
-		{
-			"name": "榴弹发射器",
-			"kind": "榴弹发射器",
-			"rarity": "传说",
-			"description": "调取任意一把传说品质重型弹药类型的榴弹发射器",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.2
-		},
-		{
-			"name": "火箭发射器",
-			"kind": "火箭发射器",
-			"rarity": "传说",
-			"description": "调取任意一把传说品质重型弹药类型的火箭发射器",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.2
-		},
-		{
-			"name": "线性融合步枪",
-			"kind": "线性融合步枪",
-			"rarity": "传说",
-			"description": "调取任意一把传说品质重型弹药类型的线性融合步枪",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.2
-		},
-		{
-			"name": "机枪",
-			"kind": "机枪",
-			"rarity": "传说",
-			"description": "调取任意一把传说品质重型弹药类型的机枪",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.2
-		}
-	],
-	"exotic": [
-		{
-			"id": 1,
-			"name": "米达多功能",
-			"kind": "斥候步枪",
-			"rarity": "异域",
-			"description": "米达多功能",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 2,
-			"name": "鼠王",
-			"kind": "手枪",
-			"rarity": "异域",
-			"description": "鼠王",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 3,
-			"name": "警惕羽翼",
-			"kind": "脉冲步枪",
-			"rarity": "异域",
-			"description": "警惕羽翼",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 4,
-			"name": "狂飙",
-			"kind": "手枪",
-			"rarity": "异域",
-			"description": "狂飙",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 5,
-			"name": "糖果生意",
-			"kind": "自动步枪",
-			"rarity": "异域",
-			"description": "糖果生意",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 6,
-			"name": "玉兔",
-			"kind": "斥候步枪",
-			"rarity": "异域",
-			"description": "玉兔",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 7,
-			"name": "血色浪漫",
-			"kind": "手炮",
-			"rarity": "异域",
-			"description": "血色浪漫",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 8,
-			"name": "SUROS政权",
-			"kind": "自动步枪",
-			"rarity": "异域",
-			"description": "SUROS政权",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 9,
-			"name": "越橘",
-			"kind": "微型冲锋枪",
-			"rarity": "异域",
-			"description": "越橘",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 10,
-			"name": "监护人",
-			"kind": "霰弹枪",
-			"rarity": "异域",
-			"description": "监护人",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 11,
-			"name": "黑桃A",
-			"kind": "手炮",
-			"rarity": "异域",
-			"description": "黑桃A",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 12,
-			"name": "渎职",
-			"kind": "手炮",
-			"rarity": "异域",
-			"description": "渎职",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 13,
-			"name": "碎愿者",
-			"kind": "弓箭",
-			"rarity": "异域",
-			"description": "碎愿者",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 14,
-			"name": "冥府三头犬+1",
-			"kind": "自动步枪",
-			"rarity": "异域",
-			"description": "冥府三头犬+1",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 15,
-			"name": "遗言",
-			"kind": "手炮",
-			"rarity": "异域",
-			"description": "遗言",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 16,
-			"name": "伊邪那岐的重担",
-			"kind": "狙击步枪",
-			"rarity": "异域",
-			"description": "伊邪那岐的重担",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 17,
-			"name": "全面爆发",
-			"kind": "脉冲步枪",
-			"rarity": "异域",
-			"description": "全面爆发",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 18,
-			"name": "荆棘",
-			"kind": "手炮",
-			"rarity": "异域",
-			"description": "荆棘",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 19,
-			"name": "劲弩",
-			"kind": "线性融合步枪",
-			"rarity": "异域",
-			"description": "劲弩",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 20,
-			"name": "邪恶符咒",
-			"kind": "脉冲步枪",
-			"rarity": "异域",
-			"description": "邪恶符咒",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 21,
-			"name": "流明",
-			"kind": "手炮",
-			"rarity": "异域",
-			"description": "流明",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 22,
-			"name": "蒙特卡洛",
-			"kind": "自动步枪",
-			"rarity": "异域",
-			"description": "蒙特卡洛",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 23,
-			"name": "堡垒",
-			"kind": "融合步枪",
-			"rarity": "异域",
-			"description": "堡垒",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 24,
-			"name": "旅行者的选择",
-			"kind": "手枪",
-			"rarity": "异域",
-			"description": "旅行者的选择",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 25,
-			"name": "枯萎囤积",
-			"kind": "榴弹发射器",
-			"rarity": "异域",
-			"description": "枯萎囤积",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 26,
-			"name": "无时辩解",
-			"kind": "脉冲步枪",
-			"rarity": "异域",
-			"description": "无时辩解",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 27,
-			"name": "隼月",
-			"kind": "手炮",
-			"rarity": "异域",
-			"description": "隼月",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 28,
-			"name": "亡者传说",
-			"kind": "斥候步枪",
-			"rarity": "异域",
-			"description": "亡者传说",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 29,
-			"name": "冷冻状态77K",
-			"kind": "手枪",
-			"rarity": "异域",
-			"description": "冷冻状态77K",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 30,
-			"name": "先驱者",
-			"kind": "手枪",
-			"rarity": "异域",
-			"description": "先驱者",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 31,
-			"name": "阿格尔的权杖",
-			"kind": "追踪步枪",
-			"rarity": "异域",
-			"description": "阿格尔的权杖",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 32,
-			"name": "枯骨鳞片",
-			"kind": "微型冲锋枪",
-			"rarity": "异域",
-			"description": "枯骨鳞片",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 33,
-			"name": "瞬变风暴",
-			"kind": "自动步枪",
-			"rarity": "异域",
-			"description": "瞬变风暴",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 34,
-			"name": "恶意触碰",
-			"kind": "斥候步枪",
-			"rarity": "异域",
-			"description": "恶意触碰",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 35,
-			"name": "零号修订",
-			"kind": "脉冲步枪",
-			"rarity": "异域",
-			"description": "零号修订",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 36,
-			"name": "雨淞弧线",
-			"kind": "弓箭",
-			"rarity": "异域",
-			"description": "雨淞弧线",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 37,
-			"name": "条件终局",
-			"kind": "霰弹枪",
-			"rarity": "异域",
-			"description": "条件终局",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 38,
-			"name": "最终警告",
-			"kind": "手枪",
-			"rarity": "异域",
-			"description": "最终警告",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 39,
-			"name": "领航员",
-			"kind": "追踪步枪",
-			"rarity": "异域",
-			"description": "领航员",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 40,
-			"name": "邪恶工具",
-			"kind": "斥候步枪",
-			"rarity": "异域",
-			"description": "邪恶工具",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 41,
-			"name": "坏疽",
-			"kind": "自动步枪",
-			"rarity": "异域",
-			"description": "坏疽",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 42,
-			"name": "严苛光芒",
-			"kind": "自动步枪",
-			"rarity": "异域",
-			"description": "严苛光芒",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 43,
-			"name": "赴险者",
-			"kind": "微型冲锋枪",
-			"rarity": "异域",
-			"description": "赴险者",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 44,
-			"name": "北极光",
-			"kind": "狙击步枪",
-			"rarity": "异域",
-			"description": "北极光",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 45,
-			"name": "焚天者誓约",
-			"kind": "斥候步枪",
-			"rarity": "异域",
-			"description": "焚天者誓约",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 46,
-			"name": "引力子长枪",
-			"kind": "脉冲步枪",
-			"rarity": "异域",
-			"description": "引力子长枪",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 47,
-			"name": "烈日弹丸",
-			"kind": "手炮",
-			"rarity": "异域",
-			"description": "烈日弹丸",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 48,
-			"name": "战狮",
-			"kind": "榴弹发射器",
-			"rarity": "异域",
-			"description": "战狮",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 49,
-			"name": "冷酷无情",
-			"kind": "融合步枪",
-			"rarity": "异域",
-			"description": "冷酷无情",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 50,
-			"name": "寒冰核心",
-			"kind": "追踪步枪",
-			"rarity": "异域",
-			"description": "寒冰核心",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 51,
-			"name": "土卫十三",
-			"kind": "融合步枪",
-			"rarity": "异域",
-			"description": "土卫十三",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 52,
-			"name": "普罗米修斯透镜",
-			"kind": "追踪步枪",
-			"rarity": "异域",
-			"description": "普罗米修斯透镜",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 53,
-			"name": "极星长枪",
-			"kind": "斥候步枪",
-			"rarity": "异域",
-			"description": "极星长枪",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 54,
-			"name": "狼王",
-			"kind": "霰弹枪",
-			"rarity": "异域",
-			"description": "狼王",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 55,
-			"name": "裂波者",
-			"kind": "追踪步枪",
-			"rarity": "异域",
-			"description": "裂波者",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 56,
-			"name": "三体坐观者",
-			"kind": "弓箭",
-			"rarity": "异域",
-			"description": "三体坐观者",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 57,
-			"name": "冰霜巨人",
-			"kind": "融合步枪",
-			"rarity": "异域",
-			"description": "冰霜巨人",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 58,
-			"name": "帝王蝶",
-			"kind": "弓箭",
-			"rarity": "异域",
-			"description": "帝王蝶",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 59,
-			"name": "泰拉巴",
-			"kind": "微型冲锋枪",
-			"rarity": "异域",
-			"description": "泰拉巴",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 60,
-			"name": "神圣裁决",
-			"kind": "追踪步枪",
-			"rarity": "异域",
-			"description": "神圣裁决",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 61,
-			"name": "爱莲娜之誓",
-			"kind": "手炮",
-			"rarity": "异域",
-			"description": "爱莲娜之誓",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 62,
-			"name": "魔鬼之厄",
-			"kind": "手枪",
-			"rarity": "异域",
-			"description": "魔鬼之厄",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 63,
-			"name": "同调",
-			"kind": "斥候步枪",
-			"rarity": "异域",
-			"description": "同调",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 64,
-			"name": "第四骑士",
-			"kind": "霰弹枪",
-			"rarity": "异域",
-			"description": "第四骑士",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 65,
-			"name": "汤米的火柴盒",
-			"kind": "自动步枪",
-			"rarity": "异域",
-			"description": "汤米的火柴盒",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 66,
-			"name": "毁灭雕像",
-			"kind": "追踪步枪",
-			"rarity": "异域",
-			"description": "毁灭雕像",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 67,
-			"name": "云霄破击",
-			"kind": "狙击步枪",
-			"rarity": "异域",
-			"description": "云霄破击",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 68,
-			"name": "二象性",
-			"kind": "霰弹枪",
-			"rarity": "异域",
-			"description": "二象性",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 69,
-			"name": "帝喾预言",
-			"kind": "弓箭",
-			"rarity": "异域",
-			"description": "帝喾预言",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 70,
-			"name": "Vex揭秘者",
-			"kind": "融合步枪",
-			"rarity": "异域",
-			"description": "Vex揭秘者",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 71,
-			"name": "洛伦兹驱动器",
-			"kind": "线性融合步枪",
-			"rarity": "异域",
-			"description": "洛伦兹驱动器",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 72,
-			"name": "集体义务",
-			"kind": "脉冲步枪",
-			"rarity": "异域",
-			"description": "集体义务",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 73,
-			"name": "死亡信使",
-			"kind": "榴弹发射器",
-			"rarity": "异域",
-			"description": "死亡信使",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 74,
-			"name": "朱雀意图之刃",
-			"kind": "堰月",
-			"rarity": "异域",
-			"description": "朱雀意图之刃",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 75,
-			"name": "玄武行动之刃",
-			"kind": "堰月",
-			"rarity": "异域",
-			"description": "玄武行动之刃",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 76,
-			"name": "青龙协同之刃",
-			"kind": "堰月",
-			"rarity": "异域",
-			"description": "青龙协同之刃",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 77,
-			"name": "入侵者",
-			"kind": "手枪",
-			"rarity": "异域",
-			"description": "入侵者",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 78,
-			"name": "精致坟墓",
-			"kind": "融合步枪",
-			"rarity": "异域",
-			"description": "精致坟墓",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 79,
-			"name": "需求层级",
-			"kind": "弓箭",
-			"rarity": "异域",
-			"description": "需求层级",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 80,
-			"name": "蝎狮",
-			"kind": "微型冲锋枪",
-			"rarity": "异域",
-			"description": "蝎狮",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 81,
-			"name": "维王者之剑",
-			"kind": "堰月",
-			"rarity": "异域",
-			"description": "维王者之剑",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 82,
-			"name": "离心混合器",
-			"kind": "自动步枪",
-			"rarity": "异域",
-			"description": "离心混合器",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 83,
-			"name": "不祥之兆",
-			"kind": "榴弹发射器",
-			"rarity": "异域",
-			"description": "不祥之兆",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 84,
-			"name": "雷神",
-			"kind": "机枪",
-			"rarity": "异域",
-			"description": "雷神",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 85,
-			"name": "D.A.R.C.I",
-			"kind": "狙击步枪",
-			"rarity": "异域",
-			"description": "D.A.R.C.I",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 86,
-			"name": "阿克瑞斯传说",
-			"kind": "霰弹枪",
-			"rarity": "异域",
-			"description": "阿克瑞斯传说",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 87,
-			"name": "牵引器火炮",
-			"kind": "霰弹枪",
-			"rarity": "异域",
-			"description": "牵引器火炮",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 88,
-			"name": "沃德克里夫线圈",
-			"kind": "火箭发射器",
-			"rarity": "异域",
-			"description": "沃德克里夫线圈",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 89,
-			"name": "勘探者",
-			"kind": "榴弹发射器",
-			"rarity": "异域",
-			"description": "勘探者",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 90,
-			"name": "群居者",
-			"kind": "榴弹发射器",
-			"rarity": "异域",
-			"description": "群居者",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 91,
-			"name": "蠕虫低语",
-			"kind": "狙击步枪",
-			"rarity": "异域",
-			"description": "蠕虫低语",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 92,
-			"name": "睡者之吼",
-			"kind": "线性融合步枪",
-			"rarity": "异域",
-			"description": "睡者之吼",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 93,
-			"name": "零号世界线",
-			"kind": "刀剑",
-			"rarity": "异域",
-			"description": "零号世界线",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 94,
-			"name": "弑后者",
-			"kind": "线性融合步枪",
-			"rarity": "异域",
-			"description": "弑后者",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 95,
-			"name": "黑色利爪",
-			"kind": "刀剑",
-			"rarity": "异域",
-			"description": "黑色利爪",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 96,
-			"name": "双尾狐",
-			"kind": "火箭发射器",
-			"rarity": "异域",
-			"description": "双尾狐",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 97,
-			"name": "千语",
-			"kind": "融合步枪",
-			"rarity": "异域",
-			"description": "千语",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 98,
-			"name": "混乱无序",
-			"kind": "榴弹发射器",
-			"rarity": "异域",
-			"description": "混乱无序",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 99,
-			"name": "真相",
-			"kind": "火箭发射器",
-			"rarity": "异域",
-			"description": "真相",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 100,
-			"name": "死亡使者",
-			"kind": "火箭发射器",
-			"rarity": "异域",
-			"description": "死亡使者",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 101,
-			"name": "异星噬菌",
-			"kind": "机枪",
-			"rarity": "异域",
-			"description": "异星噬菌",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 102,
-			"name": "利维坦之息",
-			"kind": "弓箭",
-			"rarity": "异域",
-			"description": "利维坦之息",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 103,
-			"name": "法定继承人",
-			"kind": "机枪",
-			"rarity": "异域",
-			"description": "法定继承人",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 104,
-			"name": "挽歌",
-			"kind": "刀剑",
-			"rarity": "异域",
-			"description": "挽歌",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 105,
-			"name": "明日之眼",
-			"kind": "火箭发射器",
-			"rarity": "异域",
-			"description": "明日之眼",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 106,
-			"name": "救赎之握",
-			"kind": "榴弹发射器",
-			"rarity": "异域",
-			"description": "救赎之握",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 107,
-			"name": "加拉尔号角",
-			"kind": "火箭发射器",
-			"rarity": "异域",
-			"description": "加拉尔号角",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 108,
-			"name": "大序曲",
-			"kind": "机枪",
-			"rarity": "异域",
-			"description": "大序曲",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 109,
-			"name": "寄生虫",
-			"kind": "榴弹发射器",
-			"rarity": "异域",
-			"description": "寄生虫",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 110,
-			"name": "心影",
-			"kind": "刀剑",
-			"rarity": "异域",
-			"description": "心影",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 111,
-			"name": "寒冬之啮",
-			"kind": "堰月",
-			"rarity": "异域",
-			"description": "寒冬之啮",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		},
-		{
-			"id": 112,
-			"name": "命定混沌",
-			"kind": "机枪",
-			"rarity": "异域",
-			"description": "命定混沌",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.008929
-		}
-	],
-	"titanArmor": [
-		{
-			"id": 1,
-			"name": "沙丘行者",
-			"kind": "腿部护甲",
-			"rarity": "异域",
-			"description": "沙丘行者",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 2,
-			"name": "和平守护者",
-			"kind": "腿部护甲",
-			"rarity": "异域",
-			"description": "和平守护者",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 3,
-			"name": "猖獗雄狮",
-			"kind": "腿部护甲",
-			"rarity": "异域",
-			"description": "猖獗雄狮",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 4,
-			"name": "圣火护心甲",
-			"kind": "胸部护甲",
-			"rarity": "异域",
-			"description": "圣火护心甲",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 5,
-			"name": "亚克兴角战役钻机",
-			"kind": "胸部护甲",
-			"rarity": "异域",
-			"description": "亚克兴角战役钻机",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 6,
-			"name": "阿尔法·鲁皮之脊",
-			"kind": "胸部护甲",
-			"rarity": "异域",
-			"description": "阿尔法·鲁皮之脊",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 7,
-			"name": "合成感受器",
-			"kind": "臂铠",
-			"rarity": "异域",
-			"description": "合成感受器",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 8,
-			"name": "毁灭之牙肩甲",
-			"kind": "臂铠",
-			"rarity": "异域",
-			"description": "毁灭之牙肩甲",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 9,
-			"name": "ACD-0反馈栅",
-			"kind": "臂铠",
-			"rarity": "异域",
-			"description": "ACD-0反馈栅",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 10,
-			"name": "沉默者面具",
-			"kind": "头盔",
-			"rarity": "异域",
-			"description": "沉默者面具",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 11,
-			"name": "难以逾越的颅骨堡垒",
-			"kind": "头盔",
-			"rarity": "异域",
-			"description": "难以逾越的颅骨堡垒",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 12,
-			"name": "Mk.44让开",
-			"kind": "腿部护甲",
-			"rarity": "异域",
-			"description": "Mk.44让开",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 13,
-			"name": "永劫安泰",
-			"kind": "臂铠",
-			"rarity": "异域",
-			"description": "永劫安泰",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 14,
-			"name": "圣人14的头盔",
-			"kind": "头盔",
-			"rarity": "异域",
-			"description": "圣人14的头盔",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 15,
-			"name": "凯布利角盔",
-			"kind": "头盔",
-			"rarity": "异域",
-			"description": "凯布利角盔",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 16,
-			"name": "医疗设备",
-			"kind": "胸部护甲",
-			"rarity": "异域",
-			"description": "医疗设备",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 17,
-			"name": "虫神爱抚",
-			"kind": "臂铠",
-			"rarity": "异域",
-			"description": "虫神爱抚",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 18,
-			"name": "苍白苏醒",
-			"kind": "臂铠",
-			"rarity": "异域",
-			"description": "苍白苏醒",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 19,
-			"name": "永恒战士",
-			"kind": "头盔",
-			"rarity": "异域",
-			"description": "永恒战士",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 20,
-			"name": "安泰俄斯护盾",
-			"kind": "腿部护甲",
-			"rarity": "异域",
-			"description": "安泰俄斯护盾",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 21,
-			"name": "至纯光能护心甲",
-			"kind": "胸部护甲",
-			"rarity": "异域",
-			"description": "至纯光能护心甲",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 22,
-			"name": "大熊狂怒",
-			"kind": "臂铠",
-			"rarity": "异域",
-			"description": "大熊狂怒",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 23,
-			"name": "独眼面具",
-			"kind": "头盔",
-			"rarity": "异域",
-			"description": "独眼面具",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 24,
-			"name": "据点",
-			"kind": "臂铠",
-			"rarity": "异域",
-			"description": "据点",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 25,
-			"name": "游隼胫甲",
-			"kind": "腿部护甲",
-			"rarity": "异域",
-			"description": "游隼胫甲",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 26,
-			"name": "凤巢",
-			"kind": "腿部护甲",
-			"rarity": "异域",
-			"description": "凤巢",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 27,
-			"name": "断绝末路",
-			"kind": "胸部护甲",
-			"rarity": "异域",
-			"description": "断绝末路",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 28,
-			"name": "西坦壁垒",
-			"kind": "臂铠",
-			"rarity": "异域",
-			"description": "西坦壁垒",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 29,
-			"name": "冰瀑衣钵",
-			"kind": "臂铠",
-			"rarity": "异域",
-			"description": "冰瀑衣钵",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 30,
-			"name": "珍贵伤痕",
-			"kind": "头盔",
-			"rarity": "异域",
-			"description": "珍贵伤痕",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 31,
-			"name": "陨星胸甲",
-			"kind": "胸部护甲",
-			"rarity": "异域",
-			"description": "陨星胸甲",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 32,
-			"name": "燃烧舞步之道",
-			"kind": "腿部护甲",
-			"rarity": "异域",
-			"description": "燃烧舞步之道",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 33,
-			"name": "没有B计划",
-			"kind": "臂铠",
-			"rarity": "异域",
-			"description": "没有B计划",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 34,
-			"name": "白霜-Z",
-			"kind": "胸部护甲",
-			"rarity": "异域",
-			"description": "白霜-Z",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 35,
-			"name": "罗蕾莱辉煌头盔",
-			"kind": "头盔",
-			"rarity": "异域",
-			"description": "罗蕾莱辉煌头盔",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 36,
-			"name": "第二次机会",
-			"kind": "臂铠",
-			"rarity": "异域",
-			"description": "第二次机会",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 37,
-			"name": "点接触炮架",
-			"kind": "臂铠",
-			"rarity": "异域",
-			"description": "点接触炮架",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 38,
-			"name": "中止之跃",
-			"kind": "腿部护甲",
-			"rarity": "异域",
-			"description": "中止之跃",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 39,
-			"name": "卡德马斯山脊长矛帽",
-			"kind": "头盔",
-			"rarity": "异域",
-			"description": "卡德马斯山脊长矛帽",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 40,
-			"name": "乔木典狱官",
-			"kind": "胸部护甲",
-			"rarity": "异域",
-			"description": "乔木典狱官",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 41,
-			"name": "火风暴臂铠",
-			"kind": "臂铠",
-			"rarity": "异域",
-			"description": "火风暴臂铠",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		}
-	],
-	"hunterArmor": [
-		{
-			"id": 1,
-			"name": "踢踏5",
-			"kind": "腿部护甲",
-			"rarity": "异域",
-			"description": "踢踏5",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 2,
-			"name": "奥菲斯钻机",
-			"kind": "腿部护甲",
-			"rarity": "异域",
-			"description": "奥菲斯钻机",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 3,
-			"name": "幸运裤",
-			"kind": "腿部护甲",
-			"rarity": "异域",
-			"description": "幸运裤",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 4,
-			"name": "巨龙之影",
-			"kind": "胸部护甲",
-			"rarity": "异域",
-			"description": "巨龙之影",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 5,
-			"name": "幸运要盆子",
-			"kind": "胸部护甲",
-			"rarity": "异域",
-			"description": "幸运要盆子",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 6,
-			"name": "雷电通流",
-			"kind": "胸部护甲",
-			"rarity": "异域",
-			"description": "雷电通流",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 7,
-			"name": "机工诡诈臂袖",
-			"kind": "臂铠",
-			"rarity": "异域",
-			"description": "机工诡诈臂袖",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 8,
-			"name": "幼年阿罕卡拉之脊",
-			"kind": "臂铠",
-			"rarity": "异域",
-			"description": "幼年阿罕卡拉之脊",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 9,
-			"name": "觅敌者",
-			"kind": "头盔",
-			"rarity": "异域",
-			"description": "觅敌者",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 10,
-			"name": "星界夜鹰",
-			"kind": "头盔",
-			"rarity": "异域",
-			"description": "星界夜鹰",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 11,
-			"name": "傻瓜雷达",
-			"kind": "头盔",
-			"rarity": "异域",
-			"description": "傻瓜雷达",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 12,
-			"name": "双子座小丑",
-			"kind": "腿部护甲",
-			"rarity": "异域",
-			"description": "双子座小丑",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 13,
-			"name": "忍野的誓言",
-			"kind": "臂铠",
-			"rarity": "异域",
-			"description": "忍野的誓言",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 14,
-			"name": "永劫雨燕",
-			"kind": "臂铠",
-			"rarity": "异域",
-			"description": "永劫雨燕",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 15,
-			"name": "失重引力子",
-			"kind": "头盔",
-			"rarity": "异域",
-			"description": "失重引力子",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 16,
-			"name": "冰霜-EE5",
-			"kind": "腿部护甲",
-			"rarity": "异域",
-			"description": "冰霜-EE5",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 17,
-			"name": "盘蛇苞片",
-			"kind": "胸部护甲",
-			"rarity": "异域",
-			"description": "盘蛇苞片",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 18,
-			"name": "封印阿罕卡拉护手",
-			"kind": "臂铠",
-			"rarity": "异域",
-			"description": "封印阿罕卡拉护手",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 19,
-			"name": "虫骸头冠",
-			"kind": "头盔",
-			"rarity": "异域",
-			"description": "虫骸头冠",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 20,
-			"name": "鬼神胸甲",
-			"kind": "胸部护甲",
-			"rarity": "异域",
-			"description": "鬼神胸甲",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 21,
-			"name": "第六郊狼",
-			"kind": "胸部护甲",
-			"rarity": "异域",
-			"description": "第六郊狼",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 22,
-			"name": "守誓者",
-			"kind": "臂铠",
-			"rarity": "异域",
-			"description": "守誓者",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 23,
-			"name": "加拉诺碎片",
-			"kind": "臂铠",
-			"rarity": "异域",
-			"description": "加拉诺碎片",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 24,
-			"name": "骗徒的握手",
-			"kind": "臂铠",
-			"rarity": "异域",
-			"description": "骗徒的握手",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 25,
-			"name": "凯布利之刺",
-			"kind": "臂铠",
-			"rarity": "异域",
-			"description": "凯布利之刺",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 26,
-			"name": "刺客风帽",
-			"kind": "头盔",
-			"rarity": "异域",
-			"description": "刺客风帽",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 27,
-			"name": "投弹手",
-			"kind": "腿部护甲",
-			"rarity": "异域",
-			"description": "投弹手",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 28,
-			"name": "雷兽的挽具",
-			"kind": "胸部护甲",
-			"rarity": "异域",
-			"description": "雷兽的挽具",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 29,
-			"name": "阿斯瑞思之拥",
-			"kind": "臂铠",
-			"rarity": "异域",
-			"description": "阿斯瑞思之拥",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 30,
-			"name": "巴克里斯面具",
-			"kind": "头盔",
-			"rarity": "异域",
-			"description": "巴克里斯面具",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 31,
-			"name": "全知之眼",
-			"kind": "胸部护甲",
-			"rarity": "异域",
-			"description": "全知之眼",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 32,
-			"name": "噬星者之鳞",
-			"kind": "腿部护甲",
-			"rarity": "异域",
-			"description": "噬星者之鳞",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 33,
-			"name": "光辉跳舞机",
-			"kind": "腿部护甲",
-			"rarity": "异域",
-			"description": "光辉跳舞机",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 34,
-			"name": "复兴之握",
-			"kind": "臂铠",
-			"rarity": "异域",
-			"description": "复兴之握",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 35,
-			"name": "凋零游侠",
-			"kind": "头盔",
-			"rarity": "异域",
-			"description": "凋零游侠",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 36,
-			"name": "卡利班之手",
-			"kind": "臂铠",
-			"rarity": "异域",
-			"description": "卡利班之手",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 37,
-			"name": "矛隼胸甲",
-			"kind": "胸部护甲",
-			"rarity": "异域",
-			"description": "矛隼胸甲",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 38,
-			"name": "快速装弹松身裤",
-			"kind": "腿部护甲",
-			"rarity": "异域",
-			"description": "快速装弹松身裤",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 39,
-			"name": "曲腹蛛的伪装",
-			"kind": "头盔",
-			"rarity": "异域",
-			"description": "曲腹蛛的伪装",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 40,
-			"name": "特里同之罪",
-			"kind": "臂铠",
-			"rarity": "异域",
-			"description": "特里同之罪",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 41,
-			"name": "守蛾人裹手",
-			"kind": "臂铠",
-			"rarity": "异域",
-			"description": "守蛾人裹手",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		}
-	],
-	"warlockArmor": [
-		{
-			"id": 1,
-			"name": "月之阵营靴",
-			"kind": "腿部护甲",
-			"rarity": "异域",
-			"description": "月之阵营靴",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 2,
-			"name": "横断之步",
-			"kind": "腿部护甲",
-			"rarity": "异域",
-			"description": "横断之步",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 3,
-			"name": "神圣黎明之翼",
-			"kind": "胸部护甲",
-			"rarity": "异域",
-			"description": "神圣黎明之翼",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 4,
-			"name": "星火协议",
-			"kind": "胸部护甲",
-			"rarity": "异域",
-			"description": "星火协议",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 5,
-			"name": "狡诈严冬",
-			"kind": "臂铠",
-			"rarity": "异域",
-			"description": "狡诈严冬",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 6,
-			"name": "卡恩西坦臂章",
-			"kind": "臂铠",
-			"rarity": "异域",
-			"description": "卡恩西坦臂章",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 7,
-			"name": "炎阳护腕",
-			"kind": "臂铠",
-			"rarity": "异域",
-			"description": "炎阳护腕",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 8,
-			"name": "奈扎雷克原罪",
-			"kind": "头盔",
-			"rarity": "异域",
-			"description": "奈扎雷克原罪",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 9,
-			"name": "异界之眸",
-			"kind": "头盔",
-			"rarity": "异域",
-			"description": "异界之眸",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 10,
-			"name": "风暴头冠",
-			"kind": "头盔",
-			"rarity": "异域",
-			"description": "风暴头冠",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 11,
-			"name": "阿罕卡拉之颅",
-			"kind": "头盔",
-			"rarity": "异域",
-			"description": "阿罕卡拉之颅",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 12,
-			"name": "辐径晚星",
-			"kind": "胸部护甲",
-			"rarity": "异域",
-			"description": "辐径晚星",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 13,
-			"name": "毒蛇面貌",
-			"kind": "臂铠",
-			"rarity": "异域",
-			"description": "毒蛇面貌",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 14,
-			"name": "永劫灵魂",
-			"kind": "臂铠",
-			"rarity": "异域",
-			"description": "永劫灵魂",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 15,
-			"name": "雄鹿",
-			"kind": "头盔",
-			"rarity": "异域",
-			"description": "雄鹿",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 16,
-			"name": "血红炼金术",
-			"kind": "胸部护甲",
-			"rarity": "异域",
-			"description": "血红炼金术",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 17,
-			"name": "阿罕卡拉之爪",
-			"kind": "臂铠",
-			"rarity": "异域",
-			"description": "阿罕卡拉之爪",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 18,
-			"name": "神化面纱",
-			"kind": "头盔",
-			"rarity": "异域",
-			"description": "神化面纱",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 19,
-			"name": "真理之容",
-			"kind": "头盔",
-			"rarity": "异域",
-			"description": "真理之容",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 20,
-			"name": "地磁安定靴",
-			"kind": "腿部护甲",
-			"rarity": "异域",
-			"description": "地磁安定靴",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 21,
-			"name": "凤凰法则",
-			"kind": "胸部护甲",
-			"rarity": "异域",
-			"description": "凤凰法则",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 22,
-			"name": "炫火",
-			"kind": "胸部护甲",
-			"rarity": "异域",
-			"description": "炫火",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 23,
-			"name": "反转之握",
-			"kind": "臂铠",
-			"rarity": "异域",
-			"description": "反转之握",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 24,
-			"name": "逃逸艺术家",
-			"kind": "臂铠",
-			"rarity": "异域",
-			"description": "逃逸艺术家",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 25,
-			"name": "星云之歌",
-			"kind": "头盔",
-			"rarity": "异域",
-			"description": "星云之歌",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 26,
-			"name": "风暴舞者之拥",
-			"kind": "胸部护甲",
-			"rarity": "异域",
-			"description": "风暴舞者之拥",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 27,
-			"name": "冥火之刺",
-			"kind": "腿部护甲",
-			"rarity": "异域",
-			"description": "冥火之刺",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 28,
-			"name": "邪冬的头盔",
-			"kind": "头盔",
-			"rarity": "异域",
-			"description": "邪冬的头盔",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 29,
-			"name": "亡灵之握",
-			"kind": "臂铠",
-			"rarity": "异域",
-			"description": "亡灵之握",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 30,
-			"name": "黎明副歌",
-			"kind": "头盔",
-			"rarity": "异域",
-			"description": "黎明副歌",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 31,
-			"name": "战斗和谐护肩",
-			"kind": "胸部护甲",
-			"rarity": "异域",
-			"description": "战斗和谐护肩",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 32,
-			"name": "汇编器战靴",
-			"kind": "腿部护甲",
-			"rarity": "异域",
-			"description": "汇编器战靴",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 33,
-			"name": "虚无镣铐",
-			"kind": "臂铠",
-			"rarity": "异域",
-			"description": "虚无镣铐",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 34,
-			"name": "割线纤维",
-			"kind": "腿部护甲",
-			"rarity": "异域",
-			"description": "割线纤维",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 35,
-			"name": "锇素手套",
-			"kind": "臂铠",
-			"rarity": "异域",
-			"description": "锇素手套",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 36,
-			"name": "火焰润雨",
-			"kind": "腿部护甲",
-			"rarity": "异域",
-			"description": "火焰润雨",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 37,
-			"name": "堕落者日星",
-			"kind": "头盔",
-			"rarity": "异域",
-			"description": "堕落者日星",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 38,
-			"name": "浮游孢子",
-			"kind": "腿部护甲",
-			"rarity": "异域",
-			"description": "浮游孢子",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 39,
-			"name": "巴利道斯织怒工",
-			"kind": "臂铠",
-			"rarity": "异域",
-			"description": "巴利道斯织怒工",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 40,
-			"name": "纪念碑面具",
-			"kind": "头盔",
-			"rarity": "异域",
-			"description": "纪念碑面具",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		},
-		{
-			"id": 41,
-			"name": "蔷薇束缚",
-			"kind": "臂铠",
-			"rarity": "异域",
-			"description": "蔷薇束缚",
-			"sell": 6,
-			"count": 1,
-			"weight": 0.02439
-		}
-	],
 	"deck": {
 		"MicroGain": [
 			{
@@ -2727,8 +2739,7 @@
 				"name": "Brain-Storm",
 				"cardName": "头脑灵光",
 				"description": "获得所有头部模组使用权",
-				"illustrate": "无",
-				"priority": 0,
+				"priority": "none",
 				"weight": 0.066667,
 				"count": 1
 			},
@@ -2738,8 +2749,7 @@
 				"name": "Arms-Kongwu",
 				"cardName": "双臂孔武",
 				"description": "获得所有手部模组使用权",
-				"illustrate": "无",
-				"priority": 0,
+				"priority": "none",
 				"weight": 0.066667,
 				"count": 1
 			},
@@ -2749,8 +2759,7 @@
 				"name": "Strong-Body",
 				"cardName": "身躯健硕",
 				"description": "获得所有胸部模组使用权",
-				"illustrate": "无",
-				"priority": 0,
+				"priority": "none",
 				"weight": 0.066667,
 				"count": 1
 			},
@@ -2760,8 +2769,7 @@
 				"name": "Strong-Legs",
 				"cardName": "双腿矫健",
 				"description": "获得所有腿部模组使用权",
-				"illustrate": "无",
-				"priority": 0,
+				"priority": "none",
 				"weight": 0.066667,
 				"count": 1
 			},
@@ -2771,30 +2779,27 @@
 				"name": "Professional-Mastery",
 				"cardName": "职业精通",
 				"description": "获得所有职业物品模组使用权",
-				"illustrate": "无",
-				"priority": 0,
+				"priority": "none",
 				"weight": 0.066667,
 				"count": 1
 			},
 			{
 				"id": "MG6",
 				"type": "MicroGain",
-				"name": "Rise",
-				"cardName": "升腾 ",
+				"name": "Solar",
+				"cardName": "烈日",
 				"description": "解锁烈日基础技能（含星象以及模组）",
-				"illustrate": "无",
-				"priority": 0,
+				"priority": "none",
 				"weight": 0.066667,
 				"count": 1
 			},
 			{
 				"id": "MG7",
 				"type": "MicroGain",
-				"name": "Amplified",
-				"cardName": "增幅",
+				"name": "Arc",
+				"cardName": "电弧",
 				"description": "解锁电弧基础技能（含星象以及模组） ",
-				"illustrate": "无",
-				"priority": 0,
+				"priority": "none",
 				"weight": 0.066667,
 				"count": 1
 			},
@@ -2804,85 +2809,77 @@
 				"name": "Void",
 				"cardName": "虚空",
 				"description": "解锁虚空基础技能（含星象以及模组）",
-				"illustrate": "无",
-				"priority": 0,
+				"priority": "none",
 				"weight": 0.066667,
 				"count": 1
 			},
 			{
 				"id": "MG9",
 				"type": "MicroGain",
-				"name": "Telesto",
-				"cardName": "薛定谔之枪",
-				"description": "获得异域武器土卫十三",
-				"illustrate": "无",
-				"priority": 0,
+				"name": "Stasis",
+				"cardName": "冰影",
+				"description": "解锁冰影基础技能（含星象以及模组）",
+				"priority": "none",
 				"weight": 0.066667,
 				"count": 1
 			},
 			{
 				"id": "MG10",
 				"type": "MicroGain",
-				"name": "Monte-Carlo",
-				"cardName": "马尔可夫",
-				"description": "获得异域武器蒙特卡洛",
-				"illustrate": "无",
-				"priority": 0,
+				"name": "Strand",
+				"cardName": "缚丝",
+				"description": "解锁缚丝基础技能（含星象以及模组）",
+				"priority": "none",
 				"weight": 0.066667,
 				"count": 1
 			},
 			{
 				"id": "MG11",
 				"type": "MicroGain",
-				"name": "PromeTheus-Lens",
-				"cardName": "盗火者 ",
-				"description": "获得异域武器普罗米修斯透镜",
-				"illustrate": "无",
-				"priority": 0,
+				"name": "Telesto",
+				"cardName": "薛定谔之枪",
+				"description": "获得异域武器土卫十三",
+				"priority": "none",
 				"weight": 0.066667,
 				"count": 1
 			},
 			{
 				"id": "MG12",
 				"type": "MicroGain",
-				"name": "Verglas-Curve",
-				"cardName": "极速冷却",
-				"description": "获得异域武器雨淞弧线",
-				"illustrate": "无",
-				"priority": 0,
+				"name": "Monte-Carlo",
+				"cardName": "马尔可夫",
+				"description": "获得异域武器蒙特卡洛",
+				"priority": "none",
 				"weight": 0.066667,
 				"count": 1
 			},
 			{
 				"id": "MG13",
 				"type": "MicroGain",
-				"name": "Power-System",
-				"cardName": "动力系统",
-				"description": "获得异域护甲 猖獗雄狮 / 踢踏5 / 横断之步",
-				"illustrate": "无",
-				"priority": 0,
+				"name": "PromeTheus-Lens",
+				"cardName": "盗火者 ",
+				"description": "获得异域武器普罗米修斯透镜",
+				"priority": "none",
 				"weight": 0.066667,
 				"count": 1
 			},
 			{
 				"id": "MG14",
 				"type": "MicroGain",
-				"name": "Deterministic-Chaos",
-				"cardName": "命定混沌",
-				"description": "获得异域武器命定混沌 ",
-				"illustrate": "辅助池",
-				"priority": 1,
+				"name": "Verglas-Curve",
+				"cardName": "极速冷却",
+				"description": "获得异域武器雨淞弧线",
+				"priority": "none",
 				"weight": 0.066667,
 				"count": 1
 			},
 			{
 				"id": "MG15",
 				"type": "MicroGain",
-				"name": "Cult-Of-The-Aeons",
-				"cardName": "永劫教派",
-				"description": "获得异域护甲 永杰安泰 / 永劫雨燕 / 永劫灵魂",
-				"illustrate": "辅助池",
-				"priority": 1,
+				"name": "Power-System",
+				"cardName": "动力系统",
+				"description": "获得异域护甲 猖獗雄狮 / 踢踏5 / 横断之步",
+				"priority": "none",
 				"weight": 0.066667,
 				"count": 1
 			}
@@ -2894,9 +2891,8 @@
 				"name": "All-Out",
 				"cardName": "全胜姿态",
 				"description": "获得所有模组使用权",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.052632,
+				"priority": "none",
+				"weight": 0.066667,
 				"count": 1
 			},
 			{
@@ -2905,9 +2901,8 @@
 				"name": "Darkness-Servant-1",
 				"cardName": "暗影仆从 · 一",
 				"description": "获得冰影的全部力量",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.052632,
+				"priority": "none",
+				"weight": 0.066667,
 				"count": 1
 			},
 			{
@@ -2916,9 +2911,8 @@
 				"name": "Darkness-Servant-2",
 				"cardName": "暗影仆从 · 二",
 				"description": "获得缚丝的全部力量",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.052632,
+				"priority": "none",
+				"weight": 0.066667,
 				"count": 1
 			},
 			{
@@ -2927,9 +2921,8 @@
 				"name": "Light-Bringer-1",
 				"cardName": "光能使者 · 一",
 				"description": "获得雷电的全部力量",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.052632,
+				"priority": "none",
+				"weight": 0.066667,
 				"count": 1
 			},
 			{
@@ -2938,9 +2931,8 @@
 				"name": "Light-Bringer-2",
 				"cardName": "光能使者 · 二",
 				"description": "获得烈日的全部力量",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.052632,
+				"priority": "none",
+				"weight": 0.066667,
 				"count": 1
 			},
 			{
@@ -2949,9 +2941,8 @@
 				"name": "Light-Bringer-3",
 				"cardName": "光能使者 · 三",
 				"description": "获得虚空的全部力量",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.052632,
+				"priority": "none",
+				"weight": 0.066667,
 				"count": 1
 			},
 			{
@@ -2960,9 +2951,8 @@
 				"name": "Anarchy",
 				"cardName": "电弧陷阱",
 				"description": "获得异域武器混乱无序",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.052632,
+				"priority": "none",
+				"weight": 0.066667,
 				"count": 1
 			},
 			{
@@ -2971,9 +2961,8 @@
 				"name": "Xenophage",
 				"cardName": "热毒子弹",
 				"description": "获得异域武器异星噬菌",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.052632,
+				"priority": "none",
+				"weight": 0.066667,
 				"count": 1
 			},
 			{
@@ -2982,9 +2971,8 @@
 				"name": "One-Thousand-Voices",
 				"cardName": "不测回想",
 				"description": "获得异域武器千语",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.052632,
+				"priority": "none",
+				"weight": 0.066667,
 				"count": 1
 			},
 			{
@@ -2993,9 +2981,8 @@
 				"name": "Whisper-Of-The-Worm",
 				"cardName": "月牙白",
 				"description": "获得异域武器蠕虫低语",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.052632,
+				"priority": "none",
+				"weight": 0.066667,
 				"count": 1
 			},
 			{
@@ -3004,9 +2991,8 @@
 				"name": "Thunder-Wrath",
 				"cardName": "雷霆之怒",
 				"description": "获得雷电异域护甲以及护甲能力 电接触炮架 / 骗徒的握手 / 逃逸艺术家",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.052632,
+				"priority": "none",
+				"weight": 0.066667,
 				"count": 1
 			},
 			{
@@ -3015,9 +3001,8 @@
 				"name": "Burning-Fire",
 				"cardName": "烈火予身",
 				"description": "获得烈日异域护甲以及护甲能力 虫神爱抚 / 幼年阿罕卡拉之脊 / 炎阳护腕",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.052632,
+				"priority": "none",
+				"weight": 0.066667,
 				"count": 1
 			},
 			{
@@ -3026,9 +3011,8 @@
 				"name": "Night-Chapter",
 				"cardName": "夜之章节",
 				"description": "获得虚空异域护甲以及护甲能力 据点 / 矛隼胸甲 / 反转之握",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.052632,
+				"priority": "none",
+				"weight": 0.066667,
 				"count": 1
 			},
 			{
@@ -3037,9 +3021,8 @@
 				"name": "Professional-Style",
 				"cardName": "职业风格",
 				"description": "泰坦获得雪上加霜喷子和合成感受器 / 猎人获得渎职和幸运裤 / 术士获得流明和汇编器战靴",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.052632,
+				"priority": "none",
+				"weight": 0.066667,
 				"count": 1
 			},
 			{
@@ -3048,53 +3031,8 @@
 				"name": "Paladin",
 				"cardName": "圣骑士",
 				"description": "泰坦获得挽歌 / 猎人获得心影 / 术士获得零号世界线",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.052632,
-				"count": 1
-			},
-			{
-				"id": "SG16",
-				"type": "StrongGain",
-				"name": "Gutshot-Straight",
-				"cardName": "直击要害",
-				"description": "获得异域武器神圣裁决",
-				"illustrate": "辅助池",
-				"priority": 1,
-				"weight": 0.052632,
-				"count": 1
-			},
-			{
-				"id": "SG17",
-				"type": "StrongGain",
-				"name": "Wolfpack-Leader",
-				"cardName": "狼群之首",
-				"description": "获得异域武器加拉尔号角",
-				"illustrate": "辅助池",
-				"priority": 1,
-				"weight": 0.052632,
-				"count": 1
-			},
-			{
-				"id": "SG18",
-				"type": "StrongGain",
-				"name": "Weaken",
-				"cardName": "弱化",
-				"description": "获得异域武器牵引器火炮",
-				"illustrate": "辅助池",
-				"priority": 1,
-				"weight": 0.052632,
-				"count": 1
-			},
-			{
-				"id": "SG19",
-				"type": "StrongGain",
-				"name": "Team-Core",
-				"cardName": "团队核心",
-				"description": "猎人获得虚空分支并且获得异域护甲 奥菲斯钻机 / 术士获得烈日分支并且获得异域护甲 月之阵营靴 / 泰坦获得虚空分支并且获得异域护甲 阿尔法·鲁皮之脊",
-				"illustrate": "辅助池",
-				"priority": 1,
-				"weight": 0.052632,
+				"priority": "none",
+				"weight": 0.066667,
 				"count": 1
 			}
 		],
@@ -3105,9 +3043,8 @@
 				"name": "Armory",
 				"cardName": "自选军火库",
 				"description": "从仓库中调取一把异域武器，一把传说武器，一个异域护甲，并且它们会永远跟随着你，不会因其他效果消失",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.33333,
+				"priority": "none",
+				"weight": 0.25,
 				"count": 1
 			},
 			{
@@ -3116,9 +3053,8 @@
 				"name": "Traveler",
 				"cardName": "园丁-旅行者",
 				"description": "拥有所有光能技能使用权 （永久），并且每回合可以指定两个队友，让他们获取指定分支的所有力量",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.33333,
+				"priority": "none",
+				"weight": 0.25,
 				"count": 1
 			},
 			{
@@ -3127,9 +3063,18 @@
 				"name": "Witnesses",
 				"cardName": "扬场工-三角舰",
 				"description": "拥有所有暗影技能使用权 （永久），并且每回合可以指定两个队友，让他们获取指定分支的所有力量",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.33333,
+				"priority": "none",
+				"weight": 0.25,
+				"count": 1
+			},
+			{
+				"id": "O4",
+				"type": "Opportunity",
+				"name": "The-Medallion",
+				"cardName": "免死金牌",
+				"description": "本次突袭你将不会受到任何 不适类型的卡片 (事件任务除外) 影响",
+				"priority": "none",
+				"weight": 0.25,
 				"count": 1
 			}
 		],
@@ -3140,9 +3085,8 @@
 				"name": "Trade-Off",
 				"cardName": "取舍",
 				"description": "选择一张增益卡牌舍弃（若无增益卡牌，则下次抽到直接丢弃）",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.05565,
+				"priority": "special",
+				"weight": 0.055556,
 				"count": 1
 			},
 			{
@@ -3151,9 +3095,8 @@
 				"name": "Cheap-Sale",
 				"cardName": "贱卖",
 				"description": "失去一件异域武器（若暂无异域武器，则获取异域武器时直接失去），获得3货币 ",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.05555,
+				"priority": "special",
+				"weight": 0.055556,
 				"count": 1
 			},
 			{
@@ -3162,9 +3105,8 @@
 				"name": "Immersive",
 				"cardName": "沉浸式",
 				"description": "在设置中关闭UI",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.05555,
+				"priority": "none",
+				"weight": 0.055556,
 				"count": 1
 			},
 			{
@@ -3173,9 +3115,8 @@
 				"name": "Hip-Shot",
 				"cardName": "腰射",
 				"description": "在设置中禁用瞄准",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.05555,
+				"priority": "none",
+				"weight": 0.055556,
 				"count": 1
 			},
 			{
@@ -3184,9 +3125,8 @@
 				"name": "Efficient",
 				"cardName": "高效",
 				"description": "在设置中禁用填装",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.05555,
+				"priority": "none",
+				"weight": 0.055556,
 				"count": 1
 			},
 			{
@@ -3195,9 +3135,8 @@
 				"name": "Crab",
 				"cardName": "螃蟹",
 				"description": "在设置中将前后移动禁用（设置为空）",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.05555,
+				"priority": "none",
+				"weight": 0.055556,
 				"count": 1
 			},
 			{
@@ -3206,9 +3145,8 @@
 				"name": "Straight",
 				"cardName": "直行",
 				"description": "在设置中将左右和后退移动禁用（设置为空）",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.05555,
+				"priority": "none",
+				"weight": 0.055556,
 				"count": 1
 			},
 			{
@@ -3217,9 +3155,8 @@
 				"name": "Eeath-Rings",
 				"cardName": "死亡年轮",
 				"description": "在设置中将鼠标灵敏度为 10，并且将鼠标灵敏度调整为 400",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.05555,
+				"priority": "none",
+				"weight": 0.055556,
 				"count": 1
 			},
 			{
@@ -3228,9 +3165,8 @@
 				"name": "Phase-Dislocation",
 				"cardName": "相性错位",
 				"description": "在设置中将前进与后退按键的位置调换",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.05555,
+				"priority": "none",
+				"weight": 0.055556,
 				"count": 1
 			},
 			{
@@ -3239,9 +3175,8 @@
 				"name": "Mute",
 				"cardName": "静音",
 				"description": "将电脑声音设置为0（同时包括游戏声音和语音）",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.05555,
+				"priority": "none",
+				"weight": 0.055556,
 				"count": 1
 			},
 			{
@@ -3250,9 +3185,8 @@
 				"name": "Confinement",
 				"cardName": "禁锢",
 				"description": "遭遇战中开始30秒内不能移动（原地不动30秒）",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.05555,
+				"priority": "none",
+				"weight": 0.055556,
 				"count": 1
 			},
 			{
@@ -3261,9 +3195,8 @@
 				"name": "Fashion-Guidance",
 				"cardName": "时尚指导",
 				"description": "遭遇战中不能使用异域护甲",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.05555,
+				"priority": "none",
+				"weight": 0.055556,
 				"count": 1
 			},
 			{
@@ -3272,9 +3205,8 @@
 				"name": "Fire-Control",
 				"cardName": "火力管控",
 				"description": "遭遇战中不能使用异域武器",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.05555,
+				"priority": "none",
+				"weight": 0.055556,
 				"count": 1
 			},
 			{
@@ -3283,9 +3215,8 @@
 				"name": "Air-Traffic-Control",
 				"cardName": "空中管制",
 				"description": "遭遇战中只允许一段跳跃 （除跳跳乐外，遭遇战中只能按一次空格）",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.05555,
+				"priority": "none",
+				"weight": 0.055556,
 				"count": 1
 			},
 			{
@@ -3294,9 +3225,8 @@
 				"name": "ADHD",
 				"cardName": "多动症",
 				"description": "遭遇战中必须一直跳跃 （除跳跳乐外，遭遇战中必须一直按空格）",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.05555,
+				"priority": "none",
+				"weight": 0.055556,
 				"count": 1
 			},
 			{
@@ -3305,9 +3235,8 @@
 				"name": "Fire-Coverage",
 				"cardName": "火力覆盖",
 				"description": "遭遇战中武器只能使用重型武器（技能可以使用）",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.05555,
+				"priority": "none",
+				"weight": 0.055556,
 				"count": 1
 			},
 			{
@@ -3316,9 +3245,8 @@
 				"name": "Imitate",
 				"cardName": "模仿",
 				"description": "遭遇战中你必须使用另一名玩家的分支属性以及武器类型（他用什么你用什么）",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.05555,
+				"priority": "none",
+				"weight": 0.055556,
 				"count": 1
 			},
 			{
@@ -3326,10 +3254,9 @@
 				"type": "MicroDiscomfort",
 				"name": "Extreme-Speed",
 				"cardName": "极速快感",
-				"description": "全程需要按住 Shift 奔跑不能停下来（开枪和换弹时动作结束一次按一次）",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.05555,
+				"description": "遭遇战中你必须全程需要按住 Shift 奔跑不能停下来（开枪和换弹时动作结束一次按一次）",
+				"priority": "none",
+				"weight": 0.055556,
 				"count": 1
 			}
 		],
@@ -3340,9 +3267,8 @@
 				"name": "Lost-Wallet",
 				"cardName": "卧槽我钱包呢",
 				"description": "失去你所有货币",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.06676,
+				"priority": "special",
+				"weight": 0.066667,
 				"count": 1
 			},
 			{
@@ -3351,9 +3277,8 @@
 				"name": "Reicher-Playboy",
 				"cardName": "纨绔子弟",
 				"description": "商店贩卖所有物品价格+1",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.06666,
+				"priority": "special",
+				"weight": 0.066667,
 				"count": 1
 			},
 			{
@@ -3362,9 +3287,8 @@
 				"name": "Assassin",
 				"cardName": "暗杀者",
 				"description": "你的武器仅能使用弓箭，偃月以及刀剑",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.06666,
+				"priority": "none",
+				"weight": 0.066667,
 				"count": 1
 			},
 			{
@@ -3373,9 +3297,8 @@
 				"name": "Reverse",
 				"cardName": "逆转",
 				"description": "在设置中打开垂直反转和水平反转",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.06666,
+				"priority": "none",
+				"weight": 0.066667,
 				"count": 1
 			},
 			{
@@ -3384,9 +3307,8 @@
 				"name": "Pixel-Games",
 				"cardName": "像素游戏",
 				"description": "在设置中将游戏视窗设置为窗口模式，分辨率设置为1280*720，帧率限制为30，画质设置为低，渲染率设置为25",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.06666,
+				"priority": "none",
+				"weight": 0.066667,
 				"count": 1
 			},
 			{
@@ -3395,9 +3317,8 @@
 				"name": "Passers-By",
 				"cardName": "路人角色的养成方法",
 				"description": "退出语音软件，禁用打字聊天",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.06666,
+				"priority": "none",
+				"weight": 0.066667,
 				"count": 1
 			},
 			{
@@ -3406,9 +3327,8 @@
 				"name": "Idiot",
 				"cardName": "弱智儿童",
 				"description": "当队友报点时，你必须复读他的报点，但是不能报正确的",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.06666,
+				"priority": "none",
+				"weight": 0.066667,
 				"count": 1
 			},
 			{
@@ -3417,9 +3337,8 @@
 				"name": "Arise1",
 				"cardName": "沙兵现身",
 				"description": "获得任意一把传说品质偃月装备上且无法取下，失去自主攻击能力，需指定一名沙皇命令你进行移动攻击",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.06666,
+				"priority": "none",
+				"weight": 0.066667,
 				"count": 1
 			},
 			{
@@ -3428,9 +3347,8 @@
 				"name": "Two-Together",
 				"cardName": "双人成行",
 				"description": "你可以指定一名队友与你进行生死绑定，你们共用一条生命（一失两命）",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.06666,
+				"priority": "none",
+				"weight": 0.066667,
 				"count": 1
 			},
 			{
@@ -3439,9 +3357,8 @@
 				"name": "Shortest-Distance",
 				"cardName": "最短距离",
 				"description": "必须全程贴着一位队友（他去哪里你去哪里）",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.06666,
+				"priority": "none",
+				"weight": 0.066667,
 				"count": 1
 			},
 			{
@@ -3450,9 +3367,8 @@
 				"name": "Disarm",
 				"cardName": "缴械",
 				"description": "遭遇战中禁止开枪（技能可以使用）",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.06666,
+				"priority": "none",
+				"weight": 0.066667,
 				"count": 1
 			},
 			{
@@ -3461,9 +3377,8 @@
 				"name": "Lazy",
 				"cardName": "怠惰",
 				"description": "遭遇战中不能更改任何配装",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.06666,
+				"priority": "none",
+				"weight": 0.066667,
 				"count": 1
 			},
 			{
@@ -3472,9 +3387,8 @@
 				"name": "Protect-Target",
 				"cardName": "保护目标",
 				"description": "你在遭遇战中不能死亡，否则团灭",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.06666,
+				"priority": "none",
+				"weight": 0.066667,
 				"count": 1
 			},
 			{
@@ -3483,9 +3397,8 @@
 				"name": "Flash-View",
 				"cardName": "极速视角",
 				"description": "鼠标灵敏度调整为16000，游戏内设置鼠标灵敏度为 20（视角移动超级快）",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.06666,
+				"priority": "none",
+				"weight": 0.066667,
 				"count": 1
 			},
 			{
@@ -3494,9 +3407,8 @@
 				"name": "SlowDown",
 				"cardName": "缓慢",
 				"description": "在设置中将奔跑禁用（设置为空）",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.06666,
+				"priority": "none",
+				"weight": 0.066667,
 				"count": 1
 			}
 		],
@@ -3507,9 +3419,8 @@
 				"name": "Imperial-Ban",
 				"cardName": "帝王禁令",
 				"description": "失去6张增益卡牌，如手上增益卡牌不够6张，则后续抽到增益卡牌直接丢弃",
-				"illustrate": "无",
-				"priority": "u",
-				"weight": 0.33333,
+				"priority": "special",
+				"weight": 0.25,
 				"count": 1
 			},
 			{
@@ -3518,20 +3429,28 @@
 				"name": "Stillwater-Prison",
 				"cardName": "静水监狱",
 				"description": "你的商店系统已被关闭",
-				"illustrate": "无",
-				"priority": "u",
-				"weight": 0.33333,
+				"priority": "special",
+				"weight": 0.25,
 				"count": 1
 			},
 			{
 				"id": "U3",
 				"type": "Unacceptable",
+				"name": "Quit-Gambling",
+				"cardName": "戒赌",
+				"description": "你的抽卡系统已被关闭",
+				"priority": "special",
+				"weight": 0.25,
+				"count": 1
+			},
+			{
+				"id": "U4",
+				"type": "Unacceptable",
 				"name": "Dark-Age",
 				"cardName": "黑暗纪元",
 				"description": "只能使用白色子弹武器",
-				"illustrate": "无",
-				"priority": "u",
-				"weight": 0.33333,
+				"priority": "none",
+				"weight": 0.25,
 				"count": 1
 			}
 		],
@@ -3542,9 +3461,8 @@
 				"name": "Capitalism",
 				"cardName": "资本主义",
 				"description": "获得你序号+2和序号-2玩家的一半货币（5号玩家则1号和3号获得，6号玩家则2号和4号获得）",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.091,
+				"priority": "special",
+				"weight": 0.090909,
 				"count": 1
 			},
 			{
@@ -3553,9 +3471,8 @@
 				"name": "Make-Wealth",
 				"cardName": "生财有道",
 				"description": "获得6单位货币",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.0909,
+				"priority": "special",
+				"weight": 0.090909,
 				"count": 1
 			},
 			{
@@ -3564,9 +3481,8 @@
 				"name": "Change-Card",
 				"cardName": "起手换牌",
 				"description": "丢掉手上所有的卡牌，重新从池子中抽取等量的卡牌",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.0909,
+				"priority": "special",
+				"weight": 0.090909,
 				"count": 1
 			},
 			{
@@ -3574,10 +3490,9 @@
 				"type": "Technology",
 				"name": "Devils-Pact",
 				"cardName": "恶魔契约",
-				"description": "每在商店消费一次就获得一次抽卡机会（至多触发两次）",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.0909,
+				"description": "每在商店购买一次装备就获得一次抽卡机会（至多触发两次）",
+				"priority": "special",
+				"weight": 0.090909,
 				"count": 1
 			},
 			{
@@ -3586,9 +3501,8 @@
 				"name": "Tribute",
 				"cardName": "上贡",
 				"description": "从你的增益卡牌中挑选一张送给1号玩家",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.0909,
+				"priority": "special",
+				"weight": 0.090909,
 				"count": 1
 			},
 			{
@@ -3596,157 +3510,169 @@
 				"type": "Technology",
 				"name": "Duel",
 				"cardName": "决斗",
-				"description": "与你的序号+3的玩家签订决斗协议，你们立即前往私人熔炉竞技场的生存使用当前拥有的武器技能决斗，获得第一个回合胜利的玩家得到失败者的全部货币，认输则给对方一半金币",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.0909,
+				"description": "与你的序号+3的玩家签订决斗协议，你们立即前往私人熔炉竞技场的生存使用当前拥有的武器技能决斗，获得第一个回合胜利的玩家得到失败者的一半货币，认输则给对方所有货币",
+				"priority": "special",
+				"weight": 0.090909,
 				"count": 1
 			},
 			{
 				"id": "T7",
 				"type": "Technology",
-				"name": "Squid-Game",
-				"cardName": "鱿鱼游戏",
-				"description": "你必须在遭遇战开始前选定一名队友在其身上下注，若他在遭遇战中死亡，则你失去3枚货币，若他在遭遇战中没有死亡，则你获得3枚货币，只在通过遭遇战时进行判定，每次团灭可变更下注对象",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.0909,
+				"name": "Equivalent-Exchange",
+				"cardName": "等价交换",
+				"description": "随机一名玩家与你交换卡池里的牌",
+				"priority": "special",
+				"weight": 0.090909,
 				"count": 1
 			},
 			{
 				"id": "T8",
 				"type": "Technology",
-				"name": "Equivalent-Exchange",
-				"cardName": "等价交换",
-				"description": "当队伍里有两名玩家抽到这此卡时，将你们的所有手牌互相交换",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.0909,
+				"name": "Blessed-To-Share",
+				"cardName": "有福同享",
+				"description": "随机一名玩家与你共享你卡池里的增益",
+				"priority": "special",
+				"weight": 0.090909,
 				"count": 1
 			},
 			{
 				"id": "T9",
 				"type": "Technology",
-				"name": "Gambler",
-				"cardName": "赌徒",
-				"description": "只能抽取赌徒对弈卡池",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.0909,
+				"name": "Share-The-Difficulties",
+				"cardName": "有难同当",
+				"description": "随机一名玩家与你共享你卡池里的减益",
+				"priority": "special",
+				"weight": 0.090909,
 				"count": 1
 			},
 			{
 				"id": "T10",
 				"type": "Technology",
-				"name": "Blessed-To-Share",
-				"cardName": "有福同享",
-				"description": "当队伍里有两名玩家抽到这此卡时，你们将共享增益类型卡牌",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.0909,
+				"name": "Squid-Game",
+				"cardName": "鱿鱼游戏",
+				"description": "你必须在遭遇战开始前选定一名队友在其身上下注，若他在遭遇战中死亡，则你失去3枚货币，若他在遭遇战中没有死亡，则你获得3枚货币，只在通过遭遇战时进行判定，每次团灭可变更下注对象",
+				"priority": "none",
+				"weight": 0.090909,
 				"count": 1
 			},
 			{
 				"id": "T11",
 				"type": "Technology",
-				"name": "Share-The-Difficulties",
-				"cardName": "有难同当",
-				"description": "当队伍里有两名玩家抽到这此卡时，你们将共享减益类型卡牌",
-				"illustrate": "无",
-				"priority": 0,
-				"weight": 0.0909,
+				"name": "Gambler",
+				"cardName": "赌徒",
+				"description": "只能抽取赌徒对弈卡池",
+				"priority": "none",
+				"weight": 0.090909,
+				"count": 1
+			}
+		],
+		"Support": [
+			{
+				"id": "S1",
+				"type": "Support",
+				"name": "Deterministic-Chaos",
+				"cardName": "命定混沌",
+				"description": "获得异域武器命定混沌 ",
+				"priority": "none",
+				"weight": 0.166667,
+				"count": 1
+			},
+			{
+				"id": "S2",
+				"type": "Support",
+				"name": "Cult-Of-The-Aeons",
+				"cardName": "永劫教派",
+				"description": "获得异域护甲 永杰安泰 / 永劫雨燕 / 永劫灵魂",
+				"priority": "none",
+				"weight": 0.166667,
+				"count": 1
+			},
+			{
+				"id": "S3",
+				"type": "Support",
+				"name": "Gutshot-Straight",
+				"cardName": "直击要害",
+				"description": "获得异域武器神圣裁决",
+				"priority": "none",
+				"weight": 0.166667,
+				"count": 1
+			},
+			{
+				"id": "S4",
+				"type": "Support",
+				"name": "Wolfpack-Leader",
+				"cardName": "狼群之首",
+				"description": "获得异域武器加拉尔号角",
+				"priority": "none",
+				"weight": 0.166667,
+				"count": 1
+			},
+			{
+				"id": "S5",
+				"type": "Support",
+				"name": "Weaken",
+				"cardName": "弱化",
+				"description": "获得异域武器牵引器火炮",
+				"priority": "none",
+				"weight": 0.166667,
+				"count": 1
+			},
+			{
+				"id": "S6",
+				"type": "Support",
+				"name": "Team-Core",
+				"cardName": "团队核心",
+				"description": "猎人获得虚空分支并且获得异域护甲 奥菲斯钻机 / 术士获得烈日分支并且获得异域护甲 月之阵营靴 / 泰坦获得虚空分支并且获得异域护甲 阿尔法·鲁皮之脊",
+				"priority": "none",
+				"weight": 0.166667,
 				"count": 1
 			}
 		]
 	},
-	"decklist": {
+	"deckList": {
 		"MicroGain": [],
 		"StrongGain": [],
 		"Opportunity": [],
 		"MicroDiscomfort": [],
 		"StrongDiscomfort": [],
 		"Unacceptable": [],
-		"Technology": []
+		"Technology": [],
+		"Support": []
 	},
 	"bounty": [
 		{
-			"id": "V1",
-			"type": "Value",
-			"name": "Fragile",
-			"valueName": "脆弱",
-			"description": "本场遭遇战韧性维持在59及其以下，且即使拥用抗性模组也不能使用",
-			"weight": 0.06676,
-			"count": 1
-		},
-		{
-			"id": "V2",
-			"type": "Value",
-			"name": "Ambition",
-			"valueName": "好胜心",
-			"description": "确认到本场遭遇战的团灭界面中你的伤害/清怪数/产球数有一项最高（至少团灭一次）",
-			"weight": 0.06666,
-			"count": 1
-		},
-		{
-			"id": "V3",
+			"id": "V11",
 			"type": "Value",
 			"name": "Silent",
 			"valueName": "沉默",
-			"description": "本场遭遇战不使用技能",
-			"weight": 0.06666,
-			"count": 1
-		},
-		{
-			"id": "V4",
-			"type": "Value",
-			"name": "Confession",
-			"valueName": "忏悔",
-			"description": "本场遭遇战每击杀一只怪物掏出机灵查看至少一秒，连杀则悬赏失败",
-			"weight": 0.06666,
-			"count": 1
-		},
-		{
-			"id": "V5",
-			"type": "Value",
-			"name": "Lies",
-			"valueName": "谎言",
-			"description": "本场遭遇战中使用Alt+F4一次，并对队友们谎称是棒鸡的问题",
+			"description": "本场遭遇战不使用技能（包括职业技能）",
 			"weight": 0.06666,
 			"count": 1
 		},
 		{
 			"id": "V6",
 			"type": "Value",
-			"name": "Fashionista",
-			"valueName": "时尚达人",
-			"description": "本场遭遇战每分钟至少替换至少一件幻化，遭遇战中使用过一次的幻化再次装备上视为悬赏失败，使用手机倒计时，每更换完毕一次后重新计时，倒计时结束则悬赏失败",
+			"name": "Silence-Money",
+			"valueName": "闷声发大财",
+			"description": "本场遭遇战不说话也不打字，遭遇战结束前队友发现你有问题、开口说话或者打字则悬赏失败",
 			"weight": 0.06666,
 			"count": 1
 		},
 		{
-			"id": "V7",
+			"id": "V5",
 			"type": "Value",
-			"name": "Weapon-Master",
-			"valueName": "武器大师",
-			"description": "本场遭遇战每分钟至少替换至少一件武器，遭遇战中使用过一次的武器再次装备上视为悬赏失败，使用手机倒计时，每更换完毕一次后重新计时，倒计时结束则悬赏失败",
+			"name": "Fighter",
+			"valueName": "格斗者",
+			"description": "本场遭遇战的10次击杀都需要由近战完成，其他击杀或不击杀视为悬赏失败",
 			"weight": 0.06666,
 			"count": 1
 		},
 		{
-			"id": "V8",
+			"id": "V4",
 			"type": "Value",
-			"name": "Dark-Age",
-			"valueName": "黑暗纪元",
-			"description": "本场遭遇战只使用白弹武器",
-			"weight": 0.06666,
-			"count": 1
-		},
-		{
-			"id": "V9",
-			"type": "Value",
-			"name": "Retrograde",
-			"valueName": "倒行",
-			"description": "本场遭遇战在设置中禁用前进键",
+			"name": "Hunter-Mentor",
+			"valueName": "猎人导师",
+			"description": "本场遭遇战的10次击杀都需要由手炮完成，其他击杀或不击杀视为悬赏失败",
 			"weight": 0.06666,
 			"count": 1
 		},
@@ -3755,12 +3681,12 @@
 			"type": "Value",
 			"name": "Action-Show",
 			"valueName": "作秀",
-			"description": "本场遭遇战的每次击杀都只能通过终结完成，其他击杀视为悬赏失败",
+			"description": "本场遭遇战的10次击杀都只能通过终结完成，其他击杀或不击杀视为悬赏失败",
 			"weight": 0.06666,
 			"count": 1
 		},
 		{
-			"id": "V11",
+			"id": "V3",
 			"type": "Value",
 			"name": "Ridicule",
 			"valueName": "嘲讽",
@@ -3771,28 +3697,37 @@
 		{
 			"id": "V12",
 			"type": "Value",
-			"name": "Hunter-Mentor",
-			"valueName": "猎人导师",
-			"description": "本场遭遇战的每次击杀都需要由手炮完成，其他击杀视为悬赏失败",
+			"name": "Fashionista",
+			"valueName": "时尚达人",
+			"description": "本场遭遇战装备一套惊世骇俗的幻化，在遭遇战中直到悬赏完成或放弃悬赏前只能说“看我”，若队友对你的幻化产生剧烈的感触则悬赏成功",
 			"weight": 0.06666,
 			"count": 1
 		},
 		{
 			"id": "V13",
 			"type": "Value",
-			"name": "Fighter",
-			"valueName": "格斗者",
-			"description": "本场遭遇战的每次击杀都需要由近战完成，其他击杀视为悬赏失败",
+			"name": "Weapon-Master",
+			"valueName": "武器大师",
+			"description": "本场遭遇战使用至少6种武器类型各完成至少一次击杀",
 			"weight": 0.06666,
 			"count": 1
 		},
 		{
-			"id": "V14",
+			"id": "V9",
 			"type": "Value",
-			"name": "Silence-Money",
-			"valueName": "闷声发大财",
-			"description": "本场遭遇战不说话也不打字，遭遇战结束前队友发现你有问题、开口说话或者打字则悬赏失败",
+			"name": "Confession",
+			"valueName": "忏悔",
+			"description": "本场遭遇战每击杀一只怪物掏出机灵查看至少一秒，连杀则悬赏失败",
 			"weight": 0.06666,
+			"count": 1
+		},
+		{
+			"id": "V7",
+			"type": "Value",
+			"name": "Fragile",
+			"valueName": "脆弱",
+			"description": "本场遭遇战韧性维持在59及其以下，且即使拥用抗性模组也不能使用",
+			"weight": 0.06676,
 			"count": 1
 		},
 		{
@@ -3803,10 +3738,46 @@
 			"description": "本场遭遇战释放至少3种不同的超能，团灭不重置计数，未解锁3种超能使用权悬赏自动失败",
 			"weight": 0.06666,
 			"count": 1
+		},
+		{
+			"id": "V2",
+			"type": "Value",
+			"name": "Retrograde",
+			"valueName": "倒行",
+			"description": "本场遭遇战在设置中禁用前进键",
+			"weight": 0.06666,
+			"count": 1
+		},
+		{
+			"id": "V14",
+			"type": "Value",
+			"name": "Dark-Age",
+			"valueName": "黑暗纪元",
+			"description": "本场遭遇战只使用白弹武器",
+			"weight": 0.06666,
+			"count": 1
+		},
+		{
+			"id": "V1",
+			"type": "Value",
+			"name": "Lies",
+			"valueName": "谎言",
+			"description": "本场遭遇战中使用Alt+F4一次，并对队友们谎称是棒鸡的问题",
+			"weight": 0.06666,
+			"count": 1
+		},
+		{
+			"id": "V8",
+			"type": "Value",
+			"name": "Ambition",
+			"valueName": "好胜心",
+			"description": "确认到本场遭遇战的团灭界面中你的伤害/清怪数/产球数有一项最高（至少团灭一次）",
+			"weight": 0.06666,
+			"count": 1
 		}
 	],
-	"bountylist": [],
-	"playerevent": [
+	"bountyList": [],
+	"playerEvent": [
 		{
 			"id": "PE1",
 			"type": "PlayersEvent",
@@ -3814,7 +3785,7 @@
 			"eventName": "友好交流",
 			"description": "直到下一次遭遇战结算为止只能说：“你好！”",
 			"stage": "none",
-			"weight": 0.15,
+			"weight": 0.0909,
 			"count": 1
 		},
 		{
@@ -3824,7 +3795,7 @@
 			"eventName": "钓鱼佬永不空军",
 			"description": "立即离开队伍去钓鱼，直到吊起一条传说及以上品质的鱼或者钓鱼池消失（空军），如若空军，则需去聚焦一把深渊赛季武器并坚称是钓出来的",
 			"stage": "none",
-			"weight": 0.1,
+			"weight": 0.0909,
 			"count": 1
 		},
 		{
@@ -3834,7 +3805,7 @@
 			"eventName": "这副躯体是我的啦",
 			"description": "获得一把挽歌且绑定威能位无法更换，可被【贱卖】【重铸】和2阶圣水解除，前二者失去挽歌，后者保留",
 			"stage": "none",
-			"weight": 0.1,
+			"weight": 0.0909,
 			"count": 1
 		},
 		{
@@ -3844,7 +3815,7 @@
 			"eventName": "重火力",
 			"description": "直到下一次遭遇战结算为止只能使用威能武器",
 			"stage": "none",
-			"weight": 0.1,
+			"weight": 0.0909,
 			"count": 1
 		},
 		{
@@ -3854,7 +3825,7 @@
 			"eventName": "顺手牵羊",
 			"description": "从随机号码的玩家持有的增益卡牌中拿走一张（说个数X，让别人给你第X张）",
 			"stage": "none",
-			"weight": 0.1,
+			"weight": 0.0909,
 			"count": 1
 		},
 		{
@@ -3864,7 +3835,7 @@
 			"eventName": "劈瘾犯了",
 			"description": "获得职业刀剑并装备至下次遭遇战结算",
 			"stage": "none",
-			"weight": 0.1,
+			"weight": 0.0909,
 			"count": 1
 		},
 		{
@@ -3874,7 +3845,7 @@
 			"eventName": "三刀流",
 			"description": "获得一把蒙地卡罗和一把传说品质偃月和一把传说品质刀剑，并装备至下次遭遇战结算",
 			"stage": "none",
-			"weight": 0.1,
+			"weight": 0.0909,
 			"count": 1
 		},
 		{
@@ -3884,7 +3855,7 @@
 			"eventName": "绝对服从",
 			"description": "本关遭遇战你需要让一名队友指定你使用任意超能，并且释放该超能时需要喊出技能名称",
 			"stage": "none",
-			"weight": 0.1,
+			"weight": 0.0909,
 			"count": 1
 		},
 		{
@@ -3894,7 +3865,7 @@
 			"eventName": "无中生有",
 			"description": "获得两次卡牌抽取机会",
 			"stage": "none",
-			"weight": 0.05,
+			"weight": 0.0909,
 			"count": 1
 		},
 		{
@@ -3904,7 +3875,7 @@
 			"eventName": "窃取",
 			"description": "强制刷新一次商店后获取所有随机售卖栏中的物品(获得一次免费刷新商店的机会，刷新商店后获得随即售卖栏中的物品)",
 			"stage": "none",
-			"weight": 0.05,
+			"weight": 0.0909,
 			"count": 1
 		},
 		{
@@ -3914,12 +3885,12 @@
 			"eventName": "盲盒",
 			"description": "使用dim进行一次武器随机配装，获得调取出来的三把武器",
 			"stage": "none",
-			"weight": 0.05,
+			"weight": 0.0909,
 			"count": 1
 		}
 	],
-	"playereventlist": [],
-	"globalevent": [
+	"playerEventList": [],
+	"globalEvent": [
 		{
 			"id": "GE1",
 			"type": "GlobalEvent",
@@ -3927,7 +3898,7 @@
 			"eventName": "紧急支援",
 			"description": "随机3个号码对应的玩家即刻返回轨道并进入随机地牢完成一次遭遇战，地牢遭遇战等价于raid遭遇战，3人需再抽取两次卡牌，且开启宝箱获得3单位货币，没有无暇奖励，留在raid里的三人若在另外三人归队之前完成并结算一次遭遇战可获得两次卡牌抽取机会和6单位合计宝箱共9单位货币，未完成则没有额外奖励",
 			"stage": "none",
-			"weight": 0.1,
+			"weight": 0.0625,
 			"count": 1
 		},
 		{
@@ -3937,7 +3908,7 @@
 			"eventName": "鼠党",
 			"description": "所有玩家获得一把鼠王，且需装备鼠王直至下一次遭遇战结算，若未解锁鼠王则需装备任意一把1号位传说及以下品质手枪",
 			"stage": "none",
-			"weight": 0.1,
+			"weight": 0.0625,
 			"count": 1
 		},
 		{
@@ -3947,7 +3918,7 @@
 			"eventName": "见者有份",
 			"description": "所有玩家获得3单位货币",
 			"stage": "none",
-			"weight": 0.1,
+			"weight": 0.0625,
 			"count": 1
 		},
 		{
@@ -3957,7 +3928,7 @@
 			"eventName": "重铸",
 			"description": "所有玩家可消耗合计6件异域武器&异域护甲，换取任一一把异域武器或者一件异域装备，商讨后由队伍中的一人持有",
 			"stage": "none",
-			"weight": 0.1,
+			"weight": 0.0625,
 			"count": 1
 		},
 		{
@@ -3967,7 +3938,7 @@
 			"eventName": "充斥光能",
 			"description": "获取所有并仅能使用光能分支持续到下一次遭遇战结算",
 			"stage": "none",
-			"weight": 0.1,
+			"weight": 0.0625,
 			"count": 1
 		},
 		{
@@ -3977,17 +3948,17 @@
 			"eventName": "弥漫暗影",
 			"description": "获取所有并仅能使用暗影分支持续到下一次遭遇战结算",
 			"stage": "none",
-			"weight": 0.1,
+			"weight": 0.0625,
 			"count": 1
 		},
 		{
 			"id": "GE7",
 			"type": "GlobalEvent",
-			"name": "Friendly-Combo-Skills",
-			"eventName": "友情组合技",
-			"description": "到下一次遭遇战结算前，每一个强大的敌人（黄血）需要每个人对其造成至少一次伤害后才可击杀（或者不击杀），若成功则获得2次卡牌抽取机会和6单位货币，若失败需全队抽取一次险中求胜卡池，可直接将该事件视为失败",
+			"name": "Split-Up",
+			"eventName": "各自为营",
+			"description": "全队立即随机分为两个队伍，分别使用两个不同的语音频道，每个队伍只有一个人能使用打字聊天，直到下一次遭遇战结算为止",
 			"stage": "none",
-			"weight": 0.1,
+			"weight": 0.0625,
 			"count": 1
 		},
 		{
@@ -3997,7 +3968,7 @@
 			"eventName": "无限火力",
 			"description": "本关遭遇战中获取所有技能使用权，但是使用技能的时候必须喊出技能名称，也可以不使用技能",
 			"stage": "none",
-			"weight": 0.1,
+			"weight": 0.0625,
 			"count": 1
 		},
 		{
@@ -4007,7 +3978,7 @@
 			"eventName": "五谷丰登",
 			"description": "自动抽取稳妥起见卡池（共6张），根据随机号码顺序决定对应号码玩家按顺去拿取6张卡牌之一",
 			"stage": "none",
-			"weight": 0.05,
+			"weight": 0.0625,
 			"count": 1
 		},
 		{
@@ -4017,7 +3988,7 @@
 			"eventName": "金融危机",
 			"description": "所有玩家持有货币数量减半",
 			"stage": "none",
-			"weight": 0.05,
+			"weight": 0.0625,
 			"count": 1
 		},
 		{
@@ -4027,7 +3998,7 @@
 			"eventName": "圣光洗礼",
 			"description": "所有人可选择一个负面卡牌消除，若未持有负面卡牌，则获取一次卡牌抽取机会",
 			"stage": "none",
-			"weight": 0.05,
+			"weight": 0.0625,
 			"count": 1
 		},
 		{
@@ -4037,9 +4008,49 @@
 			"eventName": "速通",
 			"description": "所有人获取一把急切刀锋",
 			"stage": "none",
-			"weight": 0.05,
+			"weight": 0.0625,
+			"count": 1
+		},
+		{
+			"id": "GE13",
+			"type": "GlobalEvent",
+			"name": "Light-Dissipates",
+			"eventName": "光能消散",
+			"description": "队长在遭遇战中立即死亡，不允许复活，团灭或通过遭遇战时间结束",
+			"stage": "none",
+			"weight": 0.0625,
+			"count": 1
+		},
+		{
+			"id": "GE14",
+			"type": "GlobalEvent",
+			"name": "Famine",
+			"eventName": "饥荒",
+			"description": "直接下一次遭遇结算前不允许插旗和使用弹药相关模组（搜寻，储备，回收）",
+			"stage": "none",
+			"weight": 0.0625,
+			"count": 1
+		},
+		{
+			"id": "GE15",
+			"type": "GlobalEvent",
+			"name": "Outbreak-Perfected",
+			"eventName": "全面爆发",
+			"description": "直到下一次遭遇战结算前，全队解锁所有变身系超能且强制装备，若处于非输出关卡，在超能完全充能时必须立即释放，若处于输出关卡，超能仅可在输出阶段使用，且进入输出阶段的同时全队立即释放超能",
+			"stage": "none",
+			"weight": 0.0625,
+			"count": 1
+		},
+		{
+			"id": "GE16",
+			"type": "GlobalEvent",
+			"name": "No-Energy-Storage",
+			"eventName": "禁止蓄能",
+			"description": "直到下一次遭遇战结算前所有可使用技能在完成充能的同时必须立即释放",
+			"stage": "none",
+			"weight": 0.0625,
 			"count": 1
 		}
 	],
-	"globaleventlist": []
+	"globalEventList": []
 }

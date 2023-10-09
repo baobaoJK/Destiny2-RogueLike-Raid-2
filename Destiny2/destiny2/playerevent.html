@@ -8,57 +8,31 @@
     <link rel="icon" href="images/favicon.ico">
     <title>命运2 RogueLike 2.0</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/deck.css">
+    <link rel="stylesheet" href="css/playerevent.css">
 </head>
 
 <body>
-    <div id="deck">
-        <h1 class="deck-title">您有 <span class="chance">0</span> 次抽取卡牌的机会</h1>
+    <div id="event">
+        <h2 class="event-title">当前没有新事件</h2>
 
-        <div class="deck-list">
-            <div class="deck">
-                <div class="deck-1" data-toggle="modal" id="safe">
-
+        <div class="event-list">
+            <div class="event-box">
+                <div class="event-item">
+                    <div class="event-card event-front">
+                        <div class="event-info">
+                            <p class="title">当前没有个人事件</p>
+                            <p class="text">请过段时间再来</p>
+                            <button class="button confirm" data-event="false">确认</button>
+                            <button class="button finish" style="display: none;" data-event="false">已完成</button>
+                        </div>
+                    </div>
+                    <div class="event-card event-back"></div>
                 </div>
-                <p class="deck-name">- 稳妥起见 -</p>
-            </div>
-            <div class="deck">
-                <div class="deck-2" data-toggle="modal" id="notself">
-
-                </div>
-                <p class="deck-name">- 身不由己 -</p>
-            </div>
-            <div class="deck">
-                <div class="deck-3" data-toggle="modal" id="gambit">
-
-                </div>
-                <p class="deck-name">- 对赌博弈 -</p>
-            </div>
-            <div class="deck">
-                <div class="deck-4" data-toggle="modal" id="luck">
-
-                </div>
-                <p class="deck-name">- 时来运转 -</p>
-            </div>
-            <div class="deck">
-                <div class="deck-5" data-toggle="modal" id="devote">
-
-                </div>
-                <p class="deck-name">- 身心奉献 -</p>
+                <p class="event-name">- 个人事件 -</p>
             </div>
         </div>
 
-        <p class="deck-count">当前卡池数量：
-            微弱增益：<span class="micro-gain-count">0</span> 张 |
-            强大增益：<span class="strong-gain-count">0</span> 张 |
-            欧皇卡牌：<span class="opportunity-count">0</span> 张 |
-            微弱不适：<span class="micro-discomfort-count">0</span> 张 |
-            重度不适：<span class="strong-discomfort-count">0</span> 张 |
-            反人类：<span class="unacceptable-count">0</span> 张 |
-            特殊卡牌：<span class="technology-count">0</span> 张 |
-            辅助卡牌：<span class="support-count">0</span> 张
-        </p>
-        <!-- <button class="button random-deck">随机抽取</button> -->
+        <audio src="audio/Aatrox.mp3" class="audio"></audio>
     </div>
 
     <!-- 卡牌抽奖模态框 -->
@@ -68,8 +42,8 @@
             <div class="modal-content">
                 <div class="modal-body">
                     <div class="deck-list-info">
+                        <p>事件惩罚：抽取身不由己卡池</p>
                         <p class="deck-list-count">
-                            卡池说明：
                         </p>
                     </div>
                     <div class="deck-list-box">
@@ -187,8 +161,6 @@
                         <h1 class="deck-name"></h1>
                         <button type="button" class="button deck-confirm deck-close" data-dismiss="modal"
                             aria-label="Close">确认</button>
-                        <button type="button" class="button deck-cancel deck-close" data-dismiss="modal"
-                            aria-label="Close">取消</button>
                     </div>
                 </div>
             </div>
@@ -197,10 +169,9 @@
 </body>
 
 <script src="js/jquery.min.js"></script>
-<script src="js/popper.min.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
-<script src="js/lottery.js"></script>
 <script src="js/api.js"></script>
-<script src="js/deck.js"></script>
+<script src="js/lottery.js"></script>
+<script src="js/playerevent.js"></script>
 
 </html>

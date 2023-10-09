@@ -48,6 +48,13 @@ $(function () {
         if (gameConfig.refreshCount != 1) gameConfig.refreshCount = 1;
 
         save(gameConfig);
+
+        showAlert("已为你添加了新的赏金任务，2次抽卡机会，1次免费刷新商店机会");
+
+        $(this).attr("disabled", "true");
+        setTimeout(() => {
+            $(this).removeAttr("disabled");
+        }, 1000);
     });
 
     // 遭遇战完成按钮
@@ -66,6 +73,13 @@ $(function () {
             };
             nextLevel();
         }
+
+        showAlert("已为你添加了3货币");
+
+        $(this).attr("disabled", "true");
+        setTimeout(() => {
+            $(this).removeAttr("disabled");
+        }, 1000);
     });
 
     // 获取隐藏箱事件
@@ -78,6 +92,13 @@ $(function () {
             update(chestSteps, chestStepNum, chestBar, chestStepWidth);
             nextChest();
         }
+
+        showAlert("已获取隐藏箱子，获得3货币");
+
+        $(this).attr("disabled", "true");
+        setTimeout(() => {
+            $(this).removeAttr("disabled");
+        }, 1000);
     });
 
     // 更改货币数量按钮
@@ -121,6 +142,12 @@ $(function () {
         gameConfig.money += 6;
         gamepaneMoney.text(gameConfig.money);
         save(gameConfig);
+        showAlert("已增加6货币");
+        
+        $(this).attr("disabled", "true");
+        setTimeout(() => {
+            $(this).removeAttr("disabled");
+        }, 1000);
     });
 });
 
@@ -190,7 +217,6 @@ function setMapInfo() {
             $(".map-step-bar").append('<div class="step map-step active">' + i + '</div>');
         }
         else {
-            // $(".map-step-bar").append('<div class="step map-step">CP</div>');
             $(".map-step-bar").append('<div class="step map-step">' + i + '</div>');
         }
     }

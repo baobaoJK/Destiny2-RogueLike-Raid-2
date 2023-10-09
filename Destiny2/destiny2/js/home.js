@@ -1,6 +1,12 @@
 $(function () {
+    $("#game-model").modal("show");
+    let playerEventAudio = $(".audio")[0];
+    let globalEventAudio = $(".audio")[1];
+    playerEventAudio.volume = 0.2;
+    globalEventAudio.volume = 0.2;
+
     // 角色选择
-    $(".emblems .role").click(function (e) {
+    $(".emblems .emblem").click(function (e) {
 
         setGameConfig();
 
@@ -64,7 +70,7 @@ function setRole(position, role, roleId, roleName) {
     gameConfig.roleId = roleId;
     gameConfig.roleName = roleName;
     save(gameConfig);
-    window.location.href = $(".role").attr("href");
+    window.location.href = $(".emblem").attr("href");
 }
 
 // 清除游戏数据

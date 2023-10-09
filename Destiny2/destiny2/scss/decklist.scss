@@ -86,6 +86,10 @@
             }
 
             .card-item {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
                 width: 15rem;
                 height: 30rem;
                 margin: 1rem;
@@ -100,7 +104,7 @@
                     background-image: url('../images/deck/deck-2.jpg');
                     background-position: center;
                     background-size: cover;
-                    box-shadow: 0px 0px 1rem #7FE4C5;
+                    box-shadow: 0px 0px 1rem 0.25rem #7FE4C5;
                 }
 
                 .card-info {
@@ -112,11 +116,6 @@
                     height: 90%;
                     background-color: #0008;
                     text-align: center;
-
-                    .delete-button {
-                        background-color: #af2222;
-                        border: 1px solid #a75555;
-                    }
                 }
 
                 .card-name {
@@ -127,27 +126,39 @@
                 .card-text {
                     font-size: 1rem;
                 }
+
+                .delete-button {
+                    background-color: #af2222;
+                    border: 1px solid #a75555;
+                }
             }
         }
     }
 }
 
-#card-model {
+.modal {
     .modal-lg {
         min-width: 76rem;
         max-width: 76rem;
     }
 
     .modal-content {
-        background-color: #12171C;
-    }
-
-    .modal-body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        height: 37.5rem;
         box-shadow: 0px 0px 1.25rem #7FE4C5;
+
+        button {
+            margin: 2rem 0;
+            width: 16rem;
+
+        }
+    }
+
+    .modal-body {
+        height: 37.5rem;
+        padding-top: 2rem;
+        justify-content: normal !important;
         overflow: auto;
 
         .title {
@@ -156,18 +167,19 @@
             font-size: 2.5rem;
         }
 
-        .card-list-box {
+        .box {
             display: flex;
             flex-wrap: wrap;
             margin: 2rem 0;
 
-            .add-card-item {
+            .item {
                 display: flex;
+                flex-wrap: wrap;
                 align-items: center;
                 justify-content: center;
                 position: relative;
                 width: 8.125rem;
-                height: 13.75rem;
+                height: 15.75rem;
                 margin: 1rem 2rem;
                 transition: opacity .3s;
                 cursor: pointer;
@@ -188,7 +200,7 @@
                     box-shadow: 0px 0px 1.25rem #7FE4C5;
                     transition: opacity .3s;
 
-                    .card-info {
+                    .info {
                         display: flex;
                         flex-direction: column;
                         align-items: center;
@@ -200,101 +212,6 @@
                         text-align: center;
                         background-color: #0005;
                         border-radius: 0.25rem;
-
-                        button {
-                            padding: 5px 10px;
-                            width: 100%;
-                            height: 2rem;
-                            font-size: 1rem;
-                            line-height: 0;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    button {
-        margin: 0 2rem;
-    }
-}
-
-#take-model {
-    .modal-lg {
-        min-width: 76rem;
-        max-width: 76rem;
-    }
-
-    .modal-content {
-        background-color: #12171C;
-    }
-
-    .modal-body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 37.5rem;
-        box-shadow: 0px 0px 1.25rem #7FE4C5;
-        overflow: auto;
-
-        .take-title {
-            color: white;
-            font-weight: 100;
-            font-size: 2.5rem;
-        }
-
-        .take-list-box {
-            display: flex;
-            flex-wrap: wrap;
-            margin: 2rem 0;
-
-            .take-item {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                position: relative;
-                width: 8.125rem;
-                height: 13.75rem;
-                margin: 1rem 2rem;
-                transition: opacity .3s;
-                cursor: pointer;
-
-                &:hover {
-                    opacity: .8;
-                }
-
-                .card {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    width: 8.125rem;
-                    height: 13.75rem;
-                    background-image: url('../images/deck/deck-2.jpg');
-                    background-size: cover;
-                    box-shadow: 0px 0px 1.25rem #7FE4C5;
-                    transition: opacity .3s;
-
-                    .take-info {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: space-around;
-                        width: 85%;
-                        height: 90%;
-                        font-size: 1rem;
-                        color: white;
-                        text-align: center;
-                        background-color: #0005;
-                        border-radius: 0.25rem;
-
-                        button {
-                            padding: 5px 10px;
-                            width: 100%;
-                            height: 2rem;
-                            font-size: 1rem;
-                            line-height: 0;
-                        }
                     }
                 }
             }

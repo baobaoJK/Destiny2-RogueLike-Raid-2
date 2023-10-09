@@ -24,7 +24,7 @@ label {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 ul {
@@ -35,6 +35,77 @@ ul li {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.modal .modal-content {
+  background-color: #12171C;
+}
+.modal .modal-content .modal-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.emblem {
+  position: relative;
+  display: block;
+  width: 29.625rem;
+  height: 6rem;
+  text-decoration: none;
+  margin-bottom: 2rem;
+}
+.emblem:hover::before {
+  background-color: rgba(255, 255, 255, 0.2);
+  -webkit-box-shadow: inset 0 0 0 1px #fff;
+          box-shadow: inset 0 0 0 1px #fff;
+}
+.emblem:hover::after {
+  -webkit-box-shadow: 0 0 0 2px #fff;
+          box-shadow: 0 0 0 2px #fff;
+  -webkit-transform: scale(1, 1) translate3d(-2px, -2px, 0);
+          transform: scale(1, 1) translate3d(-2px, -2px, 0);
+}
+.emblem::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0);
+          box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0);
+  -webkit-transition: background-color 0.25s, -webkit-box-shadow 0.25s;
+  transition: background-color 0.25s, -webkit-box-shadow 0.25s;
+  transition: box-shadow 0.25s, background-color 0.25s;
+  transition: box-shadow 0.25s, background-color 0.25s, -webkit-box-shadow 0.25s;
+  z-index: 2;
+}
+.emblem::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  -webkit-transition: -webkit-box-shadow 0.25s, -webkit-transform 0.25s;
+  transition: -webkit-box-shadow 0.25s, -webkit-transform 0.25s;
+  transition: box-shadow 0.25s, transform 0.25s;
+  transition: box-shadow 0.25s, transform 0.25s, -webkit-box-shadow 0.25s, -webkit-transform 0.25s;
+  -webkit-transform: scale(1.017, 1.1) translate3d(-2px, -2px, 0);
+          transform: scale(1.017, 1.1) translate3d(-2px, -2px, 0);
+  -webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0);
+          box-shadow: 0 0 0 2px rgba(255, 255, 255, 0);
 }
 
 .button {
@@ -112,79 +183,28 @@ ul li {
   height: 31.25rem;
 }
 #home .emblems .role {
-  position: relative;
-  display: block;
-  width: 29.625rem;
-  height: 6rem;
-  text-decoration: none;
-  margin-bottom: 2rem;
-}
-#home .emblems .role:hover::before {
-  background-color: rgba(255, 255, 255, 0.2);
-  -webkit-box-shadow: inset 0 0 0 1px #fff;
-          box-shadow: inset 0 0 0 1px #fff;
-}
-#home .emblems .role:hover::after {
-  -webkit-box-shadow: 0 0 0 2px #fff;
-          box-shadow: 0 0 0 2px #fff;
-  -webkit-transform: scale(1, 1) translate3d(-2px, -2px, 0);
-          transform: scale(1, 1) translate3d(-2px, -2px, 0);
-}
-#home .emblems .role::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0);
-  -webkit-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0);
-          box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0);
-  -webkit-transition: background-color 0.25s, -webkit-box-shadow 0.25s;
-  transition: background-color 0.25s, -webkit-box-shadow 0.25s;
-  transition: box-shadow 0.25s, background-color 0.25s;
-  transition: box-shadow 0.25s, background-color 0.25s, -webkit-box-shadow 0.25s;
-  z-index: 2;
-}
-#home .emblems .role::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
-  -webkit-transition: -webkit-box-shadow 0.25s, -webkit-transform 0.25s;
-  transition: -webkit-box-shadow 0.25s, -webkit-transform 0.25s;
-  transition: box-shadow 0.25s, transform 0.25s;
-  transition: box-shadow 0.25s, transform 0.25s, -webkit-box-shadow 0.25s, -webkit-transform 0.25s;
-  -webkit-transform: scale(1.017, 1.1) translate3d(-2px, -2px, 0);
-          transform: scale(1.017, 1.1) translate3d(-2px, -2px, 0);
-  -webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0);
-          box-shadow: 0 0 0 2px rgba(255, 255, 255, 0);
-}
-#home .emblems .emblem {
   width: 100%;
   height: 100%;
   color: white;
   background-size: cover;
 }
-#home .emblems .emblem .description {
+#home .emblems .role .description {
   width: calc(100% - 6rem);
   height: calc(100% - 0.5rem);
   margin-left: 6rem;
   padding-top: 0.5rem;
 }
-#home .emblems .emblem .description p {
+#home .emblems .role .description p {
   margin: 0;
 }
-#home .emblems .emblem .description .name {
+#home .emblems .role .description .name {
   font-size: 1.5rem;
 }
-#home .emblems .emblem .description .sub {
+#home .emblems .role .description .sub {
   font-size: 1rem;
   opacity: 0.5;
 }
-#home .emblems .emblem .light {
+#home .emblems .role .light {
   position: absolute;
   top: 0.5rem;
   right: 0.5rem;
@@ -257,14 +277,20 @@ ul li {
   color: black;
 }
 
-#role-model .modal-lg {
+.modal .modal-lg {
   min-width: 40rem;
   max-width: 40rem;
 }
-#role-model .modal-content {
-  background-color: #12171C;
+.modal .modal-lg .modal-body {
+  min-height: 20rem;
+  border-radius: 1rem;
 }
-#role-model .modal-body {
+.modal .modal-lg .modal-body .title {
+  font-weight: 100;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.modal .modal-lg .modal-body .box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -275,98 +301,37 @@ ul li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 20rem;
-  border-radius: 1rem;
-}
-#role-model .modal-body .role-title {
-  font-weight: 100;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-#role-model .modal-body .role-id-box {
   margin-bottom: 2rem;
 }
-#role-model .modal-body .role-id-box .role-id-title {
+.modal .modal-lg .modal-body .box .title {
   font-size: 1rem;
   text-align: center;
   margin-bottom: 0.5rem;
 }
-#role-model .modal-body .role-id-box .role-radio input {
+.modal .modal-lg .modal-body .box .radio input {
   margin-right: 0.5rem;
 }
-#role-model .modal-body .role-id-box .role-radio label {
+.modal .modal-lg .modal-body .box .radio label {
   margin-right: 1rem;
 }
-#role-model .modal-body .role-name-box {
+.modal .modal-lg .modal-body .name-box {
   margin-bottom: 2rem;
 }
-#role-model .modal-body .role-name-box p {
+.modal .modal-lg .modal-body .name-box p {
   text-align: center;
   margin-bottom: 0.5rem;
 }
-#role-model .modal-body .role-name-box input {
+.modal .modal-lg .modal-body .name-box input {
   width: 18.75rem;
 }
-#role-model button {
+.modal button {
   margin: 0 2rem;
 }
 
-#captain-model .modal-lg {
-  min-width: 40rem;
-  max-width: 40rem;
-}
-#captain-model .modal-content {
-  background-color: #12171C;
-}
-#captain-model .modal-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 20rem;
-  border-radius: 1rem;
-}
-#captain-model .modal-body .captain-title {
-  font-weight: 100;
-  font-size: 2rem;
+#game-model .game-config {
+  font-size: 1.5rem;
   margin-bottom: 1rem;
 }
-#captain-model .modal-body .captain-position-box {
-  margin-bottom: 2rem;
-}
-#captain-model .modal-body .captain-position-box .captain-position-title {
-  font-size: 1rem;
-  text-align: center;
-  margin-bottom: 0.5rem;
-}
-#captain-model .modal-body .captain-position-box .captain-radio input {
-  margin-right: 0.5rem;
-}
-#captain-model .modal-body .captain-position-box .captain-radio label {
-  margin-right: 1rem;
-}
-#captain-model .modal-body .captain-name-box {
-  margin-bottom: 2rem;
-}
-#captain-model .modal-body .captain-name-box p {
-  text-align: center;
-  margin-bottom: 0.5rem;
-}
-#captain-model .modal-body .captain-name-box input {
-  width: 18.75rem;
-}
-#captain-model button {
-  margin: 0 2rem;
+#game-model .audio {
+  margin: 1rem 0;
 }/*# sourceMappingURL=home.css.map */

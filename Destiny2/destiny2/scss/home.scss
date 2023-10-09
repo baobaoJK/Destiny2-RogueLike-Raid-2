@@ -30,56 +30,8 @@
         width: 29.625rem;
         height: 31.25rem;
 
-        .role {
-            position: relative;
-            display: block;
-            width: 29.625rem;
-            height: 6rem;
-            text-decoration: none;
-            margin-bottom: 2rem;
-
-            &:hover {
-                &::before {
-                    background-color: #fff3;
-                    box-shadow: inset 0 0 0 1px #fff;
-                }
-
-                &::after {
-                    box-shadow: 0 0 0 2px #fff;
-                    transform: scale(1, 1) translate3d(-2px, -2px, 0);
-                }
-            }
-
-            &::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: #fff0;
-                box-shadow: inset 0 0 0 1px #fff0;
-                transition: box-shadow .25s,
-                    background-color .25s;
-                z-index: 2;
-            }
-
-            &::after {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: calc(100% + 4px);
-                height: calc(100% + 4px);
-                transition: box-shadow .25s,
-                    transform .25s;
-                transform: scale(1.017, 1.1) translate3d(-2px, -2px, 0);
-                box-shadow: 0 0 0 2px #fff0;
-            }
-        }
-
         // 名片样式
-        .emblem {
+        .role {
             width: 100%;
             height: 100%;
             color: white;
@@ -163,6 +115,7 @@
     }
 }
 
+// 页脚
 .footer {
     display: flex;
     justify-content: center;
@@ -178,62 +131,56 @@
     }
 }
 
-// 角色信息框
-#role-model {
+// 模态框
+.modal {
     .modal-lg {
         min-width: 40rem;
         max-width: 40rem;
-    }
 
-    .modal-content {
-        background-color: #12171C;
-    }
+        .modal-body {
+            min-height: 20rem;
+            border-radius: 1rem;
 
-    .modal-body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 20rem;
-        border-radius: 1rem;
-
-        .role-title {
-            font-weight: 100;
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .role-id-box {
-            margin-bottom: 2rem;
-
-            .role-id-title {
-                font-size: 1rem;
-                text-align: center;
-                margin-bottom: 0.5rem;
+            .title {
+                font-weight: 100;
+                font-size: 2rem;
+                margin-bottom: 1rem;
             }
 
-            .role-radio {
+            .box {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 2rem;
+
+                .title {
+                    font-size: 1rem;
+                    text-align: center;
+                    margin-bottom: 0.5rem;
+                }
+
+                .radio {
+                    input {
+                        margin-right: 0.5rem;
+                    }
+
+                    label {
+                        margin-right: 1rem;
+                    }
+                }
+            }
+
+            .name-box {
+                margin-bottom: 2rem;
+
+                p {
+                    text-align: center;
+                    margin-bottom: 0.5rem;
+                }
 
                 input {
-                    margin-right: 0.5rem;
+                    width: 18.75rem;
                 }
-
-                label {
-                    margin-right: 1rem;
-                }
-            }
-        }
-
-        .role-name-box {
-            margin-bottom: 2rem;
-
-            p {
-                text-align: center;
-                margin-bottom: 0.5rem;
-            }
-
-            input {
-                width: 18.75rem;
             }
         }
     }
@@ -241,69 +188,17 @@
     button {
         margin: 0 2rem;
     }
+
 }
 
-// 队长角色信息框
-#captain-model {
-    .modal-lg {
-        min-width: 40rem;
-        max-width: 40rem;
+// 游戏检测模态框
+#game-model {
+    .game-config {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
     }
 
-    .modal-content {
-        background-color: #12171C;
-    }
-
-    .modal-body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 20rem;
-        border-radius: 1rem;
-
-        .captain-title {
-            font-weight: 100;
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .captain-position-box {
-            margin-bottom: 2rem;
-
-            .captain-position-title {
-                font-size: 1rem;
-                text-align: center;
-                margin-bottom: 0.5rem;
-            }
-
-            .captain-radio {
-
-                input {
-                    margin-right: 0.5rem;
-                }
-
-                label {
-                    margin-right: 1rem;
-                }
-            }
-        }
-
-        .captain-name-box {
-            margin-bottom: 2rem;
-
-            p {
-                text-align: center;
-                margin-bottom: 0.5rem;
-            }
-
-            input {
-                width: 18.75rem;
-            }
-        }
-    }
-
-    button {
-        margin: 0 2rem;
+    .audio {
+        margin: 1rem 0;
     }
 }

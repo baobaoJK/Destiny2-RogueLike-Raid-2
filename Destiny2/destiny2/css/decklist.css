@@ -24,7 +24,7 @@ label {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 ul {
@@ -35,6 +35,77 @@ ul li {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.modal .modal-content {
+  background-color: #12171C;
+}
+.modal .modal-content .modal-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.emblem {
+  position: relative;
+  display: block;
+  width: 29.625rem;
+  height: 6rem;
+  text-decoration: none;
+  margin-bottom: 2rem;
+}
+.emblem:hover::before {
+  background-color: rgba(255, 255, 255, 0.2);
+  -webkit-box-shadow: inset 0 0 0 1px #fff;
+          box-shadow: inset 0 0 0 1px #fff;
+}
+.emblem:hover::after {
+  -webkit-box-shadow: 0 0 0 2px #fff;
+          box-shadow: 0 0 0 2px #fff;
+  -webkit-transform: scale(1, 1) translate3d(-2px, -2px, 0);
+          transform: scale(1, 1) translate3d(-2px, -2px, 0);
+}
+.emblem::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0);
+          box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0);
+  -webkit-transition: background-color 0.25s, -webkit-box-shadow 0.25s;
+  transition: background-color 0.25s, -webkit-box-shadow 0.25s;
+  transition: box-shadow 0.25s, background-color 0.25s;
+  transition: box-shadow 0.25s, background-color 0.25s, -webkit-box-shadow 0.25s;
+  z-index: 2;
+}
+.emblem::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  -webkit-transition: -webkit-box-shadow 0.25s, -webkit-transform 0.25s;
+  transition: -webkit-box-shadow 0.25s, -webkit-transform 0.25s;
+  transition: box-shadow 0.25s, transform 0.25s;
+  transition: box-shadow 0.25s, transform 0.25s, -webkit-box-shadow 0.25s, -webkit-transform 0.25s;
+  -webkit-transform: scale(1.017, 1.1) translate3d(-2px, -2px, 0);
+          transform: scale(1.017, 1.1) translate3d(-2px, -2px, 0);
+  -webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0);
+          box-shadow: 0 0 0 2px rgba(255, 255, 255, 0);
 }
 
 .button {
@@ -180,6 +251,17 @@ ul li {
   border: 1px solid white;
 }
 #decklist .decks .card-list .card-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 15rem;
   height: 30rem;
   margin: 1rem;
@@ -200,8 +282,8 @@ ul li {
   background-image: url("../images/deck/deck-2.jpg");
   background-position: center;
   background-size: cover;
-  -webkit-box-shadow: 0px 0px 1rem #7FE4C5;
-          box-shadow: 0px 0px 1rem #7FE4C5;
+  -webkit-box-shadow: 0px 0px 1rem 0.25rem #7FE4C5;
+          box-shadow: 0px 0px 1rem 0.25rem #7FE4C5;
 }
 #decklist .decks .card-list .card-item .card-info {
   display: -webkit-box;
@@ -221,10 +303,6 @@ ul li {
   background-color: rgba(0, 0, 0, 0.5333333333);
   text-align: center;
 }
-#decklist .decks .card-list .card-item .card-info .delete-button {
-  background-color: #af2222;
-  border: 1px solid #a75555;
-}
 #decklist .decks .card-list .card-item .card-name {
   text-align: center;
   font-size: 1.5rem;
@@ -232,15 +310,16 @@ ul li {
 #decklist .decks .card-list .card-item .card-text {
   font-size: 1rem;
 }
+#decklist .decks .card-list .card-item .delete-button {
+  background-color: #af2222;
+  border: 1px solid #a75555;
+}
 
-#card-model .modal-lg {
+.modal .modal-lg {
   min-width: 76rem;
   max-width: 76rem;
 }
-#card-model .modal-content {
-  background-color: #12171C;
-}
-#card-model .modal-body {
+.modal .modal-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -251,17 +330,27 @@ ul li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 37.5rem;
   -webkit-box-shadow: 0px 0px 1.25rem #7FE4C5;
           box-shadow: 0px 0px 1.25rem #7FE4C5;
+}
+.modal .modal-content button {
+  margin: 2rem 0;
+  width: 16rem;
+}
+.modal .modal-body {
+  height: 37.5rem;
+  padding-top: 2rem;
+  -webkit-box-pack: normal !important;
+      -ms-flex-pack: normal !important;
+          justify-content: normal !important;
   overflow: auto;
 }
-#card-model .modal-body .title {
+.modal .modal-body .title {
   color: white;
   font-weight: 100;
   font-size: 2.5rem;
 }
-#card-model .modal-body .card-list-box {
+.modal .modal-body .box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -269,10 +358,12 @@ ul li {
       flex-wrap: wrap;
   margin: 2rem 0;
 }
-#card-model .modal-body .card-list-box .add-card-item {
+.modal .modal-body .box .item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -281,16 +372,16 @@ ul li {
           justify-content: center;
   position: relative;
   width: 8.125rem;
-  height: 13.75rem;
+  height: 15.75rem;
   margin: 1rem 2rem;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
   cursor: pointer;
 }
-#card-model .modal-body .card-list-box .add-card-item:hover {
+.modal .modal-body .box .item:hover {
   opacity: 0.8;
 }
-#card-model .modal-body .card-list-box .add-card-item .card {
+.modal .modal-body .box .item .card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -313,7 +404,7 @@ ul li {
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
-#card-model .modal-body .card-list-box .add-card-item .card .card-info {
+.modal .modal-body .box .item .card .info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -334,125 +425,6 @@ ul li {
   background-color: rgba(0, 0, 0, 0.3333333333);
   border-radius: 0.25rem;
 }
-#card-model .modal-body .card-list-box .add-card-item .card .card-info button {
-  padding: 5px 10px;
-  width: 100%;
-  height: 2rem;
-  font-size: 1rem;
-  line-height: 0;
-}
-#card-model button {
-  margin: 0 2rem;
-}
-
-#take-model .modal-lg {
-  min-width: 76rem;
-  max-width: 76rem;
-}
-#take-model .modal-content {
-  background-color: #12171C;
-}
-#take-model .modal-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 37.5rem;
-  -webkit-box-shadow: 0px 0px 1.25rem #7FE4C5;
-          box-shadow: 0px 0px 1.25rem #7FE4C5;
-  overflow: auto;
-}
-#take-model .modal-body .take-title {
-  color: white;
-  font-weight: 100;
-  font-size: 2.5rem;
-}
-#take-model .modal-body .take-list-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin: 2rem 0;
-}
-#take-model .modal-body .take-list-box .take-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: relative;
-  width: 8.125rem;
-  height: 13.75rem;
-  margin: 1rem 2rem;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-  cursor: pointer;
-}
-#take-model .modal-body .take-list-box .take-item:hover {
-  opacity: 0.8;
-}
-#take-model .modal-body .take-list-box .take-item .card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 8.125rem;
-  height: 13.75rem;
-  background-image: url("../images/deck/deck-2.jpg");
-  background-size: cover;
-  -webkit-box-shadow: 0px 0px 1.25rem #7FE4C5;
-          box-shadow: 0px 0px 1.25rem #7FE4C5;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-}
-#take-model .modal-body .take-list-box .take-item .card .take-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  width: 85%;
-  height: 90%;
-  font-size: 1rem;
-  color: white;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.3333333333);
-  border-radius: 0.25rem;
-}
-#take-model .modal-body .take-list-box .take-item .card .take-info button {
-  padding: 5px 10px;
-  width: 100%;
-  height: 2rem;
-  font-size: 1rem;
-  line-height: 0;
-}
-#take-model button {
+.modal button {
   margin: 0 2rem;
 }/*# sourceMappingURL=decklist.css.map */

@@ -24,7 +24,7 @@ label {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 ul {
@@ -35,6 +35,77 @@ ul li {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.modal .modal-content {
+  background-color: #12171C;
+}
+.modal .modal-content .modal-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.emblem {
+  position: relative;
+  display: block;
+  width: 29.625rem;
+  height: 6rem;
+  text-decoration: none;
+  margin-bottom: 2rem;
+}
+.emblem:hover::before {
+  background-color: rgba(255, 255, 255, 0.2);
+  -webkit-box-shadow: inset 0 0 0 1px #fff;
+          box-shadow: inset 0 0 0 1px #fff;
+}
+.emblem:hover::after {
+  -webkit-box-shadow: 0 0 0 2px #fff;
+          box-shadow: 0 0 0 2px #fff;
+  -webkit-transform: scale(1, 1) translate3d(-2px, -2px, 0);
+          transform: scale(1, 1) translate3d(-2px, -2px, 0);
+}
+.emblem::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0);
+          box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0);
+  -webkit-transition: background-color 0.25s, -webkit-box-shadow 0.25s;
+  transition: background-color 0.25s, -webkit-box-shadow 0.25s;
+  transition: box-shadow 0.25s, background-color 0.25s;
+  transition: box-shadow 0.25s, background-color 0.25s, -webkit-box-shadow 0.25s;
+  z-index: 2;
+}
+.emblem::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  -webkit-transition: -webkit-box-shadow 0.25s, -webkit-transform 0.25s;
+  transition: -webkit-box-shadow 0.25s, -webkit-transform 0.25s;
+  transition: box-shadow 0.25s, transform 0.25s;
+  transition: box-shadow 0.25s, transform 0.25s, -webkit-box-shadow 0.25s, -webkit-transform 0.25s;
+  -webkit-transform: scale(1.017, 1.1) translate3d(-2px, -2px, 0);
+          transform: scale(1.017, 1.1) translate3d(-2px, -2px, 0);
+  -webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0);
+          box-shadow: 0 0 0 2px rgba(255, 255, 255, 0);
 }
 
 .button {
@@ -87,14 +158,12 @@ ul li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  height: 100%;
+  height: auto;
+  padding-top: 4rem;
 }
 #shop .shop-list {
   display: -webkit-box;
@@ -109,7 +178,7 @@ ul li {
           align-items: center;
   position: relative;
   width: 80%;
-  min-height: 80%;
+  height: 30rem;
   color: white;
 }
 #shop .shop-list .shop-top {
@@ -192,8 +261,60 @@ ul li {
 #shop .shop-list .random-list .item-list .item:hover {
   opacity: 0.5;
 }
-#shop .show {
-  display: block !important;
+#shop .backpack {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  width: 80%;
+  height: 10rem;
+  color: white;
+}
+#shop .backpack .backpack-top {
+  width: 100%;
+  height: 3.125rem;
+}
+#shop .backpack .backpack-top .backpack-title {
+  width: 100%;
+  height: auto;
+  float: left;
+  font-size: 2rem;
+  font-weight: 100;
+  letter-spacing: 0.125rem;
+}
+#shop .backpack .backpack-top .backpack-line {
+  width: 100%;
+  border: none;
+  border-top: 1px solid #454955;
+  overflow: auto;
+}
+#shop .backpack .item-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+}
+#shop .backpack .item-list .item {
+  width: 6rem;
+  height: 6rem;
+  margin-right: 0.5rem;
+  border: 2px solid #B0B4B0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+  background-size: 100%;
+  cursor: pointer;
+}
+#shop .backpack .item-list .item:hover {
+  opacity: 0.5;
 }
 #shop #tooltip {
   display: none;
@@ -281,28 +402,15 @@ ul li {
           justify-content: flex-end;
   width: 50%;
 }
+#shop .show {
+  display: block !important;
+}
 
 #card-model .modal-lg {
   min-width: 75rem;
   max-width: 75rem;
 }
-#card-model .modal-content {
-  background-color: #12171C;
-}
 #card-model .modal-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   height: 37.5rem;
   -webkit-box-shadow: 0px 0px 1.25rem #7FE4C5;
           box-shadow: 0px 0px 1.25rem #7FE4C5;
@@ -380,7 +488,7 @@ ul li {
           justify-content: center;
   width: 85%;
   height: 90%;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   color: white;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.3333333333);

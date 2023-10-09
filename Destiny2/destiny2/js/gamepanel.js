@@ -14,7 +14,7 @@ $(function () {
     // 导航栏
     if (gameConfig.position == "captain") {
         $('.menu ul').prepend('<li class="menu-link"><a href="map.html" target="windows">地图</a></li>');
-        $('.menu ul').append('<li class="menu-link"><a href="globalevent.html" target="windows">全局事件</a></li>');
+        $('.menu ul').append('<li class="menu-link"><a href="globalEvent.html" target="windows">全局事件</a></li>');
     }
 
     // 添加操控面板
@@ -62,19 +62,29 @@ function startGame() {
 
         if (eventNumbers[0] == 1) {
             eventAudio.play();
-            let event = lotteryByCount(gameConfig.playerevent);
+            let event = lotteryByCount(gameConfig.playerEvent);
 
-            for (let i = 0; i < gameConfig.playerevent.length; i++) {
-                if (event.id == gameConfig.playerevent[i].id) {
-                    gameConfig.playerevent[i].count -= 1;
+            for (let i = 0; i < gameConfig.playerEvent.length; i++) {
+                if (event.id == gameConfig.playerEvent[i].id) {
+                    gameConfig.playerEvent[i].count -= 1;
                     break;
                 }
             }
 
-            gameConfig.playereventlist.push(event);
+            gameConfig.playerEventList.push(event);
             save(gameConfig);
-        }
 
+            let playerEventListLength = gameConfig.playerEventList.length;
+
+            // 检测卡牌状态
+            setTimeout(() => {
+                gameConfig = read();
+                if (gameConfig.playerEventList[playerEventListLength - 1].stage != "active") {
+                    gameConfig.playerEventList[playerEventListLength - 1].stage = "timeout";
+                    save(gameConfig);
+                }
+            }, 20000);
+        }
     }, 300000);
 
     console.log("个人事件检测");
@@ -95,17 +105,28 @@ function startGame() {
 
             if (globalEventNumbers[0] == 1) {
                 globalEventAudio.play();
-                let globalEvent = lotteryByCount(gameConfig.globalevent);
+                let globalEvent = lotteryByCount(gameConfig.globalEvent);
 
-                for (let i = 0; i < gameConfig.globalevent.length; i++) {
-                    if (globalEvent.id == gameConfig.globalevent[i].id) {
-                        gameConfig.globalevent[i].count -= 1;
+                for (let i = 0; i < gameConfig.globalEvent.length; i++) {
+                    if (globalEvent.id == gameConfig.globalEvent[i].id) {
+                        gameConfig.globalEvent[i].count -= 1;
                         break;
                     }
                 }
 
-                gameConfig.globaleventlist.push(globalEvent);
+                gameConfig.globalEventList.push(globalEvent);
                 save(gameConfig);
+
+                let globalEventListLengthh = gameConfig.globalEventList.length;
+                // 检测卡牌状态
+                setTimeout(() => {
+                    gameConfig = read();
+                    if (gameConfig.globalEventList[globalEventListLengthh - 1].stage != "active") {
+                        console.log("事件超时");
+                        gameConfig.globalEventList[globalEventListLengthh - 1].stage = "timeout";
+                        save(gameConfig);
+                    }
+                }, 20000);
             }
 
         }, 300000);

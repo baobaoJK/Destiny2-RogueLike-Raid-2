@@ -150,7 +150,7 @@ ul li {
     font-size: 10px;
   }
 }
-#deck {
+#event {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -167,13 +167,14 @@ ul li {
   width: 100%;
   height: 100%;
 }
-#deck .deck-title {
+#event .event-title {
   color: white;
-  margin-bottom: 2rem;
+  font-size: 1.75rem;
   font-weight: 100;
-  font-size: 2rem;
+  letter-spacing: 0.5rem;
+  margin-bottom: 2rem;
 }
-#deck .deck-list {
+#event .event-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -186,104 +187,117 @@ ul li {
           justify-content: center;
   margin-bottom: 2rem;
 }
-#deck .deck-list .deck {
-  width: 16.25rem;
-  height: 30rem;
-  margin: 2rem;
+#event .event-list .event-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 3rem;
+  width: 15.625rem;
+  height: 37.5rem;
 }
-#deck .deck-list .deck .deck-1 {
-  width: 16.25rem;
-  height: 27.5rem;
-  margin-bottom: 1rem;
-  background-image: url("../images/deck/deck-1.jpg");
+#event .event-list .event-box .event-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  width: 15.625rem;
+  height: 26.25rem;
+  margin: 2rem 0rem;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+#event .event-list .event-box .event-item.flip {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+#event .event-list .event-box .event-item .event-card {
+  width: 15.625rem;
+  height: 26.25rem;
+  border-radius: 1rem;
   background-size: cover;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  cursor: pointer;
-  -webkit-box-shadow: 0px 0px 1rem 0.25rem #546072;
-          box-shadow: 0px 0px 1rem 0.25rem #546072;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  background-image: url("../images/event/event.png");
 }
-#deck .deck-list .deck .deck-1:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-  opacity: 0.8;
+#event .event-list .event-box .event-item .event-front,
+#event .event-list .event-box .event-item .event-back {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
-#deck .deck-list .deck .deck-2 {
-  width: 16.25rem;
-  height: 27.5rem;
+#event .event-list .event-box .event-item .event-front {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+#event .event-list .event-box .event-item .event-front .event-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 90%;
+  height: 90%;
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.3333333333);
+  border-radius: 0.25rem;
+}
+#event .event-list .event-box .event-item .event-front .event-info .title,
+#event .event-list .event-box .event-item .event-front .event-info .sub-title {
+  font-size: 1.25rem;
+}
+#event .event-list .event-box .quit {
+  font-size: 1.25rem;
+  color: white;
   margin-bottom: 1rem;
-  background-image: url("../images/deck/deck-2.jpg");
-  background-size: cover;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  cursor: pointer;
-  -webkit-box-shadow: 0px 0px 1rem 0.25rem #7FE4C5;
-          box-shadow: 0px 0px 1rem 0.25rem #7FE4C5;
 }
-#deck .deck-list .deck .deck-2:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-  opacity: 0.8;
-}
-#deck .deck-list .deck .deck-3 {
-  width: 16.25rem;
-  height: 27.5rem;
-  margin-bottom: 1rem;
-  background-image: url("../images/deck/deck-3.jpg");
-  background-size: cover;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  cursor: pointer;
-  -webkit-box-shadow: 0px 0px 1rem 0.25rem #D2C796;
-          box-shadow: 0px 0px 1rem 0.25rem #D2C796;
-}
-#deck .deck-list .deck .deck-3:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-  opacity: 0.8;
-}
-#deck .deck-list .deck .deck-4 {
-  width: 16.25rem;
-  height: 27.5rem;
-  margin-bottom: 1rem;
-  background-image: url("../images/deck/deck-4.jpg");
-  background-size: cover;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  cursor: pointer;
-  -webkit-box-shadow: 0px 0px 1rem 0.25rem #973B3A;
-          box-shadow: 0px 0px 1rem 0.25rem #973B3A;
-}
-#deck .deck-list .deck .deck-4:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-  opacity: 0.8;
-}
-#deck .deck-list .deck .deck-5 {
-  width: 16.25rem;
-  height: 27.5rem;
-  margin-bottom: 1rem;
-  background-image: url("../images/deck/deck-5.jpg");
-  background-size: cover;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  cursor: pointer;
-  -webkit-box-shadow: 0px 0px 1rem 0.25rem #6e43cb;
-          box-shadow: 0px 0px 1rem 0.25rem #6e43cb;
-}
-#deck .deck-list .deck .deck-5:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-  opacity: 0.8;
-}
-#deck .deck-list .deck .deck-name {
+#event .event-list .event-box .event-name {
+  width: 100%;
   text-align: center;
   font-size: 1.5rem;
   color: white;
   letter-spacing: 0.5rem;
 }
-#deck .deck-count {
-  font-size: 1.25rem;
+#event .audio {
+  display: none;
 }
 
 #deck-model .modal-lg {
@@ -294,6 +308,7 @@ ul li {
   min-height: 37.5rem;
 }
 #deck-model .modal-body .deck-list-info p {
+  text-align: center;
   font-size: 1.5rem;
   margin: 1rem 0;
 }
@@ -303,31 +318,6 @@ ul li {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-}
-#deck-model .modal-body .deck-list-box.deck-1 .card {
-  background-image: url("../images/deck/deck-1.jpg");
-  -webkit-box-shadow: 0px 0px 1rem 0.25rem #546072;
-          box-shadow: 0px 0px 1rem 0.25rem #546072;
-}
-#deck-model .modal-body .deck-list-box.deck-2 .card {
-  background-image: url("../images/deck/deck-2.jpg");
-  -webkit-box-shadow: 0px 0px 1rem 0.25rem #7FE4C5;
-          box-shadow: 0px 0px 1rem 0.25rem #7FE4C5;
-}
-#deck-model .modal-body .deck-list-box.deck-3 .card {
-  background-image: url("../images/deck/deck-3.jpg");
-  -webkit-box-shadow: 0px 0px 1rem 0.25rem #D2C796;
-          box-shadow: 0px 0px 1rem 0.25rem #D2C796;
-}
-#deck-model .modal-body .deck-list-box.deck-4 .card {
-  background-image: url("../images/deck/deck-4.jpg");
-  -webkit-box-shadow: 0px 0px 1rem 0.25rem #973B3A;
-          box-shadow: 0px 0px 1rem 0.25rem #973B3A;
-}
-#deck-model .modal-body .deck-list-box.deck-5 .card {
-  background-image: url("../images/deck/deck-5.jpg");
-  -webkit-box-shadow: 0px 0px 1rem 0.25rem #6e43cb;
-          box-shadow: 0px 0px 1rem 0.25rem #6e43cb;
 }
 #deck-model .modal-body .deck-list-box .card-item {
   display: -webkit-box;
@@ -360,7 +350,10 @@ ul li {
 #deck-model .modal-body .deck-list-box .card-item .card {
   width: 8.125rem;
   height: 13.75rem;
+  background-image: url("../images/deck/deck-2.jpg");
   background-size: cover;
+  -webkit-box-shadow: 0px 0px 1rem 0.25rem #7FE4C5;
+          box-shadow: 0px 0px 1rem 0.25rem #7FE4C5;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
@@ -415,14 +408,4 @@ ul li {
 }
 #deck-model .modal-body .deck-confirm-box button {
   margin: 0 2rem;
-}
-
-.deck-closed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5333333333);
-  z-index: 9999;
-}/*# sourceMappingURL=deck.css.map */
+}/*# sourceMappingURL=playerevent.css.map */

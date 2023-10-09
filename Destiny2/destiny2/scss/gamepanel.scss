@@ -17,7 +17,7 @@
         }
 
         // 名片样式
-        .emblem {
+        .role {
             position: relative;
             float: left;
             width: 31.25rem;
@@ -38,54 +38,6 @@
                 left: 11.25rem;
                 width: 18.75rem;
                 height: 4rem;
-
-                a {
-                    position: relative;
-                    display: block;
-                    width: 29.625rem;
-                    height: 6rem;
-                    text-decoration: none;
-                    margin-bottom: 2rem;
-
-                    &:hover {
-                        &::before {
-                            background-color: #fff3;
-                            box-shadow: inset 0 0 0 1px #fff;
-                        }
-
-                        &::after {
-                            box-shadow: 0 0 0 2px #fff;
-                            transform: scale(1, 1) translate3d(-2px, -2px, 0);
-                        }
-                    }
-
-                    &::before {
-                        content: '';
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        background-color: #fff0;
-                        box-shadow: inset 0 0 0 1px #fff0;
-                        transition: box-shadow .25s,
-                            background-color .25s;
-                        z-index: 2;
-                    }
-
-                    &::after {
-                        content: '';
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: calc(100% + 4px);
-                        height: calc(100% + 4px);
-                        transition: box-shadow .25s,
-                            transform .25s;
-                        transform: scale(1.017, 1.1) translate3d(-2px, -2px, 0);
-                        box-shadow: 0 0 0 2px #fff0;
-                    }
-                }
 
                 .name {
                     color: white;

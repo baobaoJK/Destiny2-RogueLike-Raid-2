@@ -15,8 +15,8 @@
     <div id="home">
         <div class="title">选择游玩角色</div>
         <div class="emblems">
-            <a class="role" href="gamepanel.html" id="titan" data-toggle="modal" data-target="#role-model">
-                <div class="emblem titan">
+            <a class="emblem" href="gamepanel.html" id="titan" data-toggle="modal" data-target="#role-model">
+                <div class="role titan">
                     <div class="description">
                         <p class="name">泰坦</p>
                         <p class="sub">人类 / 觉醒者 / Exo</p>
@@ -25,8 +25,8 @@
                 </div>
             </a>
 
-            <a class="role" href="gamepanel.html" id="hunter" data-toggle="modal" data-target="#role-model">
-                <div class="emblem hunter">
+            <a class="emblem" href="gamepanel.html" id="hunter" data-toggle="modal" data-target="#role-model">
+                <div class="role hunter">
                     <div class="description">
                         <p class="name">猎人</p>
                         <p class="sub">人类 / 觉醒者 / Exo</p>
@@ -35,8 +35,8 @@
                 </div>
             </a>
 
-            <a class="role" href="gamepanel.html" id="warlock" data-toggle="modal" data-target="#role-model">
-                <div class="emblem warlock">
+            <a class="emblem" href="gamepanel.html" id="warlock" data-toggle="modal" data-target="#role-model">
+                <div class="role warlock">
                     <div class="description">
                         <p class="name">术士</p>
                         <p class="sub">人类 / 觉醒者 / Exo</p>
@@ -45,8 +45,8 @@
                 </div>
             </a>
 
-            <a class="role" href="gamepanel.html" id="captain" data-toggle="modal" data-target="#captain-model">
-                <div class="emblem corrupted">
+            <a class="emblem" href="gamepanel.html" id="captain" data-toggle="modal" data-target="#captain-model">
+                <div class="role corrupted">
                     <div class="description">
                         <p class="name">火力战队队长</p>
                         <p class="sub">人类 / 觉醒者 / Exo</p>
@@ -72,17 +72,42 @@
         <p>当前网页版本为 RogueLike Raid Version 2.0 | 请完整的阅读 《游戏说明》 与 《游戏玩法》 后再开始游戏，以免影响游戏体验</p>
     </div>
 
+    <!-- 游戏检测 -->
+    <div class="modal fade" id="game-model" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="game-modelLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h1 class="title game-title">游戏开始前检测</h1>
+
+                    <div class="box game-box">
+                        <p class="title game-config">请确认已完整的阅读游戏说明和游戏玩法后进行游戏</p>
+                        <p class="title game-title">请确认你能听得到以下音频</p>
+                        <p class="title game-tips">免责声明：若事件触发没有声音，请检测浏览器是否开启了声音，电脑系统是否禁用了浏览器声音</p>
+                        <audio class="audio" src="audio/playerevent.mp3" controls></audio>
+                        <audio class="audio" src="audio/globalevent.mp3" controls></audio>
+                    </div>
+
+                    <div class="game-confirm-box">
+                        <button type="button" class="button game-confirm game-close" data-dismiss="modal"
+                            aria-label="Close">确认</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- 角色信息模态框 -->
     <div class="modal fade" id="role-model" data-backdrop="static" data-keyboard="false" tabindex="-1"
         aria-labelledby="role-modelLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body">
-                    <h1 class="role-title">设置游戏角色信息</h1>
+                    <h1 class="title role-title">设置游戏角色信息</h1>
 
-                    <div class="role-id-box">
-                        <p class="role-id-title">选择游戏编号</p>
-                        <div class="role-radio">
+                    <div class="box role-id-box">
+                        <p class="title role-id-title">选择游戏编号</p>
+                        <div class="radio role-radio">
                             <label for="role-id-2"><input type="radio" class="role-id" name="role-id" id="role-id-2"
                                     value="2">2号</label>
                             <label for="role-id-3"><input type="radio" class="role-id" name="role-id" id="role-id-3"
@@ -96,7 +121,7 @@
                         </div>
                     </div>
 
-                    <div class="role-name-box">
+                    <div class="name-box role-name-box">
                         <p class="role-name-title">输入你的游戏名称 / 游戏ID</p>
                         <input type="text" name="role-name" id="role-name">
                     </div>
@@ -117,16 +142,16 @@
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body">
-                    <h1 class="captain-title">设置游戏角色信息</h1>
+                    <h1 class="title captain-title">设置游戏角色信息</h1>
 
-                    <div class="captain-name-box">
+                    <div class="name-box captain-name-box">
                         <p class="captain-name-title">输入你的游戏名称 / 游戏ID</p>
                         <input type="text" name="captain-name" id="captain-name">
                     </div>
 
-                    <div class="captain-position-box">
-                        <p class="captain-position-title">选择游玩职业</p>
-                        <div class="captain-radio">
+                    <div class="box captain-position-box">
+                        <p class="title captain-position-title">选择游玩职业</p>
+                        <div class="radio captain-radio">
                             <label for="captain-titan"><input type="radio" class="captain-position"
                                     name="captain-position" id="captain-titan" value="titan">泰坦</label>
                             <label for="captain-hunter"><input type="radio" class="captain-position"

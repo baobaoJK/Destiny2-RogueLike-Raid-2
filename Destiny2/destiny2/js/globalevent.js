@@ -2,9 +2,18 @@ $(function () {
     // 读取游戏存档
     gameConfig = read();
 
-    const globalEvent = gameConfig.globaleventlist;
+    const globalEvent = gameConfig.globalEventList;
 
     console.log(globalEvent);
+
+    let punishCount = 0;
+
+    for (let i = 0; i < globalEvent.length; i++) {
+        if (globalEvent[i].stage == "timeout") {
+            punishCount += 1;
+            showAlert("已有" + punishCount + "个事件超时");
+        }
+    }
 
     if (globalEvent.length != 0) {
 
@@ -14,7 +23,7 @@ $(function () {
         for (let i = 0; i < globalEvent.length; i++) {
 
             let stage = globalEvent[i].stage;
-            let confirmButton = stage == "none" ? "block" : "none";
+            let confirmButton = (stage == "none" || stage == "timeout") ? "block" : "none";
             let finishButton = stage == "active" ? "block" : "none";
 
             $(".event-list").append('<div class="event-box">' +
@@ -71,7 +80,7 @@ $(function () {
 // 全局事件处理机制 ↓
 function runEvent(eventName) {
 
-    let globalEvent = gameConfig.globaleventlist;
+    let globalEvent = gameConfig.globalEventList;
 
     let players = shuffle([1, 2, 3, 4, 5, 6]);
 
@@ -109,11 +118,16 @@ function runEvent(eventName) {
         }, 500);
     }
 
+    // 各自为营
+    if (eventName == "Split-Up") {
+        showAlert(players[0] + " | " + players[1] + " | " + players[2] + " 需要做为1队，" + players[3] + " | " + players[4] + " | " + players[5] + " 需要做为2队 分别完成此次遭遇战");
+    }
+
     // 改变事件状态
     for (let i = 0; i < globalEvent.length; i++) {
         if (eventName == globalEvent[i].name) {
             // showAlert("已接受事件 -" + gameConfig.playereventlist[i].eventName + "-");
-            gameConfig.globaleventlist[i].stage = "active";
+            gameConfig.globalEventList[i].stage = "active";
             save(gameConfig);
             // break;
         }
@@ -125,34 +139,34 @@ function deleteEvent(eventName) {
 
     console.log("事件回收机制");
 
-    let event = gameConfig.globalevent;
+    let event = gameConfig.globalEvent;
 
     for (let i = 0; i < event.length; i++) {
         if (event[i].name == eventName) {
-            gameConfig.globalevent[i].count += 1;
+            gameConfig.globalEvent[i].count += 1;
             save(gameConfig);
             break;
         }
     }
 
-    let globalevent = gameConfig.globaleventlist;
+    let globalEvent = gameConfig.globalEventList;
 
-    for (let i = 0; i < globalevent.length; i++) {
-        if (globalevent[i].name == eventName) {
-            globalevent[i] = null;
+    for (let i = 0; i < globalEvent.length; i++) {
+        if (globalEvent[i].name == eventName) {
+            globalEvent[i] = null;
             break;
         }
     }
 
     let newEventlist = [];
 
-    for (let i = 0; i < globalevent.length; i++) {
-        if (globalevent[i] != null) {
-            newEventlist.push(globalevent[i]);
+    for (let i = 0; i < globalEvent.length; i++) {
+        if (globalEvent[i] != null) {
+            newEventlist.push(globalEvent[i]);
         }
     }
 
-    gameConfig.globaleventlist = newEventlist;
+    gameConfig.globalEventList = newEventlist;
     save(gameConfig);
 }
 
