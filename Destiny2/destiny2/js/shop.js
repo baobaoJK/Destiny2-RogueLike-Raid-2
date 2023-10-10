@@ -196,7 +196,7 @@ function init() {
 
                     for (let i = 0; i < deckList.length; i++) {
                         if (deckList[i] != null) {
-                            newDecklist.push(deckList);
+                            newDecklist.push(deckList[i]);
                         }
                     }
 
