@@ -85,8 +85,12 @@
                         <p class="title game-error">请开始游玩游戏之前使用 Ctrl + Shift + R 进行浏览器重新硬加载</p>
                         <p class="title game-title">请确认你能听得到以下音频</p>
                         <p class="title game-tips">免责声明：若事件触发没有声音，请检测浏览器是否开启了声音，电脑系统是否禁用了浏览器声音</p>
-                        <audio class="audio" src="audio/playerevent.mp3" controls></audio>
-                        <audio class="audio" src="audio/globalevent.mp3" controls></audio>
+                        <label for="playerEvent">玩家事件提示音</label>
+                        <audio class="audio" id="playerEvent" src="audio/playerevent.mp3" controls></audio>
+                        <label for="globalEvent">全局事件提示音</label>
+                        <audio class="audio" id="globalEvent" src="audio/globalevent.mp3" controls></audio>
+                        <label for="audioVolume">音量调节</label>
+                        <input type="range" id="audioVolume" step="0.1" min="0" max="1" value="0.5">
                     </div>
 
                     <div class="game-confirm-box">

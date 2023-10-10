@@ -2,8 +2,19 @@ $(function () {
     $("#game-model").modal("show");
     let playerEventAudio = $(".audio")[0];
     let globalEventAudio = $(".audio")[1];
-    playerEventAudio.volume = 0.2;
-    globalEventAudio.volume = 0.2;
+    playerEventAudio.volume = 0.5;
+    globalEventAudio.volume = 0.5;
+    localStorage.setItem("volume", 0.5);
+
+    $("#audioVolume").change(function (e) {
+        e.preventDefault();
+
+        let volumeValue = $(this).val();
+        playerEventAudio.volume = volumeValue;
+        globalEventAudio.volume = volumeValue;
+
+        localStorage.setItem("volume", volumeValue);
+    })
 
     // 角色选择
     $(".emblems .emblem").click(function (e) {

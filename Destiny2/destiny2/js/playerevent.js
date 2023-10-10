@@ -4,7 +4,7 @@ $(function () {
 
     // 音频
     let audio = $(".audio")[0];
-    audio.volume = 0.2;
+    audio.volume = localStorage.getItem("volume");
 
     const playerEventList = gameConfig.playerEventList;
 

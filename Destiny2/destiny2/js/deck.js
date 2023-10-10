@@ -585,8 +585,13 @@ function specialCard(card) {
     // 决斗
     if (card.name == "Duel") {
         delectCard(card);
+        let players = [1, 2, 3, 4, 5, 6];
 
-        showAlert("与你的序号+3的玩家签订决斗协议，你们立即前往私人熔炉竞技场的生存使用当前拥有的武器技能决斗，获得第一个回合胜利的玩家得到失败者的全部货币，认输则给对方一半金币");
+        do {
+            players = shuffle(players);
+        } while (players[0] == gameConfig.roleId);
+
+        showAlert("你与" + players[0] + "号玩家签订决斗协议，你们立即前往私人熔炉竞技场的生存使用当前拥有的武器技能决斗，获得第一个回合胜利的玩家得到失败者的一半货币，不许认输！");
     }
 
     // 等价交换

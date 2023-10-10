@@ -50,8 +50,8 @@ function startGame() {
 
     // 个人事件
     let eventAudio = parentJQuery("#gamepanel #event")[0];
-    eventAudio.volume = 0.1;
-    let eventNumbers = [1, 2, 3, 4, 5, 6];
+    eventAudio.volume = localStorage.getItem("volume");
+    let eventNumbers = [1, 2, 3, 4, 5];
 
     let eventAudioInterval = setInterval(() => {
         gameConfig = read();
@@ -92,8 +92,8 @@ function startGame() {
     // 全局事件
     if (gameConfig.position == "captain") {
         let globalEventAudio = parentJQuery("#gamepanel #globalevent")[0];
-        globalEventAudio.volume = 0.1;
-        let globalEventNumbers = [1, 2, 3, 4];
+        globalEventAudio.volume = localStorage.getItem("volume");
+        let globalEventNumbers = [1, 2, 3];
 
         let globalEventAudioInterval = setInterval(() => {
 
